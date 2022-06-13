@@ -23,7 +23,10 @@
 #-------------Visualisation-------------#
 #---------------------------------------#
 # Visualize Phantom with OPENGL
-#  /control/execute openGLVis.mac
+#/vis/open OGL 600x600-0+0
+#/vis/viewer/set/specialMeshRendering
+#/vis/drawVolume
+/control/execute vis.mac
 #
 #---------------------------------------#
 #---------Radiation Environment---------#
@@ -88,7 +91,7 @@
 #---------------------------------------#
 # Chooose number of events
 #/run/beamOn 10000000
-/run/beamOn 1000
+/run/beamOn 100 
 #
 #---------------------------------------#
 #-------Visualising Scoring Mesh--------#

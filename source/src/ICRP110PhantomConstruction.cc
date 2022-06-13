@@ -319,21 +319,21 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     param -> SetNoVoxel(fNVoxelX,fNVoxelY,fNVoxelZ);
 
 
-    // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
-
-//---- Define shield radii and other constants as G4double (to define units)
-    G4double shieldInnerRadii = 1.5000 * m; 
-    G4double shieldOuterRadii = 1.5700 * m;
-    G4double pi = 3.14159265358979323846;
-    
-//---- Get the material for the shield
-    G4NistManager* nist = G4NistManager::Instance();
-    G4Material* shieldMat = nist -> FindOrBuildMaterial("G4_Al");
-
-//---- Use the material to define a sphere, then logical volume, then physical volume   
-    G4Sphere* shield = new G4Sphere("shield", shieldInnerRadii, shieldOuterRadii, 0, 2*pi, 0, pi);
-    G4LogicalVolume* logicShield = new G4LogicalVolume(shield, shieldMat, "logicShield", 0, 0, 0);
-    G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0);
+//    // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
+//
+////---- Define shield radii and other constants as G4double (to define units)
+//    G4double shieldInnerRadii = 1.5000 * m; 
+//    G4double shieldOuterRadii = 1.5700 * m;
+//    G4double pi = 3.14159265358979323846;
+//    
+////---- Get the material for the shield
+//    G4NistManager* nist = G4NistManager::Instance();
+//    G4Material* shieldMat = nist -> FindOrBuildMaterial("G4_Al");
+//
+////---- Use the material to define a sphere, then logical volume, then physical volume   
+//    G4Sphere* shield = new G4Sphere("shield", shieldInnerRadii, shieldOuterRadii, 0, 2*pi, 0, pi);
+//    G4LogicalVolume* logicShield = new G4LogicalVolume(shield, shieldMat, "logicShield", 0, 0, 0);
+//    G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0);
 
 
   return fMotherVolume;

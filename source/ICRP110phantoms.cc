@@ -42,9 +42,18 @@
 #include "G4Track.hh"
 #include "G4ParticleChange.hh"
 #include "G4DynamicParticle.hh"
+#include "Randomize.hh"
+#include "time.h"
 
 int main(int argc,char** argv)
 {
+// Give the run a random seed in order to give different results on every run.
+ // Choose the random engine
+ CLHEP::HepRandom::setTheEngine(new CLHEP::RanecuEngine());
+ // Set random seed with system time
+ G4long seed = time(NULL);
+ CLHEP::HepRandom::setTheSeed(seed);
+
  auto* runManager = G4RunManagerFactory::CreateRunManager();
  G4int nThreads = 50;
  runManager->SetNumberOfThreads(nThreads);
@@ -86,9 +95,12 @@ int main(int argc,char** argv)
     }
   else           // Batch mode
     { 
-      G4String command = "/control/execute ";
       G4String fileName = argv[1];
-      UImanager -> ApplyCommand(command+fileName);
+      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+      UImanager -> ApplyCommand("/control/execute "+fileName);     
+      ui -> SessionStart();
+      delete ui;
+	
     }     
 
 delete visManager;
