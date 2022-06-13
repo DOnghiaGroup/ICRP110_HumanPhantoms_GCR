@@ -1,0 +1,106 @@
+#---------------------------------------#
+#-------------Select Phantom------------#
+#---------------------------------------#
+# Choose phantom sex (male or female)
+/phantom/setPhantomSex male
+/phantom/setScoreWriterSex male
+
+# Choose phantom section (head, trunk or full)
+/phantom/setPhantomSection full
+/phantom/setScoreWriterSection full
+
+#---------------------------------------#
+#------------Initialization-------------#
+#---------------------------------------#
+/run/initialize
+
+/control/verbose 1
+/tracking/verbose 0
+/run/verbose 0
+/event/verbose 0
+
+#---------------------------------------#
+#-------------Visualisation-------------#
+#---------------------------------------#
+# Visualize Phantom with OPENGL
+#  /control/execute openGLVis.mac
+#
+#---------------------------------------#
+#---------Radiation Environment---------#
+#---------------------------------------#
+# Call upon definition of primary beam
+# without calling for primary.mac
+# Radiation field defined
+# by means of GPS
+/gps/verbose 0
+
+### Generates surface source based on Sphere
+### Source uses monoenergetic proton beam
+### Norm should be pointing inward
+# /gps/hist/type 
+/gps/particle ion
+/gps/ion 2 4
+/gps/energy 100 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+#/gps/direction -1 -1 -1 
+#
+#---------------------------------------#
+#------Create Phantom Scoring Mesh------#
+#---------------------------------------#
+
+/score/create/boxMesh PhantomMesh
+
+#################################################################################
+#                                                                               #
+# The phantom voxels have dimensions (x,y,z) = (2.137, 2.137, 8)mm              #
+# and there are 254 voxels along x, 127 along y and 222 along z in              #
+# the full phantom. Mesh dimensions, however, are to be specified as            #
+# half-lengths                                                                  #
+#                                                                               #
+# If the user is not building all 222 z-slices of the phantom, they             #
+# must change the boxSize in z and the nBins in z to match the geometry of      #
+# the phantom in which they have simulated. Below, the mesh is defined for      #
+# the full male phantom with 222 single slices in z.                            #
+#                                                                               #
+################################################################################# 
+
+/score/mesh/boxSize 273.536 137.8365 888. m
+/score/mesh/nBin 256 129 222
+/score/mesh/translate/xyz 0. 0. 0. mm
+
+# Choose the quantity to score via mesh
+/score/quantity/energyDeposit energyDeposit 
+/score/quantity/doseDeposit doseDeposit
+
+# Close Scorer
+/score/close
+/score/list
+
+
+#
+#---------------------------------------#
+#----------Run Beam-On Command----------#
+#---------------------------------------#
+# Chooose number of events
+#/run/beamOn 10000000
+/run/beamOn 1000
+#
+#---------------------------------------#
+#-------Visualising Scoring Mesh--------#
+#---------------------------------------#
+# You can also enter the below commands in the GUI
+# when running the simulation in interactive mode
+#
+#/score/drawProjection PhantomMesh energyDeposit
+#/score/drawProjection PhantomMesh doseDeposit
+
+#---------------------------------------#
+#----Dump Scoring Mesh Data to File-----#
+#---------------------------------------#
+/score/dumpQuantityToFile PhantomMesh energyDeposit PhantomMesh_Energy_iso_He.txt
+/score/dumpQuantityToFile PhantomMesh doseDeposit PhantomMesh_Dose_iso_He.txt

@@ -1,0 +1,410 @@
+45
+299
+137
+0.8875
+0.8875
+2.42
+53
+0	air
+1	teeth
+2	bone
+3	humeri_upper
+4	humeri_lower
+5	arm_lower
+6	hand
+7	clavicle
+8	cranium
+9	femora_upper
+10	femora_lower
+11	leg_lower
+12	foot
+13	mandible
+14	pelvis
+15	ribs
+16	scapulae
+17	spine_cervical
+18	spine_thoratic
+19	spine_lumbar	
+20	sacrum
+21	sternum
+22	hf_upper
+23	hf_lower
+24	med_lowerarm
+25	med_lowerleg
+26	cartilage
+27	skin
+28	blood
+29	muscle
+30	liver
+31	pancreas
+32	brain
+33	heart
+34	eye
+35	kidney
+36	stomach
+37	intestine_sml
+38	intestine_lrg
+39	spleen
+40	thyroid
+41	bladder
+42	ovaries_testes
+43	adrenals
+44	oesophagus
+45	misc
+46	uterus_prostate
+47	lymph
+48	breast_glandular
+49	breast_adipose
+50	lung	
+51	gastro_content
+52	urine
+AF_slice304.g4dat
+AF_slice305.g4dat
+AF_slice306.g4dat
+AF_slice307.g4dat
+AF_slice308.g4dat
+AF_slice309.g4dat
+AF_slice310.g4dat
+AF_slice311.g4dat
+AF_slice312.g4dat
+AF_slice313.g4dat
+AF_slice314.g4dat
+AF_slice315.g4dat
+AF_slice316.g4dat
+AF_slice317.g4dat
+AF_slice318.g4dat
+AF_slice319.g4dat
+AF_slice320.g4dat
+AF_slice321.g4dat
+AF_slice322.g4dat
+AF_slice323.g4dat
+AF_slice324.g4dat
+AF_slice325.g4dat
+AF_slice326.g4dat
+AF_slice327.g4dat
+AF_slice328.g4dat
+AF_slice329.g4dat
+AF_slice330.g4dat
+AF_slice331.g4dat
+AF_slice332.g4dat
+AF_slice333.g4dat
+AF_slice334.g4dat
+AF_slice335.g4dat
+AF_slice336.g4dat
+AF_slice337.g4dat
+AF_slice338.g4dat
+AF_slice339.g4dat
+AF_slice340.g4dat
+AF_slice341.g4dat
+AF_slice342.g4dat
+AF_slice343.g4dat
+AF_slice344.g4dat
+AF_slice345.g4dat
+AF_slice346.g4dat
+AF_slice347.g4dat
+AF_slice348.g4dat
+
+AF_slice1.g4dat
+AF_slice2.g4dat
+AF_slice3.g4dat
+AF_slice4.g4dat
+AF_slice5.g4dat
+AF_slice6.g4dat
+AF_slice7.g4dat
+AF_slice8.g4dat
+AF_slice9.g4dat
+AF_slice10.g4dat
+AF_slice11.g4dat
+AF_slice12.g4dat
+AF_slice13.g4dat
+AF_slice14.g4dat
+AF_slice15.g4dat
+AF_slice16.g4dat
+AF_slice17.g4dat
+AF_slice18.g4dat
+AF_slice19.g4dat
+AF_slice20.g4dat
+AF_slice21.g4dat
+AF_slice22.g4dat
+AF_slice23.g4dat
+AF_slice24.g4dat
+AF_slice25.g4dat
+AF_slice26.g4dat
+AF_slice27.g4dat
+AF_slice28.g4dat
+AF_slice29.g4dat
+AF_slice30.g4dat
+AF_slice31.g4dat
+AF_slice32.g4dat
+AF_slice33.g4dat
+AF_slice34.g4dat
+AF_slice35.g4dat
+AF_slice36.g4dat
+AF_slice37.g4dat
+AF_slice38.g4dat
+AF_slice39.g4dat
+AF_slice40.g4dat
+AF_slice41.g4dat
+AF_slice42.g4dat
+AF_slice43.g4dat
+AF_slice44.g4dat
+AF_slice45.g4dat
+AF_slice46.g4dat
+AF_slice47.g4dat
+AF_slice48.g4dat
+AF_slice49.g4dat
+AF_slice50.g4dat
+AF_slice51.g4dat
+AF_slice52.g4dat
+AF_slice53.g4dat
+AF_slice54.g4dat
+AF_slice55.g4dat
+AF_slice56.g4dat
+AF_slice57.g4dat
+AF_slice58.g4dat
+AF_slice59.g4dat
+AF_slice60.g4dat
+AF_slice61.g4dat
+AF_slice62.g4dat
+AF_slice63.g4dat
+AF_slice64.g4dat
+AF_slice65.g4dat
+AF_slice66.g4dat
+AF_slice67.g4dat
+AF_slice68.g4dat
+AF_slice69.g4dat
+AF_slice70.g4dat
+AF_slice71.g4dat
+AF_slice72.g4dat
+AF_slice73.g4dat
+AF_slice74.g4dat
+AF_slice75.g4dat
+AF_slice76.g4dat
+AF_slice77.g4dat
+AF_slice78.g4dat
+AF_slice79.g4dat
+AF_slice80.g4dat
+AF_slice81.g4dat
+AF_slice82.g4dat
+AF_slice83.g4dat
+AF_slice84.g4dat
+AF_slice85.g4dat
+AF_slice86.g4dat
+AF_slice87.g4dat
+AF_slice88.g4dat
+AF_slice89.g4dat
+AF_slice90.g4dat
+AF_slice91.g4dat
+AF_slice92.g4dat
+AF_slice93.g4dat
+AF_slice94.g4dat
+AF_slice95.g4dat
+AF_slice96.g4dat
+AF_slice97.g4dat
+AF_slice98.g4dat
+AF_slice99.g4dat
+AF_slice100.g4dat
+AF_slice101.g4dat
+AF_slice102.g4dat
+AF_slice103.g4dat
+AF_slice104.g4dat
+AF_slice105.g4dat
+AF_slice106.g4dat
+AF_slice107.g4dat
+AF_slice108.g4dat
+AF_slice109.g4dat
+AF_slice110.g4dat
+AF_slice111.g4dat
+AF_slice112.g4dat
+AF_slice113.g4dat
+AF_slice114.g4dat
+AF_slice115.g4dat
+AF_slice116.g4dat
+AF_slice117.g4dat
+AF_slice118.g4dat
+AF_slice119.g4dat
+AF_slice120.g4dat
+AF_slice121.g4dat
+AF_slice122.g4dat
+AF_slice123.g4dat
+AF_slice124.g4dat
+AF_slice125.g4dat
+AF_slice126.g4dat
+AF_slice127.g4dat
+AF_slice128.g4dat
+AF_slice129.g4dat
+AF_slice130.g4dat
+AF_slice131.g4dat
+AF_slice132.g4dat
+AF_slice133.g4dat
+AF_slice134.g4dat
+AF_slice135.g4dat
+AF_slice136.g4dat
+AF_slice137.g4dat
+AF_slice138.g4dat
+AF_slice139.g4dat
+AF_slice140.g4dat
+AF_slice141.g4dat
+AF_slice142.g4dat
+AF_slice143.g4dat
+AF_slice144.g4dat
+AF_slice145.g4dat
+AF_slice146.g4dat
+AF_slice147.g4dat
+AF_slice148.g4dat
+AF_slice149.g4dat
+AF_slice150.g4dat
+AF_slice151.g4dat
+AF_slice152.g4dat
+AF_slice153.g4dat
+AF_slice154.g4dat
+AF_slice155.g4dat
+AF_slice156.g4dat
+AF_slice157.g4dat
+AF_slice158.g4dat
+AF_slice159.g4dat
+AF_slice160.g4dat
+AF_slice161.g4dat
+AF_slice162.g4dat
+AF_slice163.g4dat
+AF_slice164.g4dat
+AF_slice165.g4dat
+AF_slice166.g4dat
+AF_slice167.g4dat
+AF_slice168.g4dat
+AF_slice169.g4dat
+AF_slice170.g4dat
+AF_slice171.g4dat
+AF_slice172.g4dat
+AF_slice173.g4dat
+AF_slice174.g4dat
+AF_slice175.g4dat
+AF_slice176.g4dat
+AF_slice177.g4dat
+AF_slice178.g4dat
+AF_slice179.g4dat
+AF_slice180.g4dat
+AF_slice181.g4dat
+AF_slice182.g4dat
+AF_slice183.g4dat
+AF_slice184.g4dat
+AF_slice185.g4dat
+AF_slice186.g4dat
+AF_slice187.g4dat
+AF_slice188.g4dat
+AF_slice189.g4dat
+AF_slice190.g4dat
+AF_slice191.g4dat
+AF_slice192.g4dat
+AF_slice193.g4dat
+AF_slice194.g4dat
+AF_slice195.g4dat
+AF_slice196.g4dat
+AF_slice197.g4dat
+AF_slice198.g4dat
+AF_slice199.g4dat
+AF_slice200.g4dat
+AF_slice201.g4dat
+AF_slice202.g4dat
+AF_slice203.g4dat
+AF_slice204.g4dat
+AF_slice205.g4dat
+AF_slice206.g4dat
+AF_slice207.g4dat
+AF_slice208.g4dat
+AF_slice209.g4dat
+AF_slice210.g4dat
+AF_slice211.g4dat
+AF_slice212.g4dat
+AF_slice213.g4dat
+AF_slice214.g4dat
+AF_slice215.g4dat
+AF_slice216.g4dat
+AF_slice217.g4dat
+AF_slice218.g4dat
+AF_slice219.g4dat
+AF_slice220.g4dat
+AF_slice221.g4dat
+AF_slice222.g4dat
+AF_slice223.g4dat
+AF_slice224.g4dat
+AF_slice225.g4dat
+AF_slice226.g4dat
+AF_slice227.g4dat
+AF_slice228.g4dat
+AF_slice229.g4dat
+AF_slice230.g4dat
+AF_slice231.g4dat
+AF_slice232.g4dat
+AF_slice233.g4dat
+AF_slice234.g4dat
+AF_slice235.g4dat
+AF_slice236.g4dat
+AF_slice237.g4dat
+AF_slice238.g4dat
+AF_slice239.g4dat
+AF_slice240.g4dat
+AF_slice241.g4dat
+AF_slice242.g4dat
+AF_slice243.g4dat
+AF_slice244.g4dat
+AF_slice245.g4dat
+AF_slice246.g4dat
+AF_slice247.g4dat
+AF_slice248.g4dat
+AF_slice249.g4dat
+AF_slice250.g4dat
+AF_slice251.g4dat
+AF_slice252.g4dat
+AF_slice253.g4dat
+AF_slice254.g4dat
+AF_slice255.g4dat
+AF_slice256.g4dat
+AF_slice257.g4dat
+AF_slice258.g4dat
+AF_slice259.g4dat
+AF_slice260.g4dat
+AF_slice261.g4dat
+AF_slice262.g4dat
+AF_slice263.g4dat
+AF_slice264.g4dat
+AF_slice265.g4dat
+AF_slice266.g4dat
+AF_slice267.g4dat
+AF_slice268.g4dat
+AF_slice269.g4dat
+AF_slice270.g4dat
+AF_slice271.g4dat
+AF_slice272.g4dat
+AF_slice273.g4dat
+AF_slice274.g4dat
+AF_slice275.g4dat
+AF_slice276.g4dat
+AF_slice277.g4dat
+AF_slice278.g4dat
+AF_slice279.g4dat
+AF_slice280.g4dat
+AF_slice281.g4dat
+AF_slice282.g4dat
+AF_slice283.g4dat
+AF_slice284.g4dat
+AF_slice285.g4dat
+AF_slice286.g4dat
+AF_slice287.g4dat
+AF_slice288.g4dat
+AF_slice289.g4dat
+AF_slice290.g4dat
+AF_slice291.g4dat
+AF_slice292.g4dat
+AF_slice293.g4dat
+AF_slice294.g4dat
+AF_slice295.g4dat
+AF_slice296.g4dat
+AF_slice297.g4dat
+AF_slice298.g4dat
+AF_slice299.g4dat
+AF_slice300.g4dat
+AF_slice301.g4dat
+AF_slice302.g4dat
+AF_slice303.g4dat
+
