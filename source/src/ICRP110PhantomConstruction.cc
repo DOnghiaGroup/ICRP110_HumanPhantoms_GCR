@@ -79,6 +79,8 @@ ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
 
 G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 {
+  G4NistManager* nist = G4NistManager::Instance();
+
   // Define Material Air
   G4double A;  // atomic mass
   G4double Z;  // atomic number
@@ -93,6 +95,9 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
   G4Material* matAir = new G4Material("Air",d,2);
   matAir -> AddElement(elN,0.8);
   matAir -> AddElement(elO,0.2); 
+
+ // Define Material Space
+ G4Material* matSpace = nist -> FindOrBuildMaterial("G4_Galactic");
 
  std::vector<G4Material*> pMaterials;
 
@@ -220,7 +225,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
   G4Box* world = new G4Box("world", worldSize, worldSize, worldSize);
 
   G4LogicalVolume* logicWorld = new G4LogicalVolume(world,
-						    matAir,
+						    matSpace,
 						    "logicalWorld", 0, 0,0);
 
   fMotherVolume = new G4PVPlacement(0,G4ThreeVector(),
@@ -327,7 +332,6 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 //    G4double pi = 3.14159265358979323846;
 //    
 ////---- Get the material for the shield
-//    G4NistManager* nist = G4NistManager::Instance();
 //    G4Material* shieldMat = nist -> FindOrBuildMaterial("G4_Al");
 //
 ////---- Use the material to define a sphere, then logical volume, then physical volume   
