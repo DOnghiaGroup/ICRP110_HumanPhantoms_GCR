@@ -43,7 +43,28 @@
 # /gps/hist/type 
 /gps/particle ion
 /gps/ion 2 4
+/gps/energy 400 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+
+/gps/source/add 1
+/gps/particle proton
 /gps/energy 100 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+
+/gps/source/add 1
+/gps/particle ion 
+/gps/ion 4 8
+/gps/energy 800 MeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 /gps/pos/centre 0. 0. 0. cm

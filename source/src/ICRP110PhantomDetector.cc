@@ -13,11 +13,8 @@ G4bool ICRP110PhantomDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0
 	G4String particleName = track -> GetParticleDefinition() -> GetParticleName();
 	const std::vector<const G4Track*>* secondaryList = aStep -> GetSecondaryInCurrentStep();
 
-	// Test
-	//if ((secondaryList -> size()) > 0) {
-	//	G4String secondaryFirstName = secondaryList -> at(0) -> GetParticleDefinition() -> GetParticleName();
-	//}
-	G4String secondaryNameList = "";
+	// Write a string containing a list of the primary particle followed by its secondaries
+	G4String secondaryNameList = particleName;
 	if ((secondaryList -> size()) > 0) {
 		for (int i = 0; i < secondaryList->size(); i++) {
 			G4String curName = secondaryList -> at(i) -> GetParticleDefinition() -> GetParticleName();
@@ -27,7 +24,12 @@ G4bool ICRP110PhantomDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0
 				secondaryNameList = secondaryNameList + ", " + curName;
 			}
 		}
-		G4cout << particleName << secondaryNameList << G4endl;
+
+		// Append to the end of the file given by /outfilename/
+		std::ofstream ofile;
+		ofile.open(outfilename, std::ios_base::app);
+		ofile << secondaryNameList << "\n";
+		ofile.close();
 	}
 
 	return true;
