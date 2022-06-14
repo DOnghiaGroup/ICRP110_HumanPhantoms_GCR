@@ -2,6 +2,8 @@
 #define PHANTOM_DETECTOR_HH
 
 #include "G4VSensitiveDetector.hh"
+#include <fstream>
+#include <vector>
 
 // This class implements the phantom as a sensitive detector to get information on events that happen in it
 

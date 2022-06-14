@@ -67,6 +67,10 @@ ICRP110PhantomDetector.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomDetector.hh
 G4VSensitiveDetector.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/G4VSensitiveDetector.hh
+fstream
+-
+vector
+-
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMaterial_Female.hh
 globals.hh
