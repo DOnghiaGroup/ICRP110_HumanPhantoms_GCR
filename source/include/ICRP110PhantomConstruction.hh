@@ -66,6 +66,8 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
      void SetPhantomSex(G4String);
      void SetPhantomSection(G4String);
 
+     void WriteDetectorData();
+
  private:
   void ReadPhantomData(const G4String& sex, const G4String& section);
   void ReadPhantomDataFile(const G4String& sex, const G4String& fname, G4int);
@@ -93,6 +95,8 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
   G4String fSex;
   G4String fSection;
   G4LogicalVolume* logicVoxel;
+  G4LogicalVolume* logicShield;
+  ICRP110PhantomDetector* shieldDetector;
 
   // Define the sensitive detector
   virtual void ConstructSDandField();

@@ -103,6 +103,9 @@ int main(int argc,char** argv)
 	
     }     
 
+// Write out any important data here
+userPhantom -> WriteDetectorData();
+
 delete visManager;
 
 delete runManager;

@@ -71,6 +71,18 @@ fstream
 -
 vector
 -
+map
+-
+ICRP110PhantomHit.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomHit.hh
+
+/home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomHit.hh
+G4VHit.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4VHit.hh
+vector
+-
+G4Track.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4Track.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMaterial_Female.hh
 globals.hh
@@ -187,6 +199,12 @@ G4NistManager.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomDetector.cc
 ICRP110PhantomDetector.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomDetector.hh
+ICRP110PhantomHit.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomHit.hh
+
+/home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomHit.cc
+ICRP110PhantomHit.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomHit.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomMaterial_Female.cc
 ICRP110PhantomMaterial_Female.hh
