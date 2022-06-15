@@ -66,6 +66,8 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
      void SetPhantomSex(G4String);
      void SetPhantomSection(G4String);
 
+     ICRP110PhantomDetector* GetSD();
+
  private:
   void ReadPhantomData(const G4String& sex, const G4String& section);
   void ReadPhantomDataFile(const G4String& sex, const G4String& fname, G4int);

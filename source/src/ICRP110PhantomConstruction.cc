@@ -358,6 +358,10 @@ void ICRP110PhantomConstruction::ConstructSDandField() {
 	logicShield -> SetSensitiveDetector(shieldDetector);
 }
 
+ICRP110PhantomDetector* ICRP110PhantomConstruction::GetSD() {
+	return shieldDetector;
+}
+
 void ICRP110PhantomConstruction::ReadPhantomData(const G4String& sex, const G4String& section)
 {
 

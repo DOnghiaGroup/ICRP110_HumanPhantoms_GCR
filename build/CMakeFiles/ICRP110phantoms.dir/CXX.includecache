@@ -39,6 +39,12 @@ Randomize.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/Randomize.hh
 time.h
 /home/reu/bderieg/geant4/GCRSimulator/source/time.h
+G4SDManager.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/G4SDManager.hh
+ICRP110PhantomDetector.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/ICRP110PhantomDetector.hh
+G4HCofThisEvent.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/G4HCofThisEvent.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomActionInitialization.hh
 G4VUserActionInitialization.hh
