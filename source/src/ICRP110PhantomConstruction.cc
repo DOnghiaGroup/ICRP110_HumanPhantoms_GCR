@@ -75,6 +75,7 @@ ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
   delete fMaterial_Female;
   delete fMaterial_Male;
   delete fMessenger;
+  delete shieldDetector;
 }
 
 G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
@@ -349,7 +350,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 
 // Sensitive detector construction
 void ICRP110PhantomConstruction::ConstructSDandField() {
-	shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
+	shieldDetector = new ICRP110PhantomDetector("ShieldDetector");
 
 	// The line below would set the sensitive detector to the human phantom instead of to the shield
 	// logicVoxel->SetSensitiveDetector(shieldDetector);	
@@ -848,8 +849,4 @@ void ICRP110PhantomConstruction::SetPhantomSection(G4String newSection)
   if ((fSection != "head") && (fSection != "trunk") && (fSection != "full"))
     G4cout << fSection << " is not defined!" << G4endl;  
 
-}
-
-void ICRP110PhantomConstruction::WriteDetectorData() {
-	shieldDetector -> ExportParticleDiff();
 }

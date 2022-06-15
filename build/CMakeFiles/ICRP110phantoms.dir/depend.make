@@ -823,6 +823,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/incl
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4SteppingControl.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4String.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4String.icc
+CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4THitsCollection.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4Threading.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4ThreeVector.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o: /opt/geant4/include/Geant4/G4TouchableHandle.hh
@@ -933,6 +934,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/G
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4SteppingControl.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4String.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4String.icc
+CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4THitsCollection.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4Threading.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4ThreeVector.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4TouchableHandle.hh
@@ -943,6 +945,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/G
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4Types.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4VExceptionHandler.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4VHit.hh
+CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4VHitsCollection.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4VPhysicalVolume.hh
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4VPhysicalVolume.icc
 CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o: /opt/geant4/include/Geant4/G4VTouchable.hh

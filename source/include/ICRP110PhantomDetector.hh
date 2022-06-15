@@ -13,11 +13,12 @@ class ICRP110PhantomDetector : public G4VSensitiveDetector {
 public:
 	ICRP110PhantomDetector(G4String);
 	~ICRP110PhantomDetector();
-	void ExportParticleDiff();
-private:
+	virtual void Initialize(G4HCofThisEvent*);
 	virtual G4bool ProcessHits(G4Step*, G4TouchableHistory*);
-	std::map<G4String, G4int> particleDiff;
-	std::vector<ICRP110PhantomHit*> hitsCollection;
+	virtual void EndOfEvent(G4HCofThisEvent*);
+private:
+	ICRP110PhantomHitsCollection* hitsCollection;
+	G4int collectionID;
 };
 
 #endif

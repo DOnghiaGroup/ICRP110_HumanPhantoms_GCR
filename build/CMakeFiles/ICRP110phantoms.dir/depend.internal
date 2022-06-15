@@ -824,6 +824,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o
  /opt/geant4/include/Geant4/G4SteppingControl.hh
  /opt/geant4/include/Geant4/G4String.hh
  /opt/geant4/include/Geant4/G4String.icc
+ /opt/geant4/include/Geant4/G4THitsCollection.hh
  /opt/geant4/include/Geant4/G4Threading.hh
  /opt/geant4/include/Geant4/G4ThreeVector.hh
  /opt/geant4/include/Geant4/G4TouchableHandle.hh
@@ -934,6 +935,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o
  /opt/geant4/include/Geant4/G4SteppingControl.hh
  /opt/geant4/include/Geant4/G4String.hh
  /opt/geant4/include/Geant4/G4String.icc
+ /opt/geant4/include/Geant4/G4THitsCollection.hh
  /opt/geant4/include/Geant4/G4Threading.hh
  /opt/geant4/include/Geant4/G4ThreeVector.hh
  /opt/geant4/include/Geant4/G4TouchableHandle.hh
@@ -944,6 +946,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomHit.cc.o
  /opt/geant4/include/Geant4/G4Types.hh
  /opt/geant4/include/Geant4/G4VExceptionHandler.hh
  /opt/geant4/include/Geant4/G4VHit.hh
+ /opt/geant4/include/Geant4/G4VHitsCollection.hh
  /opt/geant4/include/Geant4/G4VPhysicalVolume.hh
  /opt/geant4/include/Geant4/G4VPhysicalVolume.icc
  /opt/geant4/include/Geant4/G4VTouchable.hh

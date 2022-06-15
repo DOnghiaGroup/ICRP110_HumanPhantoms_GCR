@@ -83,6 +83,8 @@ vector
 -
 G4Track.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/G4Track.hh
+G4THitsCollection.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4THitsCollection.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMaterial_Female.hh
 globals.hh

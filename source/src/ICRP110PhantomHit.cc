@@ -2,4 +2,5 @@
 
 ICRP110PhantomHit::ICRP110PhantomHit() {}
 
-ICRP110PhantomHit::~ICRP110PhantomHit() {}
+ICRP110PhantomHit::~ICRP110PhantomHit() {
+}
