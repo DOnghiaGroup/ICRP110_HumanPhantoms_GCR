@@ -39,6 +39,8 @@ Randomize.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/Randomize.hh
 time.h
 /home/reu/bderieg/geant4/GCRSimulator/source/time.h
+set
+-
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomActionInitialization.hh
 G4VUserActionInitialization.hh
@@ -69,7 +71,7 @@ G4VSensitiveDetector.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/G4VSensitiveDetector.hh
 fstream
 -
-vector
+set
 -
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMaterial_Female.hh

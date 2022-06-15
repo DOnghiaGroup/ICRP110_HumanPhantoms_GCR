@@ -44,6 +44,7 @@
 #include "G4DynamicParticle.hh"
 #include "Randomize.hh"
 #include "time.h"
+#include <set>
 
 int main(int argc,char** argv)
 {
@@ -85,24 +86,23 @@ int main(int argc,char** argv)
 
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
-  if (argc==1)   // Define UI session for interactive mode.
-    { 
-      G4cout << " UI session starts ..." << G4endl;
-      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-      UImanager -> ApplyCommand("/control/execute vis.mac");     
-      ui -> SessionStart();
-      delete ui;
-    }
-  else           // Batch mode
-    { 
-      G4String fileName = argv[1];
-      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-      UImanager -> ApplyCommand("/control/execute "+fileName);     
-      ui -> SessionStart();
-      delete ui;
-	
-    }     
+  // Initialize the run and phantom properties
+  UImanager -> ApplyCommand("/phantom/setPhantomSex male");
+  UImanager -> ApplyCommand("/phantom/setScoreWriterSex male");
+  UImanager -> ApplyCommand("/phantom/setPhantomSection full");
+  UImanager -> ApplyCommand("/phantom/getScoreWriterSection full");
+  UImanager -> ApplyCommand("/run/initialize");
 
+  ICRP110PhantomDetector* shieldDetector = userPhantom -> GetSD();
+
+  G4String fileName = argv[1];
+  G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+  UImanager -> ApplyCommand("/control/execute "+fileName);
+
+  ui -> SessionStart();
+
+delete ui;
+	
 delete visManager;
 
 delete runManager;

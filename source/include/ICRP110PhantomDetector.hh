@@ -3,7 +3,7 @@
 
 #include "G4VSensitiveDetector.hh"
 #include <fstream>
-#include <vector>
+#include <set>
 
 // This class implements the phantom as a sensitive detector to get information on events that happen in it
 
@@ -13,6 +13,7 @@ public:
 	~ICRP110PhantomDetector();
 private:
 	virtual G4bool ProcessHits(G4Step*, G4TouchableHistory*);
+	G4bool ParticleFilter(G4ThreeVector, G4ThreeVector);
 };
 
 #endif
