@@ -95,8 +95,7 @@
 #----------Run Beam-On Command----------#
 #---------------------------------------#
 # Chooose number of events
-#/run/beamOn 10000000
-/run/beamOn 100
+/run/beamOn 1000000
 #
 #---------------------------------------#
 #-------Visualising Scoring Mesh--------#

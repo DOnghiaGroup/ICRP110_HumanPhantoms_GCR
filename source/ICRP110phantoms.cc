@@ -56,7 +56,7 @@ int main(int argc,char** argv)
  CLHEP::HepRandom::setTheSeed(seed);
 
  auto* runManager = G4RunManagerFactory::CreateRunManager();
- G4int nThreads = 50;
+ G4int nThreads = 100;
  runManager->SetNumberOfThreads(nThreads);
   
   // Activate UI-command base scorer

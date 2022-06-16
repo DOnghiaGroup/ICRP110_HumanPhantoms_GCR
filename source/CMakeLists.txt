@@ -40,26 +40,6 @@ target_link_libraries(ICRP110phantoms ${Geant4_LIBRARIES} )
 # Depend on data for runtime
 add_dependencies(ICRP110phantoms ICRPdata)
 
-#----------------------------------------------------------------------------
-# Copy all scripts to the build directory, i.e. the directory in which we
-# build human_phantom. This is so that we can run the executable directly because it
-# relies on these scripts being in the current working directory.
-#
-set(ICRPphantoms_SCRIPTS
-     female.in female_head.in female_trunk.in male.in male_head.in male_trunk.in vis.mac primary.mac ColourMap.dat openGLVis.mac g4views/g4_00.g4view g4views/g4_01.g4view
-#    ICRPdata/Data.dat 
-#    "ICRPdata/ICRP110_g4dat/AF/*.g4dat"
-#    "ICRPdata/ICRP110_g4dat/AM/*.g4dat"
-  )
- 
-foreach(_script ${ICRPphantoms_SCRIPTS})
-  configure_file(
-    ${PROJECT_SOURCE_DIR}/${_script}
-    ${PROJECT_BINARY_DIR}/${_script}
-    COPYONLY
-    )
-endforeach()
-
 #set(ICRPphantoms_DATADIR
 #   ICRPdata
 #)
