@@ -66,7 +66,7 @@ for key in originalBeamSpectra:
 print("Creating histograms . . . ")
 
 xlims = [1e-1, 3e5]
-ylims = [0.1, 50.0]
+ylims = [1e-1, 1e6]
 beamParticles = ['proton', 'alpha', 'Fe56']
 secondaryParticles = ['neutron', 'e-']
 numbins = 20
@@ -80,7 +80,7 @@ plt.hist(originalLists,
         bins=np.geomspace(xlims[0], xlims[1], numbins),
         label=beamParticles)
 plt.xscale('log')
-# plt.yscale('log')
+plt.yscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
 plt.legend()
@@ -97,7 +97,7 @@ plt.hist(secondariesLists,
         bins=np.geomspace(xlims[0], xlims[1], numbins),
         label=secondaryParticles)
 plt.xscale('log')
-# plt.yscale('log')
+plt.yscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
 plt.legend()
