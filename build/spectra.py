@@ -69,10 +69,10 @@ for key in originalBeamSpectra:
 print("Creating histograms . . . ")
 
 xlims = [1e-1, 3e5]
-ylims = [1e-1, 1e6]
+ylims = [1e-1, 1e8]
 beamParticles = ['proton', 'alpha', 'Fe56']
 secondaryParticles = ['proton', 'alpha', 'Fe56', 'neutron', 'e-']
-numbins = 10
+numbins = 500
 
 originalLists = []
 for name in beamParticles:
@@ -86,7 +86,7 @@ plt.xscale('log')
 plt.yscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
-plt.legend()
+plt.legend(loc='lower right')
 plt.title("Beam Spectra")
 plt.ylabel("n")
 plt.xlabel("Kinetic Energy (MeV)")
@@ -103,7 +103,7 @@ plt.xscale('log')
 plt.yscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
-plt.legend()
+plt.legend(loc='lower right')
 plt.yticks([])
 plt.title("Final Spectra")
 
