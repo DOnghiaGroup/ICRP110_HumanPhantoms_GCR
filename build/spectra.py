@@ -4,7 +4,7 @@ import numpy as np
 
 # ***Import data***
 print("Importing data . . . ")
-data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=1000000)
+data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=5000000)
 
 # ***Get total particle counts (at each energy)***
 # Initialize with beam configuration
@@ -72,7 +72,7 @@ xlims = [1e-1, 3e5]
 ylims = [1e-1, 1e8]
 beamParticles = ['proton', 'alpha', 'Fe56']
 secondaryParticles = ['proton', 'alpha', 'Fe56', 'neutron', 'e-']
-numbins = 500
+numbins = 100
 
 originalLists = []
 for name in beamParticles:
