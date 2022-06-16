@@ -57,19 +57,37 @@ xlims = [1e-3, 1e3]
 ylims = [0.1, 5.0]
 beamParticles = ['proton', 'alpha', 'Be9']
 secondaryParticles = ['neutron', 'e-']
+numbins = 20
 
-plt.subplot(121)
+originalLists = []
 for name in beamParticles:
-    plt.hist(pd.Series(originalEnergies[name]),histtype='step',
-            bins=np.geomspace(pd.Series(originalEnergies[name]).min(), pd.Series(originalEnergies[name]).max(), 50))
+    originalLists.append(pd.Series(originalEnergies[name]))
+plt.subplot(121)
+plt.hist(originalLists, 
+        histtype='step',
+        bins=np.geomspace(xlims[0], xlims[1], numbins),
+        label=beamParticles)
 plt.xscale('log')
 # plt.yscale('log')
+plt.xlim(xlims)
+plt.ylim(ylims)
+plt.legend()
+plt.title("Beam Spectra")
 
-plt.subplot(122)
+secondariesLists = []
 for name in secondaryParticles:
-    plt.hist(pd.Series(particleEnergies[name]),histtype='step',
-            bins=np.geomspace(pd.Series(particleEnergies[name]).min(), pd.Series(particleEnergies[name]).max(), 50))
+    secondariesLists.append(pd.Series(particleEnergies[name]))
+plt.subplot(122)
+plt.hist(secondariesLists, 
+        histtype='step',
+        bins=np.geomspace(xlims[0], xlims[1], numbins),
+        label=secondaryParticles)
 plt.xscale('log')
 # plt.yscale('log')
+plt.xlim(xlims)
+plt.ylim(ylims)
+plt.legend()
+plt.xticks([])
+plt.title("Final Spectra")
 
 plt.savefig('spectra.jpg')
