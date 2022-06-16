@@ -34,6 +34,26 @@
 /gps/pos/radius 1.6 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle ion
+/gps/ion 2 4
+/gps/energy 1200 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle ion
+/gps/ion 2 4
+/gps/energy 4000 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
 
 /gps/source/add 1
 /gps/particle proton
@@ -44,11 +64,49 @@
 /gps/pos/radius 1.6 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle proton
+/gps/energy 300 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle proton
+/gps/energy 1000 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
 
 /gps/source/add 1
 /gps/particle ion 
-/gps/ion 4 8
-/gps/energy 800 MeV
+/gps/ion 26 56 
+/gps/energy 2600 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle ion 
+/gps/ion 26 56 
+/gps/energy 7800 MeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.6 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle ion 
+/gps/ion 26 56 
+/gps/energy 26000 MeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 /gps/pos/centre 0. 0. 0. cm
@@ -95,7 +153,7 @@
 #----------Run Beam-On Command----------#
 #---------------------------------------#
 # Chooose number of events
-/run/beamOn 1000000
+/run/beamOn 333333 
 #
 #---------------------------------------#
 #-------Visualising Scoring Mesh--------#

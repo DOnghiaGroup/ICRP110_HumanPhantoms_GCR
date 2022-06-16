@@ -9,9 +9,15 @@ data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E
 # ***Get total particle counts (at each energy)***
 # Initialize with beam configuration
 print("Populating data structures part 1 . . . ")
-particleTracker = {('alpha', 400) : 1e6,  # Keys are a tuple: (particle, E_k)
-                  ('proton', 100) : 1e6,  # Values are the count
-                  ('Be9', 900) : 1e6}
+particleTracker = {('alpha', 400) : 333333,  # Keys are a tuple: (particle, E_k)
+                  ('alpha', 1200) : 333333,  # Values are the count
+                  ('alpha', 4000) : 333333,
+                  ('proton', 100) : 333333,
+                  ('proton', 300) : 333333,
+                  ('proton', 1000) : 333333,
+                  ('Fe56', 2600) : 333333,
+                  ('Fe56', 7800) : 333333,
+                  ('Fe56', 26000) : 333333}
 # Populate with new values from the run
 for i, row in data.iterrows():
     # Create key if it doesn't exist
@@ -36,9 +42,15 @@ for key in particleTracker:
 
 # ***Create original spectra***
 print("Creating beam spectra . . . ")
-originalBeamSpectra = {('alpha', 400) : 1e6,  # Keys are a tuple: (particle, E_k)
-                  ('proton', 100) : 1e6,  # Values are the count
-                  ('Be9', 900) : 1e6}
+originalBeamSpectra = {('alpha', 400) : 333333,  # Keys are a tuple: (particle, E_k)
+                  ('alpha', 1200) : 333333,  # Values are the count
+                  ('alpha', 4000) : 333333,
+                  ('proton', 100) : 333333,
+                  ('proton', 300) : 333333,
+                  ('proton', 1000) : 333333,
+                  ('Fe56', 2600) : 333333,
+                  ('Fe56', 7800) : 333333,
+                  ('Fe56', 26000) : 333333}
 
 originalEnergies = {}
 for key in originalBeamSpectra:
@@ -53,9 +65,9 @@ for key in originalBeamSpectra:
 # ***Create histograms***
 print("Creating histograms . . . ")
 
-xlims = [1e-3, 1e3]
-ylims = [0.1, 5.0]
-beamParticles = ['proton', 'alpha', 'Be9']
+xlims = [1e-1, 3e5]
+ylims = [0.1, 50.0]
+beamParticles = ['proton', 'alpha', 'Fe56']
 secondaryParticles = ['neutron', 'e-']
 numbins = 20
 
@@ -73,6 +85,8 @@ plt.xlim(xlims)
 plt.ylim(ylims)
 plt.legend()
 plt.title("Beam Spectra")
+plt.ylabel("n")
+plt.xlabel("Kinetic Energy (MeV)")
 
 secondariesLists = []
 for name in secondaryParticles:
@@ -87,7 +101,7 @@ plt.xscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
 plt.legend()
-plt.xticks([])
+plt.yticks([])
 plt.title("Final Spectra")
 
-plt.savefig('spectra.jpg')
+plt.savefig('spectra.jpg', dpi=1000)
