@@ -4,7 +4,7 @@ import numpy as np
 
 # ***Import data***
 print("Importing data . . . ")
-data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=100000)
+data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=1000000)
 
 # ***Get total particle counts (at each energy)***
 # Initialize with beam configuration
@@ -25,6 +25,9 @@ for i, row in data.iterrows():
         particleTracker[(row['particle'], row['E_k'])] = 0
     # Update key value
     particleTracker[(row['particle'], row['E_k'])] += row['counter']
+    # Log for progress update
+    if i%10000 == 0:
+        print(". . . " + str(i) + " rows completed")
 
 # ***Separate into a list of energies for each particle***
 # That is, here we have a dictionary where the keys are particles. The values
@@ -68,8 +71,8 @@ print("Creating histograms . . . ")
 xlims = [1e-1, 3e5]
 ylims = [1e-1, 1e6]
 beamParticles = ['proton', 'alpha', 'Fe56']
-secondaryParticles = ['neutron', 'e-']
-numbins = 100
+secondaryParticles = ['proton', 'alpha', 'Fe56', 'neutron', 'e-']
+numbins = 10
 
 originalLists = []
 for name in beamParticles:
