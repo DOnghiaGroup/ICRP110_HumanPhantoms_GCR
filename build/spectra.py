@@ -69,7 +69,7 @@ xlims = [1e-1, 3e5]
 ylims = [1e-1, 1e6]
 beamParticles = ['proton', 'alpha', 'Fe56']
 secondaryParticles = ['neutron', 'e-']
-numbins = 20
+numbins = 100
 
 originalLists = []
 for name in beamParticles:
