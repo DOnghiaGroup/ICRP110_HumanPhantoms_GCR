@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomVisAction.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110ScoreWriterMessenger.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o"
+  "CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o"
+  "CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o"
   "ICRP110phantoms"
   "ICRP110phantoms.pdb"
 )

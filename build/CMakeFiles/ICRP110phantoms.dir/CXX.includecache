@@ -126,6 +126,24 @@ globals.hh
 G4VScoreWriter.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/G4VScoreWriter.hh
 
+/home/reu/bderieg/geant4/GCRSimulator/source/include/RunFluxCount.hh
+G4Run.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4Run.hh
+G4Event.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4Event.hh
+G4THitsMap.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4THitsMap.hh
+G4SDManager.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4SDManager.hh
+G4HCofThisEvent.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4HCofThisEvent.hh
+
+/home/reu/bderieg/geant4/GCRSimulator/source/include/RunFluxCountAction.hh
+G4UserRunAction.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4UserRunAction.hh
+RunFluxCount.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/RunFluxCount.hh
+
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomActionInitialization.cc
 ICRP110PhantomActionInitialization.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomActionInitialization.hh
@@ -329,6 +347,14 @@ G4VPrimitiveScorer.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4VPrimitiveScorer.hh
 G4VScoringMesh.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4VScoringMesh.hh
+
+/home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCount.cc
+RunFluxCount.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCount.hh
+
+/home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.cc
+RunFluxCountAction.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.hh
 
 /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 iosfwd
@@ -2360,6 +2386,14 @@ globals.hh
 CLHEP/Vector/Rotation.h
 -
 
+/opt/geant4/include/Geant4/G4Run.hh
+vector
+-
+globals.hh
+/opt/geant4/include/Geant4/globals.hh
+G4Profiler.hh
+/opt/geant4/include/Geant4/G4Profiler.hh
+
 /opt/geant4/include/Geant4/G4RunManager.hh
 algorithm
 -
@@ -3375,6 +3409,10 @@ VecGeom/volumes/UnplacedTube.h
 -
 G4Polyhedron.hh
 /opt/geant4/include/Geant4/G4Polyhedron.hh
+
+/opt/geant4/include/Geant4/G4UserRunAction.hh
+G4Types.hh
+/opt/geant4/include/Geant4/G4Types.hh
 
 /opt/geant4/include/Geant4/G4UserStackingAction.hh
 G4ClassificationOfNewTrack.hh

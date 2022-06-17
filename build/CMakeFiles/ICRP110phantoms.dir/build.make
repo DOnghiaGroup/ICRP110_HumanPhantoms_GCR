@@ -230,6 +230,32 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110UserScoreWriter.cc -o CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.s
 
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o: CMakeFiles/ICRP110phantoms.dir/flags.make
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o: /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCount.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o -c /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCount.cc
+
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCount.cc > CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.i
+
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCount.cc -o CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.s
+
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o: CMakeFiles/ICRP110phantoms.dir/flags.make
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o: /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o -c /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.cc
+
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.cc > CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.i
+
+CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.cc -o CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.s
+
 # Object files for target ICRP110phantoms
 ICRP110phantoms_OBJECTS = \
 "CMakeFiles/ICRP110phantoms.dir/ICRP110phantoms.cc.o" \
@@ -243,7 +269,9 @@ ICRP110phantoms_OBJECTS = \
 "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomPseudoScene.cc.o" \
 "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomVisAction.cc.o" \
 "CMakeFiles/ICRP110phantoms.dir/src/ICRP110ScoreWriterMessenger.cc.o" \
-"CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o"
+"CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o" \
+"CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o" \
+"CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o"
 
 # External object files for target ICRP110phantoms
 ICRP110phantoms_EXTERNAL_OBJECTS =
@@ -260,6 +288,8 @@ ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomPseudoScene.cc
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomVisAction.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110ScoreWriterMessenger.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o
+ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/RunFluxCount.cc.o
+ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/RunFluxCountAction.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/build.make
 ICRP110phantoms: /opt/geant4/lib64/libG4Tree.so
 ICRP110phantoms: /opt/geant4/lib64/libG4FR.so
@@ -309,7 +339,7 @@ ICRP110phantoms: /opt/geant4/lib64/libG4global.so
 ICRP110phantoms: /opt/geant4/lib64/libG4clhep.so
 ICRP110phantoms: /opt/geant4/lib64/libG4ptl.so.0.0.2
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ICRP110phantoms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ICRP110phantoms"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ICRP110phantoms.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
