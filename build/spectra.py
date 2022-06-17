@@ -4,7 +4,7 @@ import numpy as np
 
 # ***Import data***
 print("Importing data . . . ")
-data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=5000000)
+data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=50000)
 
 # ***Get total particle counts (at each energy)***
 # Initialize with beam configuration
@@ -26,7 +26,7 @@ for i, row in data.iterrows():
     # Update key value
     particleTracker[(row['particle'], row['E_k'])] += row['counter']
     # Log for progress update
-    if i%10000 == 0:
+    if i%1000000 == 0:
         print(". . . " + str(i) + " rows completed")
 
 # ***Separate into a list of energies for each particle***
@@ -86,7 +86,7 @@ plt.xscale('log')
 plt.yscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
-plt.legend(bbox_to_anchor=(-0.6,0), loc='lower left')
+plt.legend(loc='lower left')
 plt.title("Beam Spectra")
 plt.ylabel("n")
 plt.xlabel("Kinetic Energy (MeV)")
@@ -103,7 +103,7 @@ plt.xscale('log')
 plt.yscale('log')
 plt.xlim(xlims)
 plt.ylim(ylims)
-plt.legend(bbox_to_anchor=(1.4,0), loc='lower right')
+plt.legend(bbox_to_anchor=(1.2,0), loc='lower right')
 plt.yticks([])
 plt.title("Final Spectra")
 
