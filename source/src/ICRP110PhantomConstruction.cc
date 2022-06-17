@@ -349,7 +349,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     G4VPhysicalVolume* physAirBubble = new G4PVPlacement(0, G4ThreeVector(), logicAirBubble, "physAirBubble", logicWorld, false, 0);
 
     // Create a detector to get the flux inside the aluminum sphere
-    G4Sphere* fluxDetectorInsideSphere = new G4Sphere("fluxDetectorInside", 1.54, 1.54, 0, 2*pi, 0, pi);
+    G4Sphere* fluxDetectorInsideSphere = new G4Sphere("fluxDetectorInside", 1.54, 1.541, 0, 2*pi, 0, pi);
     G4LogicalVolume* fluxDetectorInsideLogical = new G4LogicalVolume(fluxDetectorInsideSphere, matAir, "fluxDetectorInsideLogical", 0, 0, 0);
     G4MultiFunctionalDetector* fluxDetectorInsideD = new G4MultiFunctionalDetector("fluxDetectorInside");
     G4SDManager::GetSDMpointer() -> AddNewDetector(fluxDetectorInsideD);
