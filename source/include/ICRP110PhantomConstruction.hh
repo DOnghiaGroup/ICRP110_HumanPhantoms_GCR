@@ -38,7 +38,6 @@
 #include "G4VUserDetectorConstruction.hh"
 #include "globals.hh"
 #include <map>
-#include "ICRP110PhantomDetector.hh"
 
 class G4VPhysicalVolume;
 class ICRP110PhantomMaterial_Female;
@@ -94,9 +93,6 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
   G4String fSection;
   G4LogicalVolume* logicVoxel;
   G4LogicalVolume* logicShield;
-
-  // Define the sensitive detector
-  virtual void ConstructSDandField();
 };
 #endif
 

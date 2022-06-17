@@ -61,16 +61,6 @@ globals.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/globals.hh
 map
 -
-ICRP110PhantomDetector.hh
-/home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomDetector.hh
-
-/home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomDetector.hh
-G4VSensitiveDetector.hh
-/home/reu/bderieg/geant4/GCRSimulator/source/include/G4VSensitiveDetector.hh
-fstream
--
-vector
--
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMaterial_Female.hh
 globals.hh
@@ -183,10 +173,6 @@ G4Sphere.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4Sphere.hh
 G4NistManager.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4NistManager.hh
-
-/home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomDetector.cc
-ICRP110PhantomDetector.hh
-/home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomDetector.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomMaterial_Female.cc
 ICRP110PhantomMaterial_Female.hh

@@ -1,62 +1,272 @@
-proton -> e-
-proton -> e-
-proton -> e-
-proton -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> O16
-alpha -> proton, deuteron, neutron, C12
+alpha -> Al27
+alpha -> Al27
+alpha -> Al27
+proton -> Al27
+alpha -> proton, neutron, proton, gamma, gamma, Al26, neutron, neutron
+neutron -> neutron, proton, Mg25, neutron, gamma, gamma, gamma
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-
+e- -> gamma
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27, neutron, gamma, gamma, gamma
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-, e-, e-, e-, e-
+gamma -> e-
+e- -> gamma
+e- -> gamma
+e- -> gamma
+e- -> gamma
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-, e-, e-
+neutron -> neutron, Al27, gamma, gamma
+Al26 -> Mg26[1808.730], nu_e, e+
+e+ -> gamma, gamma
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, gamma, e-
+gamma -> e-, e-
+Mg26[1808.730] -> Mg26, gamma
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-
 e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-alpha -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
-e- -> e-
+neutron -> Al27
+alpha -> Mg25, deuteron, proton, gamma, gamma, triton, gamma
+gamma -> e-, e-
+triton -> neutron, Si28, neutron, gamma, gamma
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> proton, neutron, Mg26, gamma, gamma, gamma
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-
+neutron -> neutron, gamma, gamma, Al27, gamma, gamma
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-
+neutron -> Al27
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+e- -> gamma
+gamma -> e-, e-, e-, e-
+alpha -> Al27
+alpha -> Al27
+alpha -> neutron, deuteron, proton, neutron, gamma, Al26
+Al26 -> Mg26[1808.730], nu_e, e+
+e+ -> gamma, gamma
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-
+Mg26[1808.730] -> Mg26, gamma
+gamma -> e-
+neutron -> neutron, Al27, gamma, gamma
+gamma -> e-, e-
+neutron -> Al27
+alpha -> neutron, proton, neutron, proton, gamma, gamma, gamma, gamma, Na24[472.207], deuteron, proton
+proton -> neutron, proton, gamma, gamma, gamma, Al26
+Al26 -> Mg26[1808.730], nu_e, e+
+e+ -> gamma, gamma
+gamma -> e-, e-
+Mg26[1808.730] -> Mg26, gamma
+gamma -> e-
+e- -> gamma
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+deuteron -> proton, gamma, Al28
+Al28 -> Si28[1779.030], anti_nu_e, e-
+Si28[1779.030] -> Si28, gamma
+gamma -> e-
+gamma -> e-, e-, e-
+Na24[472.207] -> Na24, gamma
+gamma -> e-
+gamma -> e-, e-
+Na24 -> Mg24[4122.889], anti_nu_e, e-
+Mg24[4122.889] -> Mg24[1368.672], gamma
+Mg24[1368.672] -> Mg24, gamma
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-
+gamma -> e-
+gamma -> e-, e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+neutron -> neutron, neutron, gamma, gamma, gamma, Al26
+Al26 -> Mg26[1808.730], nu_e, e+
+e+ -> gamma, gamma
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-
+Mg26[1808.730] -> Mg26, gamma
+gamma -> e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, gamma, e-
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-, e-
+gamma -> e-
+gamma -> e-, e-
+neutron -> neutron, Al27, gamma, gamma, gamma
+gamma -> e-, e-, e-
+gamma -> e-, e-, e-, e-
+neutron -> Al27
+alpha -> proton, proton, Mg25, neutron, neutron, gamma, gamma, gamma, deuteron, gamma
+gamma -> e-
+gamma -> e-, e-
+gamma -> e-
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+alpha -> neutron, Al27, gamma, gamma, deuteron, proton
+proton -> Al27
+deuteron -> Al27
+deuteron -> Al27
+deuteron -> Al27
+deuteron -> Al27
+neutron -> Al27
+neutron -> proton, Mg26, neutron, gamma, gamma, gamma
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+e- -> gamma
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+alpha -> Al27
+proton -> proton, neutron, Mg25, proton, gamma, gamma, gamma
+gamma -> e-, e+, Al27
+e+ -> gamma, gamma
+gamma -> e-
+gamma -> e-, e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-
+gamma -> e-, e-
+e- -> gamma
+gamma -> e-, e-, e-, e-
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+neutron -> Al27
+alpha -> Al27
+proton -> Al27
+alpha -> neutron, neutron, proton, proton, gamma, gamma, gamma, gamma, gamma, Al26, neutron
+neutron -> Al27
+neutron -> Al27
+Al26 -> Mg26[1808.730], nu_e, e+
+e+ -> gamma, gamma
+gamma -> e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-
+gamma -> e-, e-, e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-, e-
+Mg26[1808.730] -> Mg26, gamma
+gamma -> e-, e-
+gamma -> e-, e-
+gamma -> e-, e-, e-, e-, e-
+neutron -> neutron, Al27, gamma
+neutron -> Al27

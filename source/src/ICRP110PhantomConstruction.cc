@@ -347,16 +347,6 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
   return fMotherVolume;
 }
 
-// Sensitive detector construction
-void ICRP110PhantomConstruction::ConstructSDandField() {
-	ICRP110PhantomDetector* shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
-
-	// The line below would set the sensitive detector to the human phantom instead of to the shield
-	// logicVoxel->SetSensitiveDetector(shieldDetector);	
-	
-	logicShield -> SetSensitiveDetector(shieldDetector);
-}
-
 void ICRP110PhantomConstruction::ReadPhantomData(const G4String& sex, const G4String& section)
 {
 
