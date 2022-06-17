@@ -2,9 +2,9 @@
 	-------------------------------- 
 	OrganID	Edep (J)	Dose (Gy)
 	-------------------------------- 
-	41 |		8.7697e-38	2.20001e-37
-	42 |		3.68352e-38	5.40756e-38
-	117 |		2.03257e-31	1.64314e-32
+	41 |		7.16381e-37	1.79715e-36
+	42 |		1.45121e-37	2.13044e-37
+	117 |		1.08592e-30	8.77865e-32
 ----------------------------------------------------------------------------
 -------------------------------ORGAN INFO-----------------------------------
 -----------------(of organs where edep/dose was recorded)-------------------
@@ -14,8 +14,8 @@ ID		Organ Name	    	    	    	Material ID		Density (g/cm^3)
 42    Pelvis, spongiosa                                14    1.123
 117   Residual tissue, trunk                           49    0.950
 
-Total Edep over all organs = 2.03257e-31 J
-Total dose absorbed over all organs = 1.64316e-32 Gy
+Total Edep over all organs = 1.08592e-30 J
+Total dose absorbed over all organs = 8.77885e-32 Gy
 
 ----------------------------------------------------------------------------
 ----------------ORGAN ENERGY DEPOSITIONS AND ABSORBED DOSE------------------
@@ -65,8 +65,8 @@ OrganID	Edep (J) 	Dose (Gy)
 38  | 		0	0
 39  | 		0	0
 40  | 		0	0
-41  | 		8.7697e-38	2.20001e-37
-42  | 		3.68352e-38	5.40756e-38
+41  | 		7.16381e-37	1.79715e-36
+42  | 		1.45121e-37	2.13044e-37
 43  | 		0	0
 44  | 		0	0
 45  | 		0	0
@@ -141,7 +141,7 @@ OrganID	Edep (J) 	Dose (Gy)
 114  | 		0	0
 115  | 		0	0
 116  | 		0	0
-117  | 		2.03257e-31	1.64314e-32
+117  | 		1.08592e-30	8.77865e-32
 118  | 		0	0
 119  | 		0	0
 120  | 		0	0
@@ -166,5 +166,5 @@ OrganID	Edep (J) 	Dose (Gy)
 139  | 		0	0
 140  | 		0	0
 141  | 		0	0
-Total energy depositied over all organs = 2.03257e-31 J
-Total absorbed dose over all organs = 1.64316e-32 Gy 
+Total energy depositied over all organs = 1.08592e-30 J
+Total absorbed dose over all organs = 8.77885e-32 Gy 

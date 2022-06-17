@@ -28,6 +28,7 @@
 //
 #include "ICRP110PhantomActionInitialization.hh"
 #include "ICRP110PhantomPrimaryGeneratorAction.hh"
+#include "RunFluxCountAction.hh"
 
 ICRP110PhantomActionInitialization::ICRP110PhantomActionInitialization():
 G4VUserActionInitialization()
@@ -36,10 +37,13 @@ G4VUserActionInitialization()
 ICRP110PhantomActionInitialization::~ICRP110PhantomActionInitialization()
 {}
 
-void ICRP110PhantomActionInitialization::BuildForMaster() const
-{}
+void ICRP110PhantomActionInitialization::BuildForMaster() const {
+	RunFluxCountAction* fluxCounter = new RunFluxCountAction();
+	SetUserAction(fluxCounter);
+}
 
-void ICRP110PhantomActionInitialization::Build() const
-{   
-SetUserAction(new ICRP110PhantomPrimaryGeneratorAction);
+void ICRP110PhantomActionInitialization::Build() const {
+	RunFluxCountAction* fluxCounter = new RunFluxCountAction();
+	SetUserAction(fluxCounter);
+	SetUserAction(new ICRP110PhantomPrimaryGeneratorAction);
 }  

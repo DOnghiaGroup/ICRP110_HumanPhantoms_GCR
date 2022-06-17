@@ -39,6 +39,8 @@ Randomize.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/Randomize.hh
 time.h
 /home/reu/bderieg/geant4/GCRSimulator/source/time.h
+RunFluxCountAction.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/RunFluxCountAction.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomActionInitialization.hh
 G4VUserActionInitialization.hh
@@ -143,12 +145,16 @@ G4UserRunAction.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/G4UserRunAction.hh
 RunFluxCount.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/RunFluxCount.hh
+G4THitsMap.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/include/G4THitsMap.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomActionInitialization.cc
 ICRP110PhantomActionInitialization.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomActionInitialization.hh
 ICRP110PhantomPrimaryGeneratorAction.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomPrimaryGeneratorAction.hh
+RunFluxCountAction.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/RunFluxCountAction.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomConstruction.cc
 ICRP110PhantomConstruction.hh
@@ -199,8 +205,8 @@ G4VSDFilter.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4VSDFilter.hh
 G4VPrimitiveScorer.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4VPrimitiveScorer.hh
-G4PSFlatSurfaceFlux.hh
-/home/reu/bderieg/geant4/GCRSimulator/source/src/G4PSFlatSurfaceFlux.hh
+G4PSSphereSurfaceFlux.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4PSSphereSurfaceFlux.hh
 G4SDParticleFilter.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4SDParticleFilter.hh
 
@@ -1814,13 +1820,13 @@ G4THitsMap.hh
 G4PSDoseDeposit.hh
 /opt/geant4/include/Geant4/G4PSDoseDeposit.hh
 
-/opt/geant4/include/Geant4/G4PSFlatSurfaceFlux.hh
-G4VPrimitivePlotter.hh
-/opt/geant4/include/Geant4/G4VPrimitivePlotter.hh
+/opt/geant4/include/Geant4/G4PSSphereSurfaceFlux.hh
+G4VPrimitiveScorer.hh
+/opt/geant4/include/Geant4/G4VPrimitiveScorer.hh
 G4THitsMap.hh
 /opt/geant4/include/Geant4/G4THitsMap.hh
-G4Box.hh
-/opt/geant4/include/Geant4/G4Box.hh
+G4Sphere.hh
+/opt/geant4/include/Geant4/G4Sphere.hh
 G4PSDirectionFlag.hh
 /opt/geant4/include/Geant4/G4PSDirectionFlag.hh
 

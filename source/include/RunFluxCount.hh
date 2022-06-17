@@ -9,6 +9,7 @@ public:
 	RunFluxCount();
 	~RunFluxCount();
 	virtual void RecordEvent(const G4Event*);
+	G4THitsMap<G4double> GetProtonFlux();
 private:
 	G4int nEvent;
 	G4int protonSurfaceFluxID;

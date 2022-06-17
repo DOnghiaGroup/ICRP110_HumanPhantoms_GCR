@@ -44,6 +44,7 @@
 #include "G4DynamicParticle.hh"
 #include "Randomize.hh"
 #include "time.h"
+#include "RunFluxCountAction.hh"
 
 int main(int argc,char** argv)
 {

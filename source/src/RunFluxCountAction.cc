@@ -10,4 +10,6 @@ G4Run* RunFluxCountAction::GenerateRun() {
 
 void RunFluxCountAction::EndOfRunAction(const G4Run* aRun) {
 	RunFluxCount* theRun = (RunFluxCount*)aRun;
+	G4THitsMap protonFlux = theRun -> GetProtonFlux();
+	protonFlux.PrintAllHits();
 }

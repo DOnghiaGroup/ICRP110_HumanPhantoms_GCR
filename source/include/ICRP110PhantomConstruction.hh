@@ -93,6 +93,9 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
   G4String fSection;
   G4LogicalVolume* logicVoxel;
   G4LogicalVolume* logicShield;
+  G4LogicalVolume* fluxDetectorInsideLogical;
+
+  virtual void ConstructSDandField();
 };
 #endif
 
