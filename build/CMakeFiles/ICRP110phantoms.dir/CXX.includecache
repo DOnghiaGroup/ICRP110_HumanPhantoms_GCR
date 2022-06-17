@@ -173,6 +173,18 @@ G4Sphere.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4Sphere.hh
 G4NistManager.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4NistManager.hh
+G4MultiFunctionalDetector.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4MultiFunctionalDetector.hh
+G4SDManager.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4SDManager.hh
+G4VSDFilter.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4VSDFilter.hh
+G4VPrimitiveScorer.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4VPrimitiveScorer.hh
+G4PSFlatSurfaceFlux.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4PSFlatSurfaceFlux.hh
+G4SDParticleFilter.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4SDParticleFilter.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomMaterial_Female.cc
 ICRP110PhantomMaterial_Female.hh
@@ -1764,6 +1776,8 @@ pwdefs.hh
 G4AutoLock.hh
 /opt/geant4/include/Geant4/G4AutoLock.hh
 
+/opt/geant4/include/Geant4/G4PSDirectionFlag.hh
+
 /opt/geant4/include/Geant4/G4PSDoseDeposit.hh
 G4VPrimitivePlotter.hh
 /opt/geant4/include/Geant4/G4VPrimitivePlotter.hh
@@ -1773,6 +1787,16 @@ G4THitsMap.hh
 /opt/geant4/include/Geant4/G4PSDoseDeposit3D.hh
 G4PSDoseDeposit.hh
 /opt/geant4/include/Geant4/G4PSDoseDeposit.hh
+
+/opt/geant4/include/Geant4/G4PSFlatSurfaceFlux.hh
+G4VPrimitivePlotter.hh
+/opt/geant4/include/Geant4/G4VPrimitivePlotter.hh
+G4THitsMap.hh
+/opt/geant4/include/Geant4/G4THitsMap.hh
+G4Box.hh
+/opt/geant4/include/Geant4/G4Box.hh
+G4PSDirectionFlag.hh
+/opt/geant4/include/Geant4/G4PSDirectionFlag.hh
 
 /opt/geant4/include/Geant4/G4PVParameterised.hh
 G4PVReplica.hh

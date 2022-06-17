@@ -50,8 +50,12 @@
 #include <cstdlib>
 #include "G4Sphere.hh"
 #include "G4NistManager.hh"
-
-
+#include "G4MultiFunctionalDetector.hh"
+#include "G4SDManager.hh"
+#include "G4VSDFilter.hh"
+#include "G4VPrimitiveScorer.hh"
+#include "G4PSFlatSurfaceFlux.hh"
+#include "G4SDParticleFilter.hh"
 
 ICRP110PhantomConstruction::ICRP110PhantomConstruction():
    fMotherVolume(nullptr), fPhantomContainer(nullptr),
@@ -343,6 +347,20 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     G4Sphere* airBubble = new G4Sphere("airBubble", 0, shieldInnerRadii, 0, 2*pi, 0, pi);
     G4LogicalVolume* logicAirBubble = new G4LogicalVolume(airBubble, matAir, "logicAirBubble", 0, 0, 0);
     G4VPhysicalVolume* physAirBubble = new G4PVPlacement(0, G4ThreeVector(), logicAirBubble, "physAirBubble", logicWorld, false, 0);
+
+    // Create a detector to get the flux inside the aluminum sphere
+    G4Sphere* fluxDetectorInsideSphere = new G4Sphere("fluxDetectorInside", 1.54, 1.54, 0, 2*pi, 0, pi);
+    G4LogicalVolume* fluxDetectorInsideLogical = new G4LogicalVolume(fluxDetectorInsideSphere, matAir, "fluxDetectorInsideLogical", 0, 0, 0);
+    G4MultiFunctionalDetector* fluxDetectorInsideD = new G4MultiFunctionalDetector("fluxDetectorInside");
+    G4SDManager::GetSDMpointer() -> AddNewDetector(fluxDetectorInsideD);
+    fluxDetectorInsideLogical -> SetSensitiveDetector(fluxDetectorInsideD);
+    G4VPrimitiveScorer* totalSurfaceFlux = new G4PSFlatSurfaceFlux("totalSurfaceFlux", 1);  // TODO: Check if this means in or out
+    fluxDetectorInsideD -> RegisterPrimitive(totalSurfaceFlux);
+    G4VPrimitiveScorer* protonSurfaceFlux = new G4PSFlatSurfaceFlux("protonSurfaceFlux", 1);
+    G4SDParticleFilter* protonFilter = new G4SDParticleFilter("protonFilter");
+    protonFilter -> add("proton");
+    protonSurfaceFlux -> SetFilter(protonFilter);
+    fluxDetectorInsideD -> RegisterPrimitive(protonSurfaceFlux);
 
   return fMotherVolume;
 }

@@ -569,8 +569,10 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomConstruction.cc.o
  /opt/geant4/include/Geant4/G4NormalNavigation.icc
  /opt/geant4/include/Geant4/G4OrderedTable.hh
  /opt/geant4/include/Geant4/G4PDefManager.hh
+ /opt/geant4/include/Geant4/G4PSDirectionFlag.hh
  /opt/geant4/include/Geant4/G4PSDoseDeposit.hh
  /opt/geant4/include/Geant4/G4PSDoseDeposit3D.hh
+ /opt/geant4/include/Geant4/G4PSFlatSurfaceFlux.hh
  /opt/geant4/include/Geant4/G4PVParameterised.hh
  /opt/geant4/include/Geant4/G4PVPlacement.hh
  /opt/geant4/include/Geant4/G4PVReplica.hh
@@ -615,6 +617,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomConstruction.cc.o
  /opt/geant4/include/Geant4/G4RunManager.hh
  /opt/geant4/include/Geant4/G4RunManagerKernel.hh
  /opt/geant4/include/Geant4/G4SDManager.hh
+ /opt/geant4/include/Geant4/G4SDParticleFilter.hh
  /opt/geant4/include/Geant4/G4SDStructure.hh
  /opt/geant4/include/Geant4/G4SandiaTable.hh
  /opt/geant4/include/Geant4/G4SensitiveVolumeList.hh
