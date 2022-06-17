@@ -4,7 +4,7 @@ import numpy as np
 
 # ***Import data***
 print("Importing data . . . ")
-data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=50000)
+data = pd.read_csv("secondary_particle_info.csv", names=["particle","counter","E_k"], nrows=20000000)
 
 # ***Get total particle counts (at each energy)***
 # Initialize with beam configuration
