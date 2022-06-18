@@ -225,7 +225,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
   G4Box* world = new G4Box("world", worldSize, worldSize, worldSize);
 
   G4LogicalVolume* logicWorld = new G4LogicalVolume(world,
-						    matSpace,
+						    matAir,
 						    "logicalWorld", 0, 0,0);
 
   fMotherVolume = new G4PVPlacement(0,G4ThreeVector(),
@@ -339,11 +339,6 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     logicShield = new G4LogicalVolume(shield, shieldMat, "logicShield", 0, 0, 0);
     G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0);
 
-//---- Do the same thing as the previous block to build the air inside the spacecraft
-    G4Sphere* airBubble = new G4Sphere("airBubble", 0, shieldInnerRadii, 0, 2*pi, 0, pi);
-    G4LogicalVolume* logicAirBubble = new G4LogicalVolume(airBubble, matAir, "logicAirBubble", 0, 0, 0);
-    G4VPhysicalVolume* physAirBubble = new G4PVPlacement(0, G4ThreeVector(), logicAirBubble, "physAirBubble", logicWorld, false, 0);
-
   return fMotherVolume;
 }
 
@@ -351,10 +346,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 void ICRP110PhantomConstruction::ConstructSDandField() {
 	ICRP110PhantomDetector* shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
 
-	// The line below would set the sensitive detector to the human phantom instead of to the shield
-	// logicVoxel->SetSensitiveDetector(shieldDetector);	
-	
-	logicShield -> SetSensitiveDetector(shieldDetector);
+	logicVoxel->SetSensitiveDetector(shieldDetector);	
 }
 
 void ICRP110PhantomConstruction::ReadPhantomData(const G4String& sex, const G4String& section)
