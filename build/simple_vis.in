@@ -1,3 +1,0 @@
-/vis/open OGL
-/vis/viewer/set/viewpointVector 1 1 1
-/vis/drawVolume
