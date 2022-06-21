@@ -45,5 +45,12 @@ ICRP110PhantomPrimaryGeneratorAction::~ICRP110PhantomPrimaryGeneratorAction()
 void ICRP110PhantomPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
   fParticleGun -> GeneratePrimaryVertex(anEvent);
+
+  G4PrimaryVertex* primVert = new G4PrimaryVertex();
+  G4PrimaryParticle* primPart = new G4PrimaryParticle();
+  primPart -> SetKineticEnergy(fParticleGun->GetParticleEnergy());
+  primPart -> SetParticleDefinition(fParticleGun -> GetParticleDefinition());
+  primVert -> SetPrimary(primPart);
+  anEvent -> AddPrimaryVertex(primVert);
 }
 

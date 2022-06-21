@@ -41,53 +41,6 @@
 ### Source uses monoenergetic proton beam
 ### Norm should be pointing inward
 /gps/particle ion
-/gps/ion 2 4
-/gps/energy 400 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-/gps/source/add 1
-/gps/particle ion
-/gps/ion 2 4
-/gps/energy 1200 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-/gps/particle ion
-/gps/ion 2 4
-/gps/energy 4000 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-
-/gps/source/add 1
-/gps/particle proton
-/gps/energy 100 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-/gps/source/add 1
-/gps/particle proton
-/gps/energy 400 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-/gps/source/add 1
 /gps/particle proton
 /gps/energy 1000 MeV
 /gps/pos/type Surface
@@ -96,37 +49,7 @@
 /gps/pos/radius 1.55 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
-
-/gps/source/add 1
-/gps/particle ion 
-/gps/ion 26 56 
-/gps/energy 5600 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-/gps/source/add 1
-/gps/particle ion 
-/gps/ion 26 56 
-/gps/energy 22400 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
-/gps/source/add 1
-/gps/particle ion 
-/gps/ion 26 56 
-/gps/energy 56000 MeV
-/gps/pos/type Surface
-/gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
-/gps/ang/type iso
-/gps/ang/surfnorm true
+#/gps/source/add 1
 #
 #---------------------------------------#
 #------Create Phantom Scoring Mesh------#
@@ -166,7 +89,7 @@
 #----------Run Beam-On Command----------#
 #---------------------------------------#
 # Chooose number of events
-/run/beamOn 10
+/run/beamOn 100
 #
 #---------------------------------------#
 #-------Visualising Scoring Mesh--------#
