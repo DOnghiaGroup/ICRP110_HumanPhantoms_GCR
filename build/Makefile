@@ -320,6 +320,33 @@ src/ICRP110PhantomDetector.cc.s:
 	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.s
 .PHONY : src/ICRP110PhantomDetector.cc.s
 
+src/ICRP110PhantomDoseDeposit.o: src/ICRP110PhantomDoseDeposit.cc.o
+
+.PHONY : src/ICRP110PhantomDoseDeposit.o
+
+# target to build an object file
+src/ICRP110PhantomDoseDeposit.cc.o:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDoseDeposit.cc.o
+.PHONY : src/ICRP110PhantomDoseDeposit.cc.o
+
+src/ICRP110PhantomDoseDeposit.i: src/ICRP110PhantomDoseDeposit.cc.i
+
+.PHONY : src/ICRP110PhantomDoseDeposit.i
+
+# target to preprocess a source file
+src/ICRP110PhantomDoseDeposit.cc.i:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDoseDeposit.cc.i
+.PHONY : src/ICRP110PhantomDoseDeposit.cc.i
+
+src/ICRP110PhantomDoseDeposit.s: src/ICRP110PhantomDoseDeposit.cc.s
+
+.PHONY : src/ICRP110PhantomDoseDeposit.s
+
+# target to generate assembly for a file
+src/ICRP110PhantomDoseDeposit.cc.s:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDoseDeposit.cc.s
+.PHONY : src/ICRP110PhantomDoseDeposit.cc.s
+
 src/ICRP110PhantomMaterial_Female.o: src/ICRP110PhantomMaterial_Female.cc.o
 
 .PHONY : src/ICRP110PhantomMaterial_Female.o
@@ -644,6 +671,9 @@ help:
 	@echo "... src/ICRP110PhantomDetector.o"
 	@echo "... src/ICRP110PhantomDetector.i"
 	@echo "... src/ICRP110PhantomDetector.s"
+	@echo "... src/ICRP110PhantomDoseDeposit.o"
+	@echo "... src/ICRP110PhantomDoseDeposit.i"
+	@echo "... src/ICRP110PhantomDoseDeposit.s"
 	@echo "... src/ICRP110PhantomMaterial_Female.o"
 	@echo "... src/ICRP110PhantomMaterial_Female.i"
 	@echo "... src/ICRP110PhantomMaterial_Female.s"

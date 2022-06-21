@@ -36,10 +36,13 @@ G4VUserActionInitialization()
 ICRP110PhantomActionInitialization::~ICRP110PhantomActionInitialization()
 {}
 
-void ICRP110PhantomActionInitialization::BuildForMaster() const
-{}
+void ICRP110PhantomActionInitialization::BuildForMaster() const {
+	ICRP110PhantomRunAction* runActions = new ICRP110PhantomRunAction();
+	SetUserAction(runActions);
+}
 
-void ICRP110PhantomActionInitialization::Build() const
-{   
-SetUserAction(new ICRP110PhantomPrimaryGeneratorAction);
+void ICRP110PhantomActionInitialization::Build() const {   
+	SetUserAction(new ICRP110PhantomPrimaryGeneratorAction);
+	ICRP110PhantomRunAction* runActions = new ICRP110PhantomRunAction();
+	SetUserAction(runActions);
 }  

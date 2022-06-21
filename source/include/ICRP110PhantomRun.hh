@@ -12,6 +12,7 @@ public:
 	ICRP110PhantomRun();
 	~ICRP110PhantomRun();
 	virtual void RecordEvent(const G4Event*);
+	G4THitsMap<G4double> GetDoseDeposit();
 private:
 	G4int nEvent;
 	G4int totalDoseID;

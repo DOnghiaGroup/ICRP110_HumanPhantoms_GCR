@@ -14,3 +14,7 @@ void ICRP110PhantomRun::RecordEvent(const G4Event* evt) {
 	eventTotalDose = (G4THitsMap<G4double>*)(HCE -> GetHC(totalDoseID));
 	totalDose += *eventTotalDose;
 }
+
+G4THitsMap<G4double> ICRP110PhantomRun::GetDoseDeposit() {
+	return totalDose;
+}

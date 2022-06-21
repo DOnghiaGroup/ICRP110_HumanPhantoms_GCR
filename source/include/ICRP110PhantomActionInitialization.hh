@@ -30,6 +30,7 @@
 #define ICRP110PhantomActionInitialization_h 1
 
 #include "G4VUserActionInitialization.hh"
+#include "ICRP110PhantomRunAction.hh"
 
 class G4GeneralParticleSource;
 
