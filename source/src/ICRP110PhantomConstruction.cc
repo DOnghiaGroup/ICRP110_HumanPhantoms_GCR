@@ -327,7 +327,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
 
 //---- Define shield radii and other constants as G4double (to define units)
-    G4double shieldInnerRadii = 1.5000 * m; 
+    G4double shieldInnerRadii = 1.5400 * m; 
     G4double shieldOuterRadii = 1.5500 * m;
     G4double pi = 3.14159265358979323846;
     
@@ -344,9 +344,16 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 
 // Sensitive detector construction
 void ICRP110PhantomConstruction::ConstructSDandField() {
-	ICRP110PhantomDetector* shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
-
-	logicVoxel->SetSensitiveDetector(shieldDetector);	
+	// Uncomment: this is the sensitive detector implementation
+	// ICRP110PhantomDetector* shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
+	// logicVoxel->SetSensitiveDetector(shieldDetector);	
+	
+	// This is the multifunctional detector implementation
+	G4MultiFunctionalDetector* phantomDetector = new G4MultiFunctionalDetector("phantomDetector");
+	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomDetector);
+	logicVoxel -> SetSensitiveDetector(phantomDetector);
+	G4VPrimitiveScorer* doseCounter = new G4PSDoseDeposit("doseCounter");
+	phantomDetector -> RegisterPrimitive(doseCounter);
 }
 
 void ICRP110PhantomConstruction::ReadPhantomData(const G4String& sex, const G4String& section)
