@@ -39,7 +39,7 @@
 #include "globals.hh"
 #include <map>
 #include "ICRP110PhantomDetector.hh"
-#include "G4PSDoseDeposit.hh"
+#include "G4PSDoseDepositMod.hh"
 
 class G4VPhysicalVolume;
 class ICRP110PhantomMaterial_Female;

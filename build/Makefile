@@ -239,6 +239,33 @@ ICRP110phantoms.cc.s:
 	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/ICRP110phantoms.cc.s
 .PHONY : ICRP110phantoms.cc.s
 
+src/G4PSDoseDepositMod.o: src/G4PSDoseDepositMod.cc.o
+
+.PHONY : src/G4PSDoseDepositMod.o
+
+# target to build an object file
+src/G4PSDoseDepositMod.cc.o:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/G4PSDoseDepositMod.cc.o
+.PHONY : src/G4PSDoseDepositMod.cc.o
+
+src/G4PSDoseDepositMod.i: src/G4PSDoseDepositMod.cc.i
+
+.PHONY : src/G4PSDoseDepositMod.i
+
+# target to preprocess a source file
+src/G4PSDoseDepositMod.cc.i:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/G4PSDoseDepositMod.cc.i
+.PHONY : src/G4PSDoseDepositMod.cc.i
+
+src/G4PSDoseDepositMod.s: src/G4PSDoseDepositMod.cc.s
+
+.PHONY : src/G4PSDoseDepositMod.s
+
+# target to generate assembly for a file
+src/G4PSDoseDepositMod.cc.s:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/G4PSDoseDepositMod.cc.s
+.PHONY : src/G4PSDoseDepositMod.cc.s
+
 src/ICRP110PhantomActionInitialization.o: src/ICRP110PhantomActionInitialization.cc.o
 
 .PHONY : src/ICRP110PhantomActionInitialization.o
@@ -319,33 +346,6 @@ src/ICRP110PhantomDetector.s: src/ICRP110PhantomDetector.cc.s
 src/ICRP110PhantomDetector.cc.s:
 	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.s
 .PHONY : src/ICRP110PhantomDetector.cc.s
-
-src/ICRP110PhantomDoseDeposit.o: src/ICRP110PhantomDoseDeposit.cc.o
-
-.PHONY : src/ICRP110PhantomDoseDeposit.o
-
-# target to build an object file
-src/ICRP110PhantomDoseDeposit.cc.o:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDoseDeposit.cc.o
-.PHONY : src/ICRP110PhantomDoseDeposit.cc.o
-
-src/ICRP110PhantomDoseDeposit.i: src/ICRP110PhantomDoseDeposit.cc.i
-
-.PHONY : src/ICRP110PhantomDoseDeposit.i
-
-# target to preprocess a source file
-src/ICRP110PhantomDoseDeposit.cc.i:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDoseDeposit.cc.i
-.PHONY : src/ICRP110PhantomDoseDeposit.cc.i
-
-src/ICRP110PhantomDoseDeposit.s: src/ICRP110PhantomDoseDeposit.cc.s
-
-.PHONY : src/ICRP110PhantomDoseDeposit.s
-
-# target to generate assembly for a file
-src/ICRP110PhantomDoseDeposit.cc.s:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDoseDeposit.cc.s
-.PHONY : src/ICRP110PhantomDoseDeposit.cc.s
 
 src/ICRP110PhantomMaterial_Female.o: src/ICRP110PhantomMaterial_Female.cc.o
 
@@ -662,6 +662,9 @@ help:
 	@echo "... ICRP110phantoms.o"
 	@echo "... ICRP110phantoms.i"
 	@echo "... ICRP110phantoms.s"
+	@echo "... src/G4PSDoseDepositMod.o"
+	@echo "... src/G4PSDoseDepositMod.i"
+	@echo "... src/G4PSDoseDepositMod.s"
 	@echo "... src/ICRP110PhantomActionInitialization.o"
 	@echo "... src/ICRP110PhantomActionInitialization.i"
 	@echo "... src/ICRP110PhantomActionInitialization.s"
@@ -671,9 +674,6 @@ help:
 	@echo "... src/ICRP110PhantomDetector.o"
 	@echo "... src/ICRP110PhantomDetector.i"
 	@echo "... src/ICRP110PhantomDetector.s"
-	@echo "... src/ICRP110PhantomDoseDeposit.o"
-	@echo "... src/ICRP110PhantomDoseDeposit.i"
-	@echo "... src/ICRP110PhantomDoseDeposit.s"
 	@echo "... src/ICRP110PhantomMaterial_Female.o"
 	@echo "... src/ICRP110PhantomMaterial_Female.i"
 	@echo "... src/ICRP110PhantomMaterial_Female.s"

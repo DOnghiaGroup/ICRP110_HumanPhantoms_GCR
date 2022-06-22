@@ -352,7 +352,7 @@ void ICRP110PhantomConstruction::ConstructSDandField() {
 	G4MultiFunctionalDetector* phantomDetector = new G4MultiFunctionalDetector("phantomDetector");
 	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomDetector);
 	logicVoxel -> SetSensitiveDetector(phantomDetector);
-	G4VPrimitiveScorer* doseCounter = new G4PSDoseDeposit("doseCounter");
+	G4VPrimitiveScorer* doseCounter = new G4PSDoseDepositMod("doseCounter");
 	phantomDetector -> RegisterPrimitive(doseCounter);
 }
 
