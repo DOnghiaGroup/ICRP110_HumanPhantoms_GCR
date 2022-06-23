@@ -7,22 +7,21 @@
 #include "G4SDManager.hh"
 #include "G4HCofThisEvent.hh"
 #include "G4PrimaryParticle.hh"
+#include <map>
 
 class ICRP110PhantomRun : public G4Run {
 public:
 	ICRP110PhantomRun();
 	~ICRP110PhantomRun();
 	virtual void RecordEvent(const G4Event*);
-	G4THitsMap<G4double> GetDoseDeposit();
-	G4double GetPrimaryKE();
-	G4String GetPrimaryName();
+	std::map<G4String, G4double> GetDoseDeposits();
+	std::map<G4String, G4double> GetPrimaryKEs();
 private:
 	G4int nEvent;
 	G4int totalDoseID;
-	G4THitsMap<G4double> totalDose;
+	std::map<G4String, G4double> totalDoses;
 	G4THitsMap<G4double>* eventTotalDose;
-	G4double primaryKE;
-	G4String primaryName;
+	std::map<G4String, G4double> primaryKEs;
 };
 
 #endif

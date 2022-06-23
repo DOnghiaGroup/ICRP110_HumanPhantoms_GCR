@@ -1,6 +1,6 @@
 #include "ICRP110PhantomRun.hh"
 
-ICRP110PhantomRun::ICRP110PhantomRun() : nEvent(0), primaryKE(-1), primaryName("err_name_not_found") {
+ICRP110PhantomRun::ICRP110PhantomRun() : nEvent(0) {
 	G4SDManager* SDM = G4SDManager::GetSDMpointer();
 	totalDoseID = SDM -> GetCollectionID("phantomDetector/doseCounter");
 }
@@ -11,20 +11,26 @@ ICRP110PhantomRun::~ICRP110PhantomRun() {
 void ICRP110PhantomRun::RecordEvent(const G4Event* evt) {
 	nEvent++;
 	G4HCofThisEvent* HCE = evt -> GetHCofThisEvent();
+
+	G4String eventPrimaryName = evt -> GetPrimaryVertex() -> GetPrimary() -> GetParticleDefinition() -> GetParticleName();
+	G4double eventPrimaryKE = evt -> GetPrimaryVertex() -> GetPrimary() -> GetKineticEnergy();
 	eventTotalDose = (G4THitsMap<G4double>*)(HCE -> GetHC(totalDoseID));
-	totalDose += *eventTotalDose;
-	primaryKE = evt -> GetPrimaryVertex() -> GetPrimary() -> GetKineticEnergy();
-	primaryName = evt -> GetPrimaryVertex() -> GetPrimary() -> GetParticleDefinition() -> GetParticleName();
+
+	std::map<G4int, G4double*>* eventDoseMap = eventTotalDose->GetMap();
+	std::map<G4int, G4double*>::iterator itr;
+	G4double newDose = 0.0;
+	for (itr = eventDoseMap->begin(); itr != eventDoseMap->end(); itr++) {
+		newDose += *(itr->second);	
+	}
+
+	totalDoses[eventPrimaryName] += newDose;
+	primaryKEs[eventPrimaryName] = eventPrimaryKE;
 }
 
-G4THitsMap<G4double> ICRP110PhantomRun::GetDoseDeposit() {
-	return totalDose;
+std::map<G4String, G4double> ICRP110PhantomRun::GetDoseDeposits() {
+	return totalDoses;
 }
 
-G4double ICRP110PhantomRun::GetPrimaryKE() {
-	return primaryKE;
-}
-
-G4String ICRP110PhantomRun::GetPrimaryName() {
-	return primaryName;
+std::map<G4String, G4double> ICRP110PhantomRun::GetPrimaryKEs() {
+	return primaryKEs;
 }

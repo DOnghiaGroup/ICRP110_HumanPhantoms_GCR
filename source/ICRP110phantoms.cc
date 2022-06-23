@@ -85,24 +85,12 @@ int main(int argc,char** argv)
 
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
-  if (argc==1)   // Define UI session for interactive mode.
-    { 
-      G4cout << " UI session starts ..." << G4endl;
-      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-      UImanager -> ApplyCommand("/control/execute vis.mac");     
-      ui -> SessionStart();
-      delete ui;
-    }
-  else           // Batch mode
-    { 
-      G4String fileName = argv[1];
-      G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-      UImanager -> ApplyCommand("/control/execute "+fileName);     
-      ui -> SessionStart();
-      delete ui;
+  G4String fileName = argv[1];
+  G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+  UImanager -> ApplyCommand("/control/execute "+fileName);     
+  ui -> SessionStart();
+  delete ui;
 	
-    }     
-
 delete visManager;
 
 delete runManager;

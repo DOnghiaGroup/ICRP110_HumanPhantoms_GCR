@@ -344,7 +344,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 
 // Sensitive detector construction
 void ICRP110PhantomConstruction::ConstructSDandField() {
-	// Uncomment: this is the sensitive detector implementation
+	// Uncomment: this is the sensitive detector implementation. This is useful for extreme control over what is recorded.
 	// ICRP110PhantomDetector* shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
 	// logicVoxel->SetSensitiveDetector(shieldDetector);	
 	

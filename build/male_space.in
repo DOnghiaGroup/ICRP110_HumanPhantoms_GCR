@@ -52,6 +52,19 @@
 /gps/pos/radius 1.55 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/source/add 1
+/gps/particle ion
+/gps/particle alpha
+/gps/ene/type Lin
+/gps/ene/min 400 MeV
+/gps/ene/max 40 GeV
+/gps/ene/intercept 1
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.55 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
 #
 #---------------------------------------#
 #------Create Phantom Scoring Mesh------#
