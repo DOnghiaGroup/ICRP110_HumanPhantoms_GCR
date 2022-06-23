@@ -1,6 +1,13 @@
 #include "ICRP110PhantomRunAction.hh"
 
-ICRP110PhantomRunAction::ICRP110PhantomRunAction() : fileName("doseDepositByPrimary.csv") {
+ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
+	// Define messengers for macro files
+	outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
+
+	outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
+	primariesFileName = "unnamed_output_file.csv";
+	outputMessenger -> DeclareProperty("outputPrimaries", primariesFileName, "Output a file with primaries and their energies");
+	outputPrimaries = false;
 }
 
 ICRP110PhantomRunAction::~ICRP110PhantomRunAction() {
@@ -13,7 +20,7 @@ G4Run* ICRP110PhantomRunAction::GenerateRun() {
 void ICRP110PhantomRunAction::BeginOfRunAction(const G4Run* aRun) {
 }
 
-void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
+void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) { if (outputPrimaries) {
 	// Get information about the run from the run class
 	ICRP110PhantomRun* theRun = (ICRP110PhantomRun*)aRun;
 	std::map<G4String, G4double> totalDoses = theRun -> GetDoseDeposits();
@@ -30,4 +37,4 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 		ofile << eventPrimaryName << "," << eventPrimaryKE << "," << eventDose << "\n";
 		ofile.close();
 	}
-}
+}}

@@ -35,9 +35,11 @@
 #/control/execute scoring.mac
 
 #---------------------------------------#
-#----------Run Beam-On Command----------#
+#------------------Run------------------#
 #---------------------------------------#
 # Chooose number of events (with the source in source_definition.mac
+/output/outputPrimaries true
+/output/fileName doseDepositByPrimaries.csv
 /run/beamOn 100
 
 #---------------------------------------#

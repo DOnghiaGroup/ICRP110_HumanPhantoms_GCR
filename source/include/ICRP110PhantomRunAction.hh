@@ -13,6 +13,7 @@
 #include "G4TrajectoryContainer.hh"
 #include "G4PrimaryParticle.hh"
 #include <fstream>
+#include "G4GenericMessenger.hh"
 
 class ICRP110PhantomRunAction : public G4UserRunAction {
 public:
@@ -23,7 +24,9 @@ public:
 	virtual void BeginOfRunAction(const G4Run*);
 	virtual void EndOfRunAction(const G4Run*);
 private:
-	G4String fileName;
+	G4String primariesFileName;
+	G4bool outputPrimaries;
+	G4GenericMessenger* outputMessenger;
 };
 
 #endif
