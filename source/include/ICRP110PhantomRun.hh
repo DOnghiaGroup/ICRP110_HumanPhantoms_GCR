@@ -1,3 +1,7 @@
+// This class gets all the information from a run and stores maps where the key values are
+// the primary particle, and the values are either the kinetic energy of that particle or
+// the total dose delivered by all secondaries.
+
 #ifndef ICRP110PhantomRun_HH
 #define ICRP110PhantomRun_HH
 

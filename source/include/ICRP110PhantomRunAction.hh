@@ -1,3 +1,6 @@
+// This class defines what to do at the beginning and end of a given run. For example,
+// it can store information which was generated during the run in the run class.
+
 #ifndef ICRP110PHANTOMRUNACTION_HH
 #define ICRP110PHANTOMRUNACTION_HH
 

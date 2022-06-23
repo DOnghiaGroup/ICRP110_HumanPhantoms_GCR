@@ -1,0 +1,32 @@
+#---------------------------------------#
+#------Create Phantom Scoring Mesh------#
+#---------------------------------------#
+
+/score/create/boxMesh PhantomMesh
+
+#################################################################################
+#                                                                               #
+# The phantom voxels have dimensions (x,y,z) = (2.137, 2.137, 8)mm              #
+# and there are 254 voxels along x, 127 along y and 222 along z in              #
+# the full phantom. Mesh dimensions, however, are to be specified as            #
+# half-lengths                                                                  #
+#                                                                               #
+# If the user is not building all 222 z-slices of the phantom, they             #
+# must change the boxSize in z and the nBins in z to match the geometry of      #
+# the phantom in which they have simulated. Below, the mesh is defined for      #
+# the full male phantom with 222 single slices in z.                            #
+#                                                                               #
+################################################################################# 
+
+/score/mesh/boxSize 273.536 137.8365 888. m
+/score/mesh/nBin 256 129 222
+/score/mesh/translate/xyz 0. 0. 0. mm
+
+# Choose the quantity to score via mesh
+/score/quantity/energyDeposit energyDeposit 
+/score/quantity/doseDeposit doseDeposit
+
+# Close Scorer
+/score/close
+/score/list
+
