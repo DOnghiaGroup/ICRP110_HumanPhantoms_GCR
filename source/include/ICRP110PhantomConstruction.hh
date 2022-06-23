@@ -40,6 +40,7 @@
 #include <map>
 #include "ICRP110PhantomDetector.hh"
 #include "G4PSDoseDepositMod.hh"
+#include "G4GenericMessenger.hh"
 
 class G4VPhysicalVolume;
 class ICRP110PhantomMaterial_Female;
@@ -98,6 +99,10 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
 
   // Define the sensitive detector
   virtual void ConstructSDandField();
+
+  // Messenger values
+  G4GenericMessenger* outputMessenger;
+  G4String detectorType;
 };
 #endif
 

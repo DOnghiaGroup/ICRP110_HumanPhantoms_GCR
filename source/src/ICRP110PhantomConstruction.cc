@@ -68,6 +68,10 @@ ICRP110PhantomConstruction::ICRP110PhantomConstruction():
   fMaterial_Male = new ICRP110PhantomMaterial_Male();
   fSex = "female"; // Female phantom is the default option
   fSection = "head"; // Head partial phantom is the default option
+
+  outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
+  outputMessenger -> DeclareProperty("detectorType", detectorType, "Phantom detector type (all or primaries)");
+  detectorType = "none";
 }
 
 ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
@@ -75,6 +79,7 @@ ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
   delete fMaterial_Female;
   delete fMaterial_Male;
   delete fMessenger;
+  delete outputMessenger;
 }
 
 G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
@@ -344,16 +349,23 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 
 // Sensitive detector construction
 void ICRP110PhantomConstruction::ConstructSDandField() {
-	// Uncomment: this is the sensitive detector implementation. This is useful for extreme control over what is recorded.
-	// ICRP110PhantomDetector* shieldDetector = new ICRP110PhantomDetector("SensitiveDetector");
-	// logicVoxel->SetSensitiveDetector(shieldDetector);	
-	
-	// This is the multifunctional detector implementation
+	// Sensitive detector definition
+	ICRP110PhantomDetector* phantomSensitiveDetector = new ICRP110PhantomDetector("SensitiveDetector");
+	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomSensitiveDetector);
+
+	// Multifunctional detector implementation
 	G4MultiFunctionalDetector* phantomDetector = new G4MultiFunctionalDetector("phantomDetector");
 	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomDetector);
-	logicVoxel -> SetSensitiveDetector(phantomDetector);
 	G4VPrimitiveScorer* doseCounter = new G4PSDoseDepositMod("doseCounter");
 	phantomDetector -> RegisterPrimitive(doseCounter);
+
+	if (detectorType == "all") {
+		// Sensitive detector implementation
+		logicVoxel -> SetSensitiveDetector(phantomSensitiveDetector);	
+	} else if (detectorType == "primaries") {
+		// Multifunctional detector implementation
+		logicVoxel -> SetSensitiveDetector(phantomDetector);
+	}
 }
 
 void ICRP110PhantomConstruction::ReadPhantomData(const G4String& sex, const G4String& section)

@@ -9,6 +9,9 @@
 /phantom/setPhantomSection full
 /phantom/setScoreWriterSection full
 
+# Select what type of output (all, primaries, or none (default))
+/output/detectorType all
+
 #---------------------------------------#
 #------------Initialization-------------#
 #---------------------------------------#
@@ -37,9 +40,9 @@
 #---------------------------------------#
 #------------------Run------------------#
 #---------------------------------------#
-# Chooose number of events (with the source in source_definition.mac
-/output/outputPrimaries true
-/output/fileName doseDepositByPrimaries.csv
+# Chooose number of events (with the source in source_definition.mac)
+/output/allFileName particleInfo.csv
+/output/primariesFileName doseDepositByPrimaries.csv
 /run/beamOn 100
 
 #---------------------------------------#

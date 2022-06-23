@@ -6,11 +6,10 @@ ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 
 	outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
 	primariesFileName = "unnamed_output_file.csv";
-	outputMessenger -> DeclareProperty("outputPrimaries", primariesFileName, "Output a file with primaries and their energies");
-	outputPrimaries = false;
 }
 
 ICRP110PhantomRunAction::~ICRP110PhantomRunAction() {
+	delete outputMessenger;
 }
 
 G4Run* ICRP110PhantomRunAction::GenerateRun() {
@@ -20,7 +19,7 @@ G4Run* ICRP110PhantomRunAction::GenerateRun() {
 void ICRP110PhantomRunAction::BeginOfRunAction(const G4Run* aRun) {
 }
 
-void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) { if (outputPrimaries) {
+void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	// Get information about the run from the run class
 	ICRP110PhantomRun* theRun = (ICRP110PhantomRun*)aRun;
 	std::map<G4String, G4double> totalDoses = theRun -> GetDoseDeposits();
@@ -33,8 +32,8 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) { if (outputPrim
 		G4double eventDose = totalDoses[eventPrimaryName];
 
 		std::ofstream ofile;
-		ofile.open(fileName, std::ios_base::app);
+		ofile.open(primariesFileName, std::ios_base::app);
 		ofile << eventPrimaryName << "," << eventPrimaryKE << "," << eventDose << "\n";
 		ofile.close();
 	}
-}}
+}

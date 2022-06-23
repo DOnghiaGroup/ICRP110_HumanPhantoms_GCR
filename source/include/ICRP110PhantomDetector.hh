@@ -4,8 +4,7 @@
 #include "G4VSensitiveDetector.hh"
 #include <fstream>
 #include <vector>
-
-// This class implements the phantom as a sensitive detector to get information on events that happen in it
+#include "G4GenericMessenger.hh"
 
 class ICRP110PhantomDetector : public G4VSensitiveDetector {
 public:
@@ -13,6 +12,8 @@ public:
 	~ICRP110PhantomDetector();
 private:
 	virtual G4bool ProcessHits(G4Step*, G4TouchableHistory*);
+	G4GenericMessenger* outputMessenger;
+	G4String allFileName;
 };
 
 #endif
