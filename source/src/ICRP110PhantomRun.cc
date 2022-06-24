@@ -29,14 +29,12 @@ void ICRP110PhantomRun::RecordEvent(const G4Event* evt) {
 	}
 
 	// Store this information in class variables depending on what the primary particle was
-	totalDoses[eventPrimaryName] += newDose;
-	primaryKEs[eventPrimaryName] = eventPrimaryKE;
+	std::pair<G4String, G4double> keyPair;
+	keyPair.first = eventPrimaryName;
+	keyPair.second = eventPrimaryKE;
+	totalDoses[keyPair] += newDose;
 }
 
-std::map<G4String, G4double> ICRP110PhantomRun::GetDoseDeposits() {
+std::map<std::pair<G4String, G4double>, G4double> ICRP110PhantomRun::GetDoseDeposits() {
 	return totalDoses;
-}
-
-std::map<G4String, G4double> ICRP110PhantomRun::GetPrimaryKEs() {
-	return primaryKEs;
 }

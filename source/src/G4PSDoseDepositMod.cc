@@ -64,7 +64,6 @@ G4bool G4PSDoseDepositMod::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
   G4double edep = aStep->GetTotalEnergyDeposit();
   if ( edep == 0. ) return FALSE;
-
   G4int idx = ((G4TouchableHistory*)
                (aStep->GetPreStepPoint()->GetTouchable()))
                ->GetReplicaNumber(indexDepth);

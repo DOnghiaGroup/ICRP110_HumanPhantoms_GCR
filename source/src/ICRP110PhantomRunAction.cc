@@ -22,14 +22,13 @@ void ICRP110PhantomRunAction::BeginOfRunAction(const G4Run* aRun) {
 void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	// Get information about the run from the run class
 	ICRP110PhantomRun* theRun = (ICRP110PhantomRun*)aRun;
-	std::map<G4String, G4double> totalDoses = theRun -> GetDoseDeposits();
-	std::map<G4String, G4double> primaryKEs = theRun -> GetPrimaryKEs();
+	std::map<std::pair<G4String, G4double>, G4double> totalDoses = theRun -> GetDoseDeposits();
 
 	// For all of the primary particles, store this information
-	for (auto itr = primaryKEs.begin(); itr != primaryKEs.end(); itr++) {
-		G4String eventPrimaryName = itr->first;
-		G4double eventPrimaryKE = itr->second;
-		G4double eventDose = totalDoses[eventPrimaryName];
+	for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
+		G4String eventPrimaryName = itr->first.first;
+		G4double eventPrimaryKE = itr->first.second;
+		G4double eventDose = totalDoses[itr->first];
 
 		std::ofstream ofile;
 		ofile.open(primariesFileName, std::ios_base::app);

@@ -10,7 +10,7 @@
 /phantom/setScoreWriterSection full
 
 # Select what type of output (all, primaries, or none (default))
-/output/detectorType all
+/output/detectorType primaries
 
 #---------------------------------------#
 #------------Initialization-------------#
@@ -43,7 +43,7 @@
 # Chooose number of events (with the source in source_definition.mac)
 /output/allFileName particleInfo.csv
 /output/primariesFileName doseDepositByPrimaries.csv
-/run/beamOn 100
+/run/beamOn 100000
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

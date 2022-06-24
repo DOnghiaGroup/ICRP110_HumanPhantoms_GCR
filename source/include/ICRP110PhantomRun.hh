@@ -12,20 +12,19 @@
 #include "G4HCofThisEvent.hh"
 #include "G4PrimaryParticle.hh"
 #include <map>
+#include <utility>
 
 class ICRP110PhantomRun : public G4Run {
 public:
 	ICRP110PhantomRun();
 	~ICRP110PhantomRun();
 	virtual void RecordEvent(const G4Event*);
-	std::map<G4String, G4double> GetDoseDeposits();
-	std::map<G4String, G4double> GetPrimaryKEs();
+	std::map<std::pair<G4String, G4double>, G4double> GetDoseDeposits();
 private:
 	G4int nEvent;
 	G4int totalDoseID;
-	std::map<G4String, G4double> totalDoses;
+	std::map<std::pair<G4String, G4double>, G4double> totalDoses;
 	G4THitsMap<G4double>* eventTotalDose;
-	std::map<G4String, G4double> primaryKEs;
 };
 
 #endif
