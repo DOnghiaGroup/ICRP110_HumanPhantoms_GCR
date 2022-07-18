@@ -1,4 +1,5 @@
 #include "ICRP110PhantomRunAction.hh"
+#include "G4SystemOfUnits.hh"
 
 ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 	// Define messengers for macro files
@@ -32,7 +33,8 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 
 		std::ofstream ofile;
 		ofile.open(primariesFileName, std::ios_base::app);
-		ofile << eventPrimaryName << "," << eventPrimaryKE << "," << eventDose << "\n";
+		// Notice: convert dose to gray on next line
+		ofile << eventPrimaryName << "," << eventPrimaryKE << "," << (eventDose/(MeV/g))*(1.602*pow(10,-10)) << "\n";
 		ofile.close();
 	}
 }

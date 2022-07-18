@@ -5,6 +5,8 @@ ICRP110PhantomDetector::ICRP110PhantomDetector(G4String name) : G4VSensitiveDete
 	outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
 
 	outputMessenger -> DeclareProperty("allFileName", allFileName, "Name of output file for all particles");
+	outputMessenger -> DeclareProperty("allDetectorType", allDetectorType, "Type of detector for the sensitive detector");
+	allDetectorType = "positions";
 	allFileName = "unnamed_output_file.csv";
 }
 
@@ -20,14 +22,33 @@ G4bool ICRP110PhantomDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0
 	G4double initKE = aStep -> GetPreStepPoint() -> GetKineticEnergy();
 	G4ThreeVector position = aStep -> GetPreStepPoint() -> GetPosition();
 	G4double energyDep = aStep -> GetTotalEnergyDeposit();
-	G4String material = aStep -> GetTrack() -> GetMaterial() -> GetName();
+	G4String material = aStep -> GetPreStepPoint() -> GetMaterial() -> GetName();
 
 	// Output to file
-	if (material != "Air") {
-		std::ofstream ofile;
-		ofile.open(allFileName, std::ios_base::app);
-		ofile << particleName << "," << initKE << "," << position[0] << "," << position[1] << "," << position[2] << "," << energyDep << "\n"; 
-		ofile.close();
+	if (allDetectorType == "positions") {
+		if (material != "Air") {
+			std::ofstream ofile;
+			ofile.open(allFileName, std::ios_base::app);
+			ofile << particleName << "," << initKE << "," << position[0] << "," << position[1] << "," << position[2] << "," << energyDep << "\n"; 
+			ofile.close();
+		}
+	}
+	else if (allDetectorType == "organDoses") {
+		if (material != "Air") {
+			std::ofstream ofile;
+			ofile.open(allFileName, std::ios_base::app);
+			// Dose in Gy
+			ofile << material << "," << (energyDep/(MeV))*(1.602*pow(10,-13))/70 << "\n"; 
+			ofile.close();
+		}
+	else if (allDetectorType == "secondaryDoses") {
+		if (material != "Air") {
+			std::ofstream ofile;
+			ofile.open(allFileName, std::ios_base::app);
+			// Dose in Gy
+			ofile << particleName << "," << (energyDep/(MeV))*(1.602*pow(10,-13))/70 << "\n"; 
+			ofile.close();
+		}
 	}
 
 	return true;

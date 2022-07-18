@@ -1,4 +1,5 @@
 #include "ICRP110PhantomRun.hh"
+#include "G4SystemOfUnits.hh"
 
 // Upon beginning a run, get the specific detector/scorer we will need
 ICRP110PhantomRun::ICRP110PhantomRun() : nEvent(0) {

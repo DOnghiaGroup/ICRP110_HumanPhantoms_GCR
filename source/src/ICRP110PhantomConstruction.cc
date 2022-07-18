@@ -332,7 +332,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
 
 //---- Define shield radii and other constants as G4double (to define units)
-    G4double shieldInnerRadii = 1.5400 * m; 
+    G4double shieldInnerRadii = 1.5200 * m; 
     G4double shieldOuterRadii = 1.5500 * m;
     G4double pi = 3.14159265358979323846;
     

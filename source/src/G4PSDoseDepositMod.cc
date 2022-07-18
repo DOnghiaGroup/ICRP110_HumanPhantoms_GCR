@@ -34,6 +34,7 @@
 #include "G4VPhysicalVolume.hh"
 #include "G4VPVParameterisation.hh"
 #include "G4UnitsTable.hh"
+#include "G4SystemOfUnits.hh"
 
 // (Description)
 //   This is a primitive scorer class for scoring only energy deposit.
@@ -71,10 +72,13 @@ if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
 
 
   G4double density = aStep->GetTrack()->GetStep()->GetPreStepPoint()->GetMaterial()->GetDensity();
-  G4double dose    = edep / ( density * cubicVolume );
-  dose *= aStep->GetPreStepPoint()->GetWeight(); 
+  G4double dose = edep / (70*kg);  // G4double dose    = edep / ( density * cubicVolume );
+  // dose *= aStep->GetPreStepPoint()->GetWeight(); 
   G4int  index = GetIndex(aStep);
   EvtMap->add(index,dose);  
+
+  // G4cout << "E_dep: " << edep/(MeV) << ", Density: " << density/(g/mm3) << ", Volume: " << cubicVolume/(mm3) << ", Dose: " << dose/(MeV/g) << G4endl;
+
   return TRUE;
 } else { return FALSE; }
 }
@@ -140,4 +144,8 @@ G4double G4PSDoseDepositMod::ComputeVolume(G4Step* aStep, G4int idx){
   }
   
   return solid->GetCubicVolume();
+}
+
+std::vector<std::pair<G4String, G4double>> G4PSDoseDepositMod::GetParticlesEnergies() {
+	return particlesEnergies;
 }

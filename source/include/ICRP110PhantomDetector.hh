@@ -14,6 +14,7 @@ private:
 	virtual G4bool ProcessHits(G4Step*, G4TouchableHistory*);
 	G4GenericMessenger* outputMessenger;
 	G4String allFileName;
+	G4String allDetectorType;
 };
 
 #endif

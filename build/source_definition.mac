@@ -1,12 +1,18 @@
+# The particles here are defined on a loguniform distribution, which is a power law with alpha=-1 and
+# coeffecient (ln(max)-ln(min))^-1. The coefficient is here given with the /gps/source/intensity command,
+# and has a value of .217147240952 given min=100 MeV/n and max=10 Gev/n.
+
 # Set verbosity
 /gps/verbose 0
 
+# Hydrogen
 /gps/particle ion
 /gps/particle proton
-/gps/ene/type Lin
-/gps/ene/min 100 MeV
+/gps/ene/type Pow
+/gps/source/intensity .144764827301
+/gps/ene/alpha -1
+/gps/ene/min 10 MeV
 /gps/ene/max 10 GeV
-/gps/ene/intercept 1
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 /gps/pos/centre 0. 0. 0. cm
@@ -14,13 +20,15 @@
 /gps/ang/type iso
 /gps/ang/surfnorm true
 
+# Helium
 /gps/source/add 1
 /gps/particle ion
 /gps/particle alpha
-/gps/ene/type Lin
-/gps/ene/min 400 MeV
+/gps/ene/type Pow
+/gps/source/intensity .144764827301
+/gps/ene/alpha -1
+/gps/ene/min 40 MeV
 /gps/ene/max 40 GeV
-/gps/ene/intercept 1
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 /gps/pos/centre 0. 0. 0. cm
@@ -28,3 +36,50 @@
 /gps/ang/type iso
 /gps/ang/surfnorm true
 
+# Carbon
+/gps/source/add 1
+/gps/particle ion
+/gps/ion 6 12
+/gps/ene/type Pow
+/gps/source/intensity .144764827301
+/gps/ene/alpha -1
+/gps/ene/min 60 MeV
+/gps/ene/max 60 GeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.55 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+
+# Silicon
+/gps/source/add 1
+/gps/particle ion
+/gps/ion 14 28
+/gps/ene/type Pow
+/gps/source/intensity .144764827301
+/gps/ene/alpha -1
+/gps/ene/min 140 MeV
+/gps/ene/max 140 GeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.55 m
+/gps/ang/type iso
+/gps/ang/surfnorm true
+
+# Iron
+/gps/source/add 1
+/gps/particle ion
+/gps/ion 26 56
+/gps/ene/type Pow
+/gps/source/intensity .144764827301
+/gps/ene/alpha -1
+/gps/ene/min 260 MeV
+/gps/ene/max 260 GeV
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.55 m
+/gps/ang/type iso
+/gps/ang/surfnorm true

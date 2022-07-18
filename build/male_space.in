@@ -41,7 +41,7 @@
 #------------------Run------------------#
 #---------------------------------------#
 # Chooose number of events (with the source in source_definition.mac)
-/output/allFileName particleInfo.csv
+/output/allFileName oneevent.csv
 /output/primariesFileName doseDepositByPrimaries.csv
 /run/beamOn 100000
 
