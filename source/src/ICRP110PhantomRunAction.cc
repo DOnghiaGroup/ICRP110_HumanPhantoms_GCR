@@ -6,7 +6,7 @@ ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 	outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
 
 	outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
-	outputMessenger -> DeclareProperty("primariesFileType", primariesFileType, "What to output (basic, organ)?");
+	outputMessenger -> DeclareProperty("primariesFileType", primariesFileType, "What to output (basic, organ, secondary)?");
 	primariesFileName = "unnamed_output_file.csv";
 	primariesFileType = "basic";
 }
@@ -27,6 +27,7 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	ICRP110PhantomRun* theRun = (ICRP110PhantomRun*)aRun;
 	std::map<std::pair<G4String, G4double>, G4double> totalDoses = theRun -> GetDoseDeposits();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue = theRun -> GetTotalDosesByTissue();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesBySecondary = theRun -> GetTotalDosesBySecondary();
 
 	// For all of the primary particles, store this information
 	if (primariesFileType == "basic") { for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
@@ -47,7 +48,7 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 
 		std::ofstream ofile;
 		ofile.open(primariesFileName, std::ios_base::app);
-		ofile << "{ " << eventPrimaryName << ", " << eventPrimaryKE << " } : { ";
+		ofile << "\"'" << eventPrimaryName << "', " << eventPrimaryKE << "\" : { ";
 
 		G4int formatItr = 0;
 		for (auto tissueItr = itr->second.begin(); tissueItr != itr->second.end(); tissueItr++) {
@@ -61,7 +62,31 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 			formatItr += 1;
 		}
 
-		ofile << " }\n";
+		ofile << " },\n";
+		ofile.close();
+	}}
+
+	else if (primariesFileType == "secondary") { for (auto itr = totalDosesBySecondary.begin(); itr != totalDosesBySecondary.end(); itr++) {
+		G4String eventPrimaryName = itr->first.first;
+		G4double eventPrimaryKE = itr->first.second;
+
+		std::ofstream ofile;
+		ofile.open(primariesFileName, std::ios_base::app);
+		ofile << "\"'" << eventPrimaryName << "', " << eventPrimaryKE << "\" : { ";
+
+		G4int formatItr = 0;
+		for (auto secondaryItr = itr->second.begin(); secondaryItr != itr->second.end(); secondaryItr++) {
+			G4String secondaryName = secondaryItr->first;
+			// Notice: convert dose to gray on next line
+			G4double secondaryDose = (secondaryItr->second/(MeV/g))*(1.602*pow(10,-10));
+
+			if (formatItr != 0) { ofile << ", "; } 
+			ofile << "\"" << secondaryName << "\" : " << secondaryDose;
+
+			formatItr += 1;
+		}
+
+		ofile << " },\n";
 		ofile.close();
 	}}
 }

@@ -21,14 +21,18 @@ public:
 	virtual void RecordEvent(const G4Event*);
 	std::map<std::pair<G4String, G4double>, G4double> GetDoseDeposits();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> GetTotalDosesByTissue();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> GetTotalDosesBySecondary();
 private:
 	G4int nEvent;
 	G4int totalDoseID;
 	G4int organNameID;
-	std::map<std::pair<G4String, G4double>, G4double> totalDoses;
+	G4int secondaryTypeID;
 	G4THitsMap<G4double>* eventTotalDose;
 	G4THitsMap<G4String>* eventOrganNames;
+	G4THitsMap<G4String>* eventSecondaryNames;
+	std::map<std::pair<G4String, G4double>, G4double> totalDoses;
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue;
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesBySecondary;
 };
 
 #endif

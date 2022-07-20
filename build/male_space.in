@@ -42,9 +42,9 @@
 #---------------------------------------#
 # Chooose number of events (with the source in source_definition.mac)
 /output/allFileName oneevent.csv
-/output/primariesFileName doseDepositByPrimary.dat
+/output/primariesFileName doseDepositByPrimary_byOrgan.dat
 /output/primariesFileType organ
-/run/beamOn 5
+/run/beamOn 10000
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

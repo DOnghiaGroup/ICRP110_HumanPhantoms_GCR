@@ -671,6 +671,33 @@ src/PSOrganName.cc.s:
 	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.s
 .PHONY : src/PSOrganName.cc.s
 
+src/PSSecondaryType.o: src/PSSecondaryType.cc.o
+
+.PHONY : src/PSSecondaryType.o
+
+# target to build an object file
+src/PSSecondaryType.cc.o:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o
+.PHONY : src/PSSecondaryType.cc.o
+
+src/PSSecondaryType.i: src/PSSecondaryType.cc.i
+
+.PHONY : src/PSSecondaryType.i
+
+# target to preprocess a source file
+src/PSSecondaryType.cc.i:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.i
+.PHONY : src/PSSecondaryType.cc.i
+
+src/PSSecondaryType.s: src/PSSecondaryType.cc.s
+
+.PHONY : src/PSSecondaryType.s
+
+# target to generate assembly for a file
+src/PSSecondaryType.cc.s:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.s
+.PHONY : src/PSSecondaryType.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -737,6 +764,9 @@ help:
 	@echo "... src/PSOrganName.o"
 	@echo "... src/PSOrganName.i"
 	@echo "... src/PSOrganName.s"
+	@echo "... src/PSSecondaryType.o"
+	@echo "... src/PSSecondaryType.i"
+	@echo "... src/PSSecondaryType.s"
 .PHONY : help
 
 

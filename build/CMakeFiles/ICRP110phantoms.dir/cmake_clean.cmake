@@ -16,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110ScoreWriterMessenger.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.o"
+  "CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o"
   "ICRP110phantoms"
   "ICRP110phantoms.pdb"
 )

@@ -6,6 +6,7 @@ ICRP110PhantomRun::ICRP110PhantomRun() : nEvent(0) {
 	G4SDManager* SDM = G4SDManager::GetSDMpointer();
 	totalDoseID = SDM -> GetCollectionID("phantomDetector/doseCounter");
 	organNameID = SDM -> GetCollectionID("phantomDetector/organName");
+	secondaryTypeID = SDM -> GetCollectionID("phantomDetector/secondaryType");
 }
 
 ICRP110PhantomRun::~ICRP110PhantomRun() {
@@ -26,12 +27,16 @@ void ICRP110PhantomRun::RecordEvent(const G4Event* evt) {
 	std::map<G4int, G4double*>* eventDoseMap = eventTotalDose->GetMap();
 	eventOrganNames = (G4THitsMap<G4String>*)(HCE -> GetHC(organNameID));
 	std::map<G4int, G4String*>* eventOrganNamesMap = eventOrganNames -> GetMap();
+	eventSecondaryNames = (G4THitsMap<G4String>*)(HCE -> GetHC(secondaryTypeID));
+	std::map<G4int, G4String*>* eventSecondaryNamesMap = eventSecondaryNames -> GetMap();
 	std::map<G4int, G4double*>::iterator itr;
 	G4double newDose = 0.0;
 	std::map<G4String, G4double> runTissueMap;
+	std::map<G4String, G4double> runSecondaryMap;
 	for (itr = eventDoseMap->begin(); itr != eventDoseMap->end(); itr++) {
 		newDose += *itr->second;	
 		runTissueMap[*eventOrganNamesMap->operator[](itr->first)] += *itr->second;
+		runSecondaryMap[*eventSecondaryNamesMap->operator[](itr->first)] += *itr->second;
 	}
 
 	// Store this information in class variables depending on what the primary particle was
@@ -42,6 +47,9 @@ void ICRP110PhantomRun::RecordEvent(const G4Event* evt) {
 
 	// Store this information in a different way: according to dose in each organ
 	totalDosesByTissue[keyPair] = runTissueMap;
+
+	// Store this information in a different way: according to dose from each type of secondary particle
+	totalDosesBySecondary[keyPair] = runSecondaryMap;
 }
 
 std::map<std::pair<G4String, G4double>, G4double> ICRP110PhantomRun::GetDoseDeposits() {
@@ -50,4 +58,8 @@ std::map<std::pair<G4String, G4double>, G4double> ICRP110PhantomRun::GetDoseDepo
 
 std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> ICRP110PhantomRun::GetTotalDosesByTissue() {
 	return totalDosesByTissue;
+}
+
+std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> ICRP110PhantomRun::GetTotalDosesBySecondary() {
+	return totalDosesBySecondary;
 }

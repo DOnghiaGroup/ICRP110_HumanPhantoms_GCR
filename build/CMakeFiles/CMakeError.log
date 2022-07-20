@@ -901,3 +901,261 @@ int main(void)
   return 0;
 }
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_78776/fast && /usr/bin/gmake -f CMakeFiles/cmTC_78776.dir/build.make CMakeFiles/cmTC_78776.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_78776.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_78776.dir/src.c.o   -c /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_78776
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78776.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_78776.dir/src.c.o  -o cmTC_78776 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_78776.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_78776.dir/build.make:104: cmTC_78776] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_78776/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_989de/fast && /usr/bin/gmake -f CMakeFiles/cmTC_989de.dir/build.make CMakeFiles/cmTC_989de.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_989de.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_989de.dir/src.c.o   -c /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_989de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_989de.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_989de.dir/src.c.o  -o cmTC_989de 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_989de.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_989de.dir/build.make:104: cmTC_989de] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_989de/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b0ac8/fast && /usr/bin/gmake -f CMakeFiles/cmTC_b0ac8.dir/build.make CMakeFiles/cmTC_b0ac8.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b0ac8.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b0ac8.dir/src.c.o   -c /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b0ac8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0ac8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b0ac8.dir/src.c.o  -o cmTC_b0ac8 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_b0ac8.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_b0ac8.dir/build.make:104: cmTC_b0ac8] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_b0ac8/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2dd3b/fast && /usr/bin/gmake -f CMakeFiles/cmTC_2dd3b.dir/build.make CMakeFiles/cmTC_2dd3b.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2dd3b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2dd3b.dir/src.c.o   -c /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2dd3b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2dd3b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_2dd3b.dir/src.c.o  -o cmTC_2dd3b 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_2dd3b.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_2dd3b.dir/build.make:104: cmTC_2dd3b] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_2dd3b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5916d/fast && /usr/bin/gmake -f CMakeFiles/cmTC_5916d.dir/build.make CMakeFiles/cmTC_5916d.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5916d.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5916d.dir/src.c.o   -c /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5916d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5916d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_5916d.dir/src.c.o  -o cmTC_5916d 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_5916d.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_5916d.dir/build.make:104: cmTC_5916d] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_5916d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_58a42/fast && /usr/bin/gmake -f CMakeFiles/cmTC_58a42.dir/build.make CMakeFiles/cmTC_58a42.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58a42.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_58a42.dir/src.c.o   -c /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_58a42
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58a42.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_58a42.dir/src.c.o  -o cmTC_58a42 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_58a42.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_58a42.dir/build.make:104: cmTC_58a42] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_58a42/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

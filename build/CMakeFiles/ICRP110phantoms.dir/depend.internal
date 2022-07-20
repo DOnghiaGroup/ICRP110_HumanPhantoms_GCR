@@ -14,6 +14,7 @@ CMakeFiles/ICRP110phantoms.dir/ICRP110phantoms.cc.o
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110ScoreWriterMessenger.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110UserScoreWriter.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/PSOrganName.hh
+ /home/reu/bderieg/geant4/GCRSimulator/source/include/PSSecondaryType.hh
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Plane3D.h
@@ -706,6 +707,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomConstruction.cc.o
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMessenger.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomNestedParameterisation.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/PSOrganName.hh
+ /home/reu/bderieg/geant4/GCRSimulator/source/include/PSSecondaryType.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomConstruction.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -1673,6 +1675,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomMessenger.cc.o
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomDetector.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomMessenger.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/PSOrganName.hh
+ /home/reu/bderieg/geant4/GCRSimulator/source/include/PSSecondaryType.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomMessenger.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -2551,6 +2554,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomVisAction.cc.o
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomPseudoScene.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomVisAction.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/include/PSOrganName.hh
+ /home/reu/bderieg/geant4/GCRSimulator/source/include/PSSecondaryType.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomVisAction.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -3257,6 +3261,145 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o
 CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.o
  /home/reu/bderieg/geant4/GCRSimulator/source/include/PSOrganName.hh
  /home/reu/bderieg/geant4/GCRSimulator/source/src/PSOrganName.cc
+ /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
+ /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
+ /opt/geant4/include/Geant4/CLHEP/Geometry/Point3D.h
+ /opt/geant4/include/Geant4/CLHEP/Geometry/Transform3D.h
+ /opt/geant4/include/Geant4/CLHEP/Geometry/Transform3D.icc
+ /opt/geant4/include/Geant4/CLHEP/Geometry/Vector3D.h
+ /opt/geant4/include/Geant4/CLHEP/Units/PhysicalConstants.h
+ /opt/geant4/include/Geant4/CLHEP/Units/SystemOfUnits.h
+ /opt/geant4/include/Geant4/CLHEP/Utility/defs.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/Rotation.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/Rotation.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationX.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationX.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationY.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationY.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationZ.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/RotationZ.icc
+ /opt/geant4/include/Geant4/CLHEP/Vector/ThreeVector.h
+ /opt/geant4/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /opt/geant4/include/Geant4/G4AffineTransform.hh
+ /opt/geant4/include/Geant4/G4AffineTransform.icc
+ /opt/geant4/include/Geant4/G4Allocator.hh
+ /opt/geant4/include/Geant4/G4AllocatorPool.hh
+ /opt/geant4/include/Geant4/G4AutoLock.hh
+ /opt/geant4/include/Geant4/G4CollectionNameVector.hh
+ /opt/geant4/include/Geant4/G4DataVector.hh
+ /opt/geant4/include/Geant4/G4DataVector.icc
+ /opt/geant4/include/Geant4/G4DynamicParticle.hh
+ /opt/geant4/include/Geant4/G4DynamicParticle.icc
+ /opt/geant4/include/Geant4/G4ElectronOccupancy.hh
+ /opt/geant4/include/Geant4/G4Element.hh
+ /opt/geant4/include/Geant4/G4ElementTable.hh
+ /opt/geant4/include/Geant4/G4ElementVector.hh
+ /opt/geant4/include/Geant4/G4EnvironmentUtils.hh
+ /opt/geant4/include/Geant4/G4Exception.hh
+ /opt/geant4/include/Geant4/G4ExceptionSeverity.hh
+ /opt/geant4/include/Geant4/G4Exp.hh
+ /opt/geant4/include/Geant4/G4GeomSplitter.hh
+ /opt/geant4/include/Geant4/G4GlobalConfig.hh
+ /opt/geant4/include/Geant4/G4HCofThisEvent.hh
+ /opt/geant4/include/Geant4/G4IonisParamElm.hh
+ /opt/geant4/include/Geant4/G4IonisParamMat.hh
+ /opt/geant4/include/Geant4/G4Isotope.hh
+ /opt/geant4/include/Geant4/G4IsotopeVector.hh
+ /opt/geant4/include/Geant4/G4Log.hh
+ /opt/geant4/include/Geant4/G4LogicalVolume.hh
+ /opt/geant4/include/Geant4/G4LogicalVolume.icc
+ /opt/geant4/include/Geant4/G4LorentzVector.hh
+ /opt/geant4/include/Geant4/G4Material.hh
+ /opt/geant4/include/Geant4/G4MaterialPropertiesIndex.hh
+ /opt/geant4/include/Geant4/G4MaterialPropertiesTable.hh
+ /opt/geant4/include/Geant4/G4MaterialPropertyVector.hh
+ /opt/geant4/include/Geant4/G4MaterialTable.hh
+ /opt/geant4/include/Geant4/G4MultiFunctionalDetector.hh
+ /opt/geant4/include/Geant4/G4NavigationHistory.hh
+ /opt/geant4/include/Geant4/G4NavigationHistory.icc
+ /opt/geant4/include/Geant4/G4NavigationHistoryPool.hh
+ /opt/geant4/include/Geant4/G4NavigationLevel.hh
+ /opt/geant4/include/Geant4/G4NavigationLevel.icc
+ /opt/geant4/include/Geant4/G4NavigationLevelRep.hh
+ /opt/geant4/include/Geant4/G4NavigationLevelRep.icc
+ /opt/geant4/include/Geant4/G4OrderedTable.hh
+ /opt/geant4/include/Geant4/G4PDefManager.hh
+ /opt/geant4/include/Geant4/G4ParticleDefinition.hh
+ /opt/geant4/include/Geant4/G4ParticleDefinition.icc
+ /opt/geant4/include/Geant4/G4ParticleMomentum.hh
+ /opt/geant4/include/Geant4/G4PhysicsFreeVector.hh
+ /opt/geant4/include/Geant4/G4PhysicsModelCatalog.hh
+ /opt/geant4/include/Geant4/G4PhysicsVector.hh
+ /opt/geant4/include/Geant4/G4PhysicsVector.icc
+ /opt/geant4/include/Geant4/G4PhysicsVectorType.hh
+ /opt/geant4/include/Geant4/G4Profiler.hh
+ /opt/geant4/include/Geant4/G4Profiler.icc
+ /opt/geant4/include/Geant4/G4ReferenceCountedHandle.hh
+ /opt/geant4/include/Geant4/G4Region.hh
+ /opt/geant4/include/Geant4/G4Region.icc
+ /opt/geant4/include/Geant4/G4RotationMatrix.hh
+ /opt/geant4/include/Geant4/G4SandiaTable.hh
+ /opt/geant4/include/Geant4/G4SensitiveVolumeList.hh
+ /opt/geant4/include/Geant4/G4Step.hh
+ /opt/geant4/include/Geant4/G4Step.icc
+ /opt/geant4/include/Geant4/G4StepPoint.hh
+ /opt/geant4/include/Geant4/G4StepPoint.icc
+ /opt/geant4/include/Geant4/G4StepStatus.hh
+ /opt/geant4/include/Geant4/G4SteppingControl.hh
+ /opt/geant4/include/Geant4/G4String.hh
+ /opt/geant4/include/Geant4/G4String.icc
+ /opt/geant4/include/Geant4/G4SystemOfUnits.hh
+ /opt/geant4/include/Geant4/G4THitsCollection.hh
+ /opt/geant4/include/Geant4/G4THitsMap.hh
+ /opt/geant4/include/Geant4/G4Threading.hh
+ /opt/geant4/include/Geant4/G4ThreeVector.hh
+ /opt/geant4/include/Geant4/G4TouchableHandle.hh
+ /opt/geant4/include/Geant4/G4TouchableHistory.hh
+ /opt/geant4/include/Geant4/G4TouchableHistory.icc
+ /opt/geant4/include/Geant4/G4Track.hh
+ /opt/geant4/include/Geant4/G4Track.icc
+ /opt/geant4/include/Geant4/G4TrackStatus.hh
+ /opt/geant4/include/Geant4/G4TrackVector.hh
+ /opt/geant4/include/Geant4/G4Transform3D.hh
+ /opt/geant4/include/Geant4/G4Types.hh
+ /opt/geant4/include/Geant4/G4UnitsTable.hh
+ /opt/geant4/include/Geant4/G4UnitsTable.icc
+ /opt/geant4/include/Geant4/G4VExceptionHandler.hh
+ /opt/geant4/include/Geant4/G4VHit.hh
+ /opt/geant4/include/Geant4/G4VHitsCollection.hh
+ /opt/geant4/include/Geant4/G4VPVParameterisation.hh
+ /opt/geant4/include/Geant4/G4VPhysicalVolume.hh
+ /opt/geant4/include/Geant4/G4VPhysicalVolume.icc
+ /opt/geant4/include/Geant4/G4VPrimitiveScorer.hh
+ /opt/geant4/include/Geant4/G4VReadOutGeometry.hh
+ /opt/geant4/include/Geant4/G4VSDFilter.hh
+ /opt/geant4/include/Geant4/G4VSensitiveDetector.hh
+ /opt/geant4/include/Geant4/G4VSolid.hh
+ /opt/geant4/include/Geant4/G4VSolid.icc
+ /opt/geant4/include/Geant4/G4VTouchable.hh
+ /opt/geant4/include/Geant4/G4VTouchable.icc
+ /opt/geant4/include/Geant4/G4VUserTrackInformation.hh
+ /opt/geant4/include/Geant4/G4VVolumeMaterialScanner.hh
+ /opt/geant4/include/Geant4/G4ios.hh
+ /opt/geant4/include/Geant4/PTL/Globals.hh
+ /opt/geant4/include/Geant4/PTL/Types.hh
+ /opt/geant4/include/Geant4/PTL/Utility.hh
+ /opt/geant4/include/Geant4/geomdefs.hh
+ /opt/geant4/include/Geant4/geomwdefs.hh
+ /opt/geant4/include/Geant4/globals.hh
+ /opt/geant4/include/Geant4/pwdefs.hh
+ /opt/geant4/include/Geant4/templates.hh
+ /opt/geant4/include/Geant4/tls.hh
+ /opt/geant4/include/Geant4/trkdefs.hh
+CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o
+ /home/reu/bderieg/geant4/GCRSimulator/source/include/PSSecondaryType.hh
+ /home/reu/bderieg/geant4/GCRSimulator/source/src/PSSecondaryType.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Point3D.h
