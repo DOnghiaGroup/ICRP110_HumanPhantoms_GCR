@@ -26,6 +26,7 @@ public:
 	virtual void EndOfRunAction(const G4Run*);
 private:
 	G4String primariesFileName;
+	G4String primariesFileType;
 	G4GenericMessenger* outputMessenger;
 };
 

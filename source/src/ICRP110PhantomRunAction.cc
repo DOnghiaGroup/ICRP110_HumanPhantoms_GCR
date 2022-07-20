@@ -6,7 +6,9 @@ ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 	outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
 
 	outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
+	outputMessenger -> DeclareProperty("primariesFileType", primariesFileType, "What to output (basic, organ)?");
 	primariesFileName = "unnamed_output_file.csv";
+	primariesFileType = "basic";
 }
 
 ICRP110PhantomRunAction::~ICRP110PhantomRunAction() {
@@ -27,7 +29,7 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue = theRun -> GetTotalDosesByTissue();
 
 	// For all of the primary particles, store this information
-	for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
+	if (primariesFileType == "basic") { for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
 		G4String eventPrimaryName = itr->first.first;
 		G4double eventPrimaryKE = itr->first.second;
 		G4double eventDose = totalDoses[itr->first];
@@ -37,14 +39,14 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 		// Notice: convert dose to gray on next line
 		ofile << eventPrimaryName << "," << eventPrimaryKE << "," << (eventDose/(MeV/g))*(1.602*pow(10,-10)) << "\n";
 		ofile.close();
-	}
+	}}
 
-	for (auto itr = totalDosesByTissue.begin(); itr != totalDosesByTissue.end(); itr++) {
+	else if (primariesFileType == "organ") { for (auto itr = totalDosesByTissue.begin(); itr != totalDosesByTissue.end(); itr++) {
 		G4String eventPrimaryName = itr->first.first;
 		G4double eventPrimaryKE = itr->first.second;
 
 		std::ofstream ofile;
-		ofile.open("test_output.dat", std::ios_base::app);
+		ofile.open(primariesFileName, std::ios_base::app);
 		ofile << "{ " << eventPrimaryName << ", " << eventPrimaryKE << " } : { ";
 
 		G4int formatItr = 0;
@@ -61,5 +63,5 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 
 		ofile << " }\n";
 		ofile.close();
-	}
+	}}
 }

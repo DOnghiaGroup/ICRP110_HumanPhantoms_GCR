@@ -42,7 +42,8 @@
 #---------------------------------------#
 # Chooose number of events (with the source in source_definition.mac)
 /output/allFileName oneevent.csv
-/output/primariesFileName doseDepositByPrimaries.csv
+/output/primariesFileName doseDepositByPrimary.dat
+/output/primariesFileType organ
 /run/beamOn 5
 
 #---------------------------------------#
