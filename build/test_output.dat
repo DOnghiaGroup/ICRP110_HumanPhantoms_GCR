@@ -1,0 +1,5 @@
+{ Fe56, 229243 } : { "bone" : 6.67164e-12, "brain" : 2.47014e-13, "breast_adipose" : 2.80663e-11, "cranium" : 3.77552e-13, "intestine_lrg" : 1.18777e-12, "intestine_sml" : 2.17018e-12, "liver" : 7.44961e-13, "lung" : 6.34968e-12, "muscle" : 2.92048e-11, "ovaries_testes" : 3.47804e-18, "ribs" : 3.58866e-13, "skin" : 1.31464e-12, "spine_lumbar" : 9.85622e-12, "urine" : 1.22738e-11}
+{ Fe56, 2849.36 } : { "breast_adipose" : 6.52096e-12}
+{ Si28, 473.055 } : { "breast_adipose" : 1.08262e-12}
+{ alpha, 264.81 } : { "breast_adipose" : 3.11428e-13, "muscle" : 9.37789e-14, "urine" : 2.00831e-13}
+{ C12, 171.838 } : { "breast_adipose" : 3.93264e-13}

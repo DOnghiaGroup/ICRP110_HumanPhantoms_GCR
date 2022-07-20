@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/ICRPdata"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/ICRPdata.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/ICRPdata-complete.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-install.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-mkdir.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-download.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-update.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-patch.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-configure.rule"
+		},
+		{
+			"file" : "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata-stamp/ICRPdata-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ICRPdata"
+		],
+		"name" : "ICRPdata"
+	}
+}

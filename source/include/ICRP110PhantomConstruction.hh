@@ -40,6 +40,7 @@
 #include <map>
 #include "ICRP110PhantomDetector.hh"
 #include "G4PSDoseDepositMod.hh"
+#include "PSOrganName.hh"
 #include "G4GenericMessenger.hh"
 
 class G4VPhysicalVolume;

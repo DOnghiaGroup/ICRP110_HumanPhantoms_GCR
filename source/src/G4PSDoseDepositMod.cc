@@ -77,8 +77,6 @@ if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
   G4int  index = GetIndex(aStep);
   EvtMap->add(index,dose);  
 
-  // G4cout << "E_dep: " << edep/(MeV) << ", Density: " << density/(g/mm3) << ", Volume: " << cubicVolume/(mm3) << ", Dose: " << dose/(MeV/g) << G4endl;
-
   return TRUE;
 } else { return FALSE; }
 }

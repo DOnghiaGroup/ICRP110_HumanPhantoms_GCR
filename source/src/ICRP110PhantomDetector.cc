@@ -1,4 +1,5 @@
 #include "ICRP110PhantomDetector.hh"
+#include "G4SystemOfUnits.hh"
 
 ICRP110PhantomDetector::ICRP110PhantomDetector(G4String name) : G4VSensitiveDetector(name) {
 	// Define messengers for macro files
@@ -41,6 +42,7 @@ G4bool ICRP110PhantomDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0
 			ofile << material << "," << (energyDep/(MeV))*(1.602*pow(10,-13))/70 << "\n"; 
 			ofile.close();
 		}
+	}
 	else if (allDetectorType == "secondaryDoses") {
 		if (material != "Air") {
 			std::ofstream ofile;

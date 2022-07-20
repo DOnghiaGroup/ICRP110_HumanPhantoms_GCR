@@ -43,7 +43,7 @@
 # Chooose number of events (with the source in source_definition.mac)
 /output/allFileName oneevent.csv
 /output/primariesFileName doseDepositByPrimaries.csv
-/run/beamOn 100000
+/run/beamOn 5
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

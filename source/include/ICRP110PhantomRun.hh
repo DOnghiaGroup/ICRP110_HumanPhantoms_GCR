@@ -20,11 +20,15 @@ public:
 	~ICRP110PhantomRun();
 	virtual void RecordEvent(const G4Event*);
 	std::map<std::pair<G4String, G4double>, G4double> GetDoseDeposits();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> GetTotalDosesByTissue();
 private:
 	G4int nEvent;
 	G4int totalDoseID;
+	G4int organNameID;
 	std::map<std::pair<G4String, G4double>, G4double> totalDoses;
 	G4THitsMap<G4double>* eventTotalDose;
+	G4THitsMap<G4String>* eventOrganNames;
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue;
 };
 
 #endif

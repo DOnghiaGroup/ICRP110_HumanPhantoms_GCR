@@ -357,7 +357,9 @@ void ICRP110PhantomConstruction::ConstructSDandField() {
 	G4MultiFunctionalDetector* phantomDetector = new G4MultiFunctionalDetector("phantomDetector");
 	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomDetector);
 	G4VPrimitiveScorer* doseCounter = new G4PSDoseDepositMod("doseCounter");
+	G4VPrimitiveScorer* organName = new PSOrganName("organName");
 	phantomDetector -> RegisterPrimitive(doseCounter);
+	phantomDetector -> RegisterPrimitive(organName);
 
 	if (detectorType == "all") {
 		// Sensitive detector implementation

@@ -24,6 +24,7 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	// Get information about the run from the run class
 	ICRP110PhantomRun* theRun = (ICRP110PhantomRun*)aRun;
 	std::map<std::pair<G4String, G4double>, G4double> totalDoses = theRun -> GetDoseDeposits();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue = theRun -> GetTotalDosesByTissue();
 
 	// For all of the primary particles, store this information
 	for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
@@ -35,6 +36,30 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 		ofile.open(primariesFileName, std::ios_base::app);
 		// Notice: convert dose to gray on next line
 		ofile << eventPrimaryName << "," << eventPrimaryKE << "," << (eventDose/(MeV/g))*(1.602*pow(10,-10)) << "\n";
+		ofile.close();
+	}
+
+	for (auto itr = totalDosesByTissue.begin(); itr != totalDosesByTissue.end(); itr++) {
+		G4String eventPrimaryName = itr->first.first;
+		G4double eventPrimaryKE = itr->first.second;
+
+		std::ofstream ofile;
+		ofile.open("test_output.dat", std::ios_base::app);
+		ofile << "{ " << eventPrimaryName << ", " << eventPrimaryKE << " } : { ";
+
+		G4int formatItr = 0;
+		for (auto tissueItr = itr->second.begin(); tissueItr != itr->second.end(); tissueItr++) {
+			G4String tissueName = tissueItr->first;
+			// Notice: convert dose to gray on next line
+			G4double tissueDose = (tissueItr->second/(MeV/g))*(1.602*pow(10,-10));
+
+			if (formatItr != 0) { ofile << ", "; } 
+			ofile << "\"" << tissueName << "\" : " << tissueDose;
+
+			formatItr += 1;
+		}
+
+		ofile << " }\n";
 		ofile.close();
 	}
 }
