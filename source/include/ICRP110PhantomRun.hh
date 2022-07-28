@@ -22,6 +22,7 @@ public:
 	std::map<std::pair<G4String, G4double>, G4double> GetDoseDeposits();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> GetTotalDosesByTissue();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> GetTotalDosesBySecondary();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4int>> GetTotalSecondariesByCount();
 private:
 	G4int nEvent;
 	G4int totalDoseID;
@@ -33,6 +34,7 @@ private:
 	std::map<std::pair<G4String, G4double>, G4double> totalDoses;
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue;
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesBySecondary;
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4int>> totalSecondariesByCount;
 };
 
 #endif

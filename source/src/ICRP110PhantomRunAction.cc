@@ -6,7 +6,7 @@ ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 	outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
 
 	outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
-	outputMessenger -> DeclareProperty("primariesFileType", primariesFileType, "What to output (basic, organ, secondary)?");
+	outputMessenger -> DeclareProperty("primariesFileType", primariesFileType, "What to output (basic, organ, secondary, secondaryCount)?");
 	primariesFileName = "unnamed_output_file.csv";
 	primariesFileType = "basic";
 }
@@ -28,6 +28,7 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	std::map<std::pair<G4String, G4double>, G4double> totalDoses = theRun -> GetDoseDeposits();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue = theRun -> GetTotalDosesByTissue();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesBySecondary = theRun -> GetTotalDosesBySecondary();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4int>> totalSecondariesByCount = theRun -> GetTotalSecondariesByCount();
 
 	// For all of the primary particles, store this information
 	if (primariesFileType == "basic") { for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
@@ -82,6 +83,30 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 
 			if (formatItr != 0) { ofile << ", "; } 
 			ofile << "\"" << secondaryName << "\" : " << secondaryDose;
+
+			formatItr += 1;
+		}
+
+		ofile << " },\n";
+		ofile.close();
+	}}
+
+	else if (primariesFileType == "secondaryCount") { for (auto itr = totalSecondariesByCount.begin(); itr != totalSecondariesByCount.end(); itr++) {
+		G4String eventPrimaryName = itr->first.first;
+		G4double eventPrimaryKE = itr->first.second;
+
+		std::ofstream ofile;
+		ofile.open(primariesFileName, std::ios_base::app);
+		ofile << "\"'" << eventPrimaryName << "', " << eventPrimaryKE << "\" : { ";
+
+		G4int formatItr = 0;
+		for (auto secondaryItr = itr->second.begin(); secondaryItr != itr->second.end(); secondaryItr++) {
+			G4String secondaryName = secondaryItr->first;
+			// Notice: convert dose to gray on next line
+			G4int secondaryCount = (secondaryItr->second/(MeV/g))*(1.602*pow(10,-10));
+
+			if (formatItr != 0) { ofile << ", "; } 
+			ofile << "\"" << secondaryName << "\" : " << secondaryCount;
 
 			formatItr += 1;
 		}

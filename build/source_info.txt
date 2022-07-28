@@ -1,0 +1,5 @@
+particle type: C12
+source radius: 1990
+primary vertex: 
+	energy: 10964.1
+	name: Si28

@@ -50,6 +50,7 @@
 #include <cstdlib>
 #include "G4Sphere.hh"
 #include "G4NistManager.hh"
+#include "G4PSEnergyDeposit.hh"
 
 
 
@@ -255,7 +256,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
                                fNVoxelY*fVoxelHalfDimY*mm,
                                fNVoxelZ*fVoxelHalfDimZ*mm);
  
-  G4LogicalVolume*  fContainer_logic = new G4LogicalVolume( fContainer_solid,
+  G4LogicalVolume* fContainer_logic = new G4LogicalVolume( fContainer_solid,
                                                             matAir,
                                                             "phantomContainer",
                                                              0, 0, 0 );                                                        
@@ -328,12 +329,11 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     param -> SetMaterialIndices(fMateIDs); // fMateIDs is  the vector with Material ID associated to each voxel, from ASCII input data files.
     param -> SetNoVoxel(fNVoxelX,fNVoxelY,fNVoxelZ);
 
-
     // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
 
-//---- Define shield radii and other constants as G4double (to define units)
-    G4double shieldInnerRadii = 1.5200 * m; 
-    G4double shieldOuterRadii = 1.5500 * m;
+//---- Define shield radii and other constants
+    G4double shieldInnerRadii = 1.6540 * m; 
+    G4double shieldOuterRadii = 1.800 * m;
     G4double pi = 3.14159265358979323846;
     
 //---- Get the material for the shield
@@ -342,7 +342,7 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 //---- Use the material to define a sphere, then logical volume, then physical volume   
     G4Sphere* shield = new G4Sphere("shield", shieldInnerRadii, shieldOuterRadii, 0, 2*pi, 0, pi);
     logicShield = new G4LogicalVolume(shield, shieldMat, "logicShield", 0, 0, 0);
-    G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0);
+    G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0, true);
 
   return fMotherVolume;
 }
@@ -356,6 +356,7 @@ void ICRP110PhantomConstruction::ConstructSDandField() {
 	// Multifunctional detector implementation
 	G4MultiFunctionalDetector* phantomDetector = new G4MultiFunctionalDetector("phantomDetector");
 	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomDetector);
+
 	G4VPrimitiveScorer* doseCounter = new G4PSDoseDepositMod("doseCounter");
 	G4VPrimitiveScorer* organName = new PSOrganName("organName");
 	G4VPrimitiveScorer* secondaryType = new PSSecondaryType("secondaryType");

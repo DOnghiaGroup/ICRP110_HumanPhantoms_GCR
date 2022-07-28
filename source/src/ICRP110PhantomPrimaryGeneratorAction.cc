@@ -31,6 +31,7 @@
 #include "ICRP110PhantomPrimaryGeneratorAction.hh"
 #include "G4Event.hh"
 #include "G4GeneralParticleSource.hh"
+#include <fstream>
 
 ICRP110PhantomPrimaryGeneratorAction::ICRP110PhantomPrimaryGeneratorAction()
 {
@@ -46,12 +47,23 @@ void ICRP110PhantomPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
   fParticleGun -> GeneratePrimaryVertex(anEvent);
 
+//  G4cout << "Particle source // particle type: " << fParticleGun->GetCurrentSource()->GetParticleDefinition()->GetParticleName() << ", source radius: " << fParticleGun->GetCurrentSource()->GetPosDist()->GetRadius() << G4endl;
+
   // Add information about the generated primary particle to the event
-  G4PrimaryVertex* primVert = new G4PrimaryVertex();
-  G4PrimaryParticle* primPart = new G4PrimaryParticle();
-  primPart -> SetKineticEnergy(fParticleGun->GetParticleEnergy());
-  primPart -> SetParticleDefinition(fParticleGun -> GetParticleDefinition());
-  primVert -> SetPrimary(primPart);
-  anEvent -> AddPrimaryVertex(primVert);
+ // G4PrimaryVertex* primVert = new G4PrimaryVertex();
+ // G4PrimaryParticle* primPart = new G4PrimaryParticle();
+ // primPart -> SetKineticEnergy(fParticleGun->GetParticleEnergy());
+ // primPart -> SetParticleDefinition(fParticleGun -> GetParticleDefinition());
+ // primVert -> SetPrimary(primPart);
+ // anEvent -> AddPrimaryVertex(primVert);
+ 
+// std::ofstream ofile;
+// ofile.open("source_info.txt");
+// ofile << "particle type: " << fParticleGun->GetCurrentSource()->GetParticleDefinition()->GetParticleName() << "\n";
+// ofile << "source radius: " << fParticleGun->GetCurrentSource()->GetPosDist()->GetRadius() << "\n";
+// ofile << "primary vertex: " << "\n";
+// ofile << "\tenergy: " << anEvent->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy() << "\n";
+// ofile << "\tname: " << anEvent->GetPrimaryVertex()->GetPrimary()->GetParticleDefinition()->GetParticleName() << "\n";
+// ofile.close();
 }
 

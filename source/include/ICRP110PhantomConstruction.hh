@@ -43,6 +43,7 @@
 #include "PSOrganName.hh"
 #include "PSSecondaryType.hh"
 #include "G4GenericMessenger.hh"
+#include <fstream>
 
 class G4VPhysicalVolume;
 class ICRP110PhantomMaterial_Female;

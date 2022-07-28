@@ -35,6 +35,7 @@
 #include "G4VPVParameterisation.hh"
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh"
+#include "ICRP110PhantomNestedParameterisation.hh"
 
 // (Description)
 //   This is a primitive scorer class for scoring only energy deposit.
@@ -64,14 +65,22 @@ G4bool G4PSDoseDepositMod::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 {
 if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
   G4double edep = aStep->GetTotalEnergyDeposit();
+
+//  G4cout << 
+//	  "Particle: " << aStep->GetTrack()->GetParticleDefinition()->GetParticleName() << 
+//	  ", Material: " << aStep->GetPreStepPoint()->GetMaterial()->GetName() << 
+//	  ", Time: " << aStep->GetPreStepPoint()->GetGlobalTime() << 
+//	  ", Location: " << aStep->GetPreStepPoint()->GetPosition() << 
+//	  G4endl;
+
+  ICRP110PhantomNestedParameterisation* param = (ICRP110PhantomNestedParameterisation*)(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetParameterisation());
   if ( edep == 0. ) return FALSE;
-  G4int idx = ((G4TouchableHistory*)
-               (aStep->GetPreStepPoint()->GetTouchable()))
-               ->GetReplicaNumber(indexDepth);
-  G4double cubicVolume = ComputeVolume(aStep, idx);
+  // G4int idx = ((G4TouchableHistory*)
+  //             (aStep->GetPreStepPoint()->GetTouchable()))
+  //             ->GetReplicaNumber(indexDepth);
+  // G4double cubicVolume = ComputeVolume(aStep, idx);
 
-
-  G4double density = aStep->GetTrack()->GetStep()->GetPreStepPoint()->GetMaterial()->GetDensity();
+  // G4double density = aStep->GetTrack()->GetStep()->GetPreStepPoint()->GetMaterial()->GetDensity();
   G4double dose = edep / (70*kg);  // G4double dose    = edep / ( density * cubicVolume );
   // dose *= aStep->GetPreStepPoint()->GetWeight(); 
   G4int  index = GetIndex(aStep);

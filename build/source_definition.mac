@@ -15,10 +15,11 @@
 /gps/ene/max 10 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
+# /gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.8 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/ang/maxtheta 90 deg
 
 # Helium
 /gps/source/add 1
@@ -31,10 +32,11 @@
 /gps/ene/max 40 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
+# /gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.8 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/ang/maxtheta 90 deg
 
 # Carbon
 /gps/source/add 1
@@ -47,10 +49,11 @@
 /gps/ene/max 60 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
+# /gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.8 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/ang/maxtheta 90 deg
 
 # Silicon
 /gps/source/add 1
@@ -63,10 +66,11 @@
 /gps/ene/max 140 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
+# /gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.8 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/ang/maxtheta 90 deg
 
 # Iron
 /gps/source/add 1
@@ -79,7 +83,8 @@
 /gps/ene/max 260 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
-/gps/pos/centre 0. 0. 0. cm
-/gps/pos/radius 1.55 m
+# /gps/pos/centre 0. 0. 0. cm
+/gps/pos/radius 1.8 m
 /gps/ang/type iso
 /gps/ang/surfnorm true
+/gps/ang/maxtheta 90 deg

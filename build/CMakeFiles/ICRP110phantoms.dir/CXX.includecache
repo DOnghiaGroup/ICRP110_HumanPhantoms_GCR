@@ -81,6 +81,8 @@ PSSecondaryType.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/PSSecondaryType.hh
 G4GenericMessenger.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/include/G4GenericMessenger.hh
+fstream
+-
 
 /home/reu/bderieg/geant4/GCRSimulator/source/include/ICRP110PhantomDetector.hh
 G4VSensitiveDetector.hh
@@ -233,6 +235,8 @@ G4UnitsTable.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4UnitsTable.hh
 G4SystemOfUnits.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4SystemOfUnits.hh
+ICRP110PhantomNestedParameterisation.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomNestedParameterisation.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomActionInitialization.cc
 ICRP110PhantomActionInitialization.hh
@@ -281,6 +285,8 @@ G4Sphere.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4Sphere.hh
 G4NistManager.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4NistManager.hh
+G4PSEnergyDeposit.hh
+/home/reu/bderieg/geant4/GCRSimulator/source/src/G4PSEnergyDeposit.hh
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomDetector.cc
 ICRP110PhantomDetector.hh
@@ -369,6 +375,8 @@ G4Event.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4Event.hh
 G4GeneralParticleSource.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4GeneralParticleSource.hh
+fstream
+-
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomPseudoScene.cc
 ICRP110PhantomPseudoScene.hh
@@ -385,6 +393,8 @@ ICRP110PhantomRun.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomRun.hh
 G4SystemOfUnits.hh
 /home/reu/bderieg/geant4/GCRSimulator/source/src/G4SystemOfUnits.hh
+fstream
+-
 
 /home/reu/bderieg/geant4/GCRSimulator/source/src/ICRP110PhantomRunAction.cc
 ICRP110PhantomRunAction.hh
@@ -1961,6 +1971,12 @@ G4THitsMap.hh
 /opt/geant4/include/Geant4/G4PSDoseDeposit3D.hh
 G4PSDoseDeposit.hh
 /opt/geant4/include/Geant4/G4PSDoseDeposit.hh
+
+/opt/geant4/include/Geant4/G4PSEnergyDeposit.hh
+G4VPrimitivePlotter.hh
+/opt/geant4/include/Geant4/G4VPrimitivePlotter.hh
+G4THitsMap.hh
+/opt/geant4/include/Geant4/G4THitsMap.hh
 
 /opt/geant4/include/Geant4/G4PVParameterised.hh
 G4PVReplica.hh

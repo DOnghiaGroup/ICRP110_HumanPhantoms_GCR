@@ -21,8 +21,8 @@
 #/vis/viewer/set/background white
 #
 # Draw phantom
-/vis/viewer/set/specialMeshRendering
-/vis/drawVolume
+# /vis/viewer/set/specialMeshRendering
+# /vis/drawVolume
 #
 # Alternatively comment out
 # /vis/viewer/set/specialMeshRendering
@@ -30,10 +30,10 @@
 # and replace by
 # Temporarily switch culling off so even a "transparent/invisible" volume
 #   is drawn
-#/vis/viewer/set/culling global false
+/vis/viewer/set/culling global false
 # phantomContainer is transparent - but defines "extent"
-#/vis/drawVolume phantomContainer ! 0
-#/vis/viewer/set/culling global true
+/vis/drawVolume phantomContainer ! 0
+/vis/viewer/set/culling global true
 # Add vis user action
 #/vis/scene/add/userAction
 #
@@ -57,14 +57,14 @@
 #
 # Draw trajectories at end of event, showing trajectory points
 # as markers 2 pixels wide:
-#/vis/scene/add/trajectories
-#/vis/modeling/trajectories/create/drawByCharge
-#/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
-#/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+/vis/scene/add/trajectories
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
 # (if too many tracks cause core dump => /tracking/storeTrajectory 0)
 #
 # Draw hits at end of event:
-#/vis/scene/add/hits
+/vis/scene/add/hits
 #
 # To draw only gammas:
 #/vis/filtering/trajectories/create/particleFilter
