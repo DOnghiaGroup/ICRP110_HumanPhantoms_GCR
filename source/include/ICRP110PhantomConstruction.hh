@@ -95,6 +95,7 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
   G4int fNoFiles;
   G4int fNVoxels;
   size_t* fMateIDs; // index of material of each voxel
+  size_t* fOrganIDs;
   G4String fSex;
   G4String fSection;
   G4LogicalVolume* logicVoxel;

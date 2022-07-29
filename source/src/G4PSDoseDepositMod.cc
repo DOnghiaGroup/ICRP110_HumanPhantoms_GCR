@@ -66,23 +66,13 @@ G4bool G4PSDoseDepositMod::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
   G4double edep = aStep->GetTotalEnergyDeposit();
 
-//  G4cout << 
-//	  "Particle: " << aStep->GetTrack()->GetParticleDefinition()->GetParticleName() << 
-//	  ", Material: " << aStep->GetPreStepPoint()->GetMaterial()->GetName() << 
-//	  ", Time: " << aStep->GetPreStepPoint()->GetGlobalTime() << 
-//	  ", Location: " << aStep->GetPreStepPoint()->GetPosition() << 
-//	  G4endl;
-
-  ICRP110PhantomNestedParameterisation* param = (ICRP110PhantomNestedParameterisation*)(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetParameterisation());
   if ( edep == 0. ) return FALSE;
-  // G4int idx = ((G4TouchableHistory*)
-  //             (aStep->GetPreStepPoint()->GetTouchable()))
-  //             ->GetReplicaNumber(indexDepth);
-  // G4double cubicVolume = ComputeVolume(aStep, idx);
 
-  // G4double density = aStep->GetTrack()->GetStep()->GetPreStepPoint()->GetMaterial()->GetDensity();
-  G4double dose = edep / (70*kg);  // G4double dose    = edep / ( density * cubicVolume );
-  // dose *= aStep->GetPreStepPoint()->GetWeight(); 
+  // G4double dose = edep / (70*kg);  // G4double dose    = edep / ( density * cubicVolume );
+  G4double orgID = std::stoi(aStep->GetPreStepPoint()->GetMaterial()->GetName());
+  G4double organMass = IDToMass(orgID);
+  if (organMass == 0.) return FALSE;
+  G4double dose = edep / (organMass*g);
   G4int  index = GetIndex(aStep);
   EvtMap->add(index,dose);  
 
@@ -155,4 +145,150 @@ G4double G4PSDoseDepositMod::ComputeVolume(G4Step* aStep, G4int idx){
 
 std::vector<std::pair<G4String, G4double>> G4PSDoseDepositMod::GetParticlesEnergies() {
 	return particlesEnergies;
+}
+
+// FIXME: Currently assumes the phantom is male
+G4double G4PSDoseDepositMod::IDToMass(G4int id) {
+	if (id==0) { return 0; }
+	if (id==1) { return 7; }
+	if (id==2) { return 7; }
+	if (id==3) { return 11.03; }
+	if (id==4) { return 28.41; }
+	if (id==5) { return 30.73; }
+	if (id==6) { return 5.1; }
+	if (id==7) { return 10.01; }
+	if (id==8) { return 66.31; }
+	if (id==9) { return 0.85; }
+	if (id==10) { return 271.93; }
+	if (id==11) { return 15.72; }
+	if (id==12) { return 83.04; }
+	if (id==13) { return 135.26; }
+	if (id==14) { return 184.86; }
+	if (id==15) { return 33.48; }
+	if (id==16) { return 128.03; }
+	if (id==17) { return 59.73; }
+	if (id==18) { return 37.13; }
+	if (id==19) { return 270.8; }
+	if (id==20) { return 181.91; }
+	if (id==21) { return 22.67; }
+	if (id==22) { return 179.74; }
+	if (id==23) { return 139.59; }
+	if (id==24) { return 47.78; }
+	if (id==25) { return 53.06; }
+	if (id==26) { return 562.85; }
+	if (id==27) { return 451.06; }
+	if (id==28) { return 261.68; }
+	if (id==29) { return 472.05; }
+	if (id==30) { return 25.78; }
+	if (id==31) { return 294.09; }
+	if (id==32) { return 438.57; }
+	if (id==33) { return 80.89; }
+	if (id==34) { return 531.35; }
+	if (id==35) { return 729.38; }
+	if (id==36) { return 78.67; }
+	if (id==37) { return 232.56; }
+	if (id==38) { return 507.78; }
+	if (id==39) { return 76.12; }
+	if (id==40) { return 73.9; }
+	if (id==41) { return 398.62; }
+	if (id==42) { return 681.18; }
+	if (id==43) { return 365.16; }
+	if (id==44) { return 520.06; }
+	if (id==45) { return 221.13; }
+	if (id==46) { return 192.21; }
+	if (id==47) { return 102.92; }
+	if (id==48) { return 73.55; }
+	if (id==49) { return 286.58; }
+	if (id==50) { return 335.34; }
+	if (id==51) { return 186.19; }
+	if (id==52) { return 302.07; }
+	if (id==53) { return 109.23; }
+	if (id==54) { return 173.51; }
+	if (id==55) { return 9.89; }
+	if (id==56) { return 56.31; }
+	if (id==57) { return 15.96; }
+	if (id==58) { return 88.67; }
+	if (id==59) { return 5.91; }
+	if (id==60) { return 34.73; }
+	if (id==61) { return 1450; }
+	if (id==62) { return 7.5; }
+	if (id==63) { return 4.99; }
+	if (id==64) { return 7.5; }
+	if (id==65) { return 4.99; }
+	if (id==66) { return 0.19; }
+	if (id==67) { return 7.29; }
+	if (id==68) { return 0.19; }
+	if (id==69) { return 7.33; }
+	if (id==70) { return 13.92; }
+	if (id==71) { return 54.08; }
+	if (id==72) { return 149.99; }
+	if (id==73) { return 250.01; }
+	if (id==74) { return 650; }
+	if (id==75) { return 350.02; }
+	if (id==76) { return 89.99; }
+	if (id==77) { return 55.02; }
+	if (id==78) { return 60; }
+	if (id==79) { return 95; }
+	if (id==80) { return 60; }
+	if (id==81) { return 40.01; }
+	if (id==82) { return 89.99; }
+	if (id==83) { return 35; }
+	if (id==84) { return 40.01; }
+	if (id==85) { return 74.97; }
+	if (id==86) { return 29.98; }
+	if (id==87) { return 329.98; }
+	if (id==88) { return 510.01; }
+	if (id==89) { return 107.12; }
+	if (id==90) { return 38.25; }
+	if (id==91) { return 7.63; }
+	if (id==92) { return 109.92; }
+	if (id==93) { return 39.25; }
+	if (id==94) { return 7.87; }
+	if (id==95) { return 1800.01; }
+	if (id==96) { return 79.01; }
+	if (id==97) { return 477.74; }
+	if (id==98) { return 71.54; }
+	if (id==99) { return 580.08; }
+	if (id==100) { return 2.26; }
+	if (id==101) { return 6.4; }
+	if (id==102) { return 5.98; }
+	if (id==103) { return 104.4; }
+	if (id==104) { return 7.83; }
+	if (id==105) { return 11.1; }
+	if (id==106) { return 1217.81; }
+	if (id==107) { return 15006.82; }
+	if (id==108) { return 2750.53; }
+	if (id==109) { return 10024.97; }
+	if (id==110) { return 40.01; }
+	if (id==111) { return 0; }
+	if (id==112) { return 0; }
+	if (id==113) { return 140; }
+	if (id==114) { return 0.6; }
+	if (id==115) { return 17.01; }
+	if (id==116) { return 1048.51; }
+	if (id==117) { return 12370.04; }
+	if (id==118) { return 1643.47; }
+	if (id==119) { return 5396.47; }
+	if (id==120) { return 42.49; }
+	if (id==121) { return 42.49; }
+	if (id==122) { return 291.34; }
+	if (id==123) { return 1465.21; }
+	if (id==124) { return 639.03; }
+	if (id==125) { return 1332.43; }
+	if (id==126) { return 36.62; }
+	if (id==127) { return 149.99; }
+	if (id==128) { return 50.04; }
+	if (id==129) { return 17.48; }
+	if (id==130) { return 17.52; }
+	if (id==131) { return 24.99; }
+	if (id==132) { return 19.99; }
+	if (id==133) { return 42.28; }
+	if (id==134) { return 3.01; }
+	if (id==135) { return 8.51; }
+	if (id==136) { return 7.49; }
+	if (id==137) { return 50.01; }
+	if (id==138) { return 200; }
+	if (id==139) { return 0; }
+	if (id==140) { return 0.2; }
+	if (id==141) { return 154.3; }
 }

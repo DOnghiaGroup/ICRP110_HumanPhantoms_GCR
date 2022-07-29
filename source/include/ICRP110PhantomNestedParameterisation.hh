@@ -82,10 +82,13 @@ public:
   G4Material* GetMaterial(G4int idx) const;
 
   G4int GetMaterialIndex( G4int copyNo) const;
+  G4int GetOrganIndex( G4int copyNo) const;
   
   void SetMaterialIndices( size_t* matInd ){ fMaterialIndices = matInd;}
   // This method passes the information of the matID associated to each voxel
   // from the DetectorConstruction to the NestedParameterisation class
+
+  void SetOrganIndices( size_t* orgInd ) { fOrganIndices = orgInd; }
   
   void SetNoVoxel( G4int nx, G4int ny, G4int nz ); 
   // This method passes the total number of voxels along X, Y and Z from 
@@ -137,6 +140,7 @@ private:
   G4int fnX,fnY,fnZ;    // Number of voxels along X, Y and Z
   std::vector<G4Material*> fMaterials; // Vector with materials
   size_t* fMaterialIndices; // Index of the material associated to each voxel
+  size_t* fOrganIndices;
   std::map<G4String,G4VisAttributes*> fColours;
 };
 #endif

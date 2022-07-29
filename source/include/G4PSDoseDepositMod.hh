@@ -70,5 +70,6 @@ class G4PSDoseDepositMod : public G4VPrimitiveScorer
       G4int HCID;
       G4THitsMap<G4double>* EvtMap;
       std::vector<std::pair<G4String, G4double>> particlesEnergies;
+      G4double IDToMass(G4int);
 };
 #endif

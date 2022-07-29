@@ -44,7 +44,7 @@
 # /output/allFileName oneevent.csv
 /output/primariesFileName yeehaw.dat
 # /output/primariesFileType organ
-/run/beamOn 10000
+/run/beamOn 100000
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

@@ -327,12 +327,13 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
                           param);       // Parameterisation
 
     param -> SetMaterialIndices(fMateIDs); // fMateIDs is  the vector with Material ID associated to each voxel, from ASCII input data files.
+    param -> SetOrganIndices(fOrganIDs);
     param -> SetNoVoxel(fNVoxelX,fNVoxelY,fNVoxelZ);
 
     // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
 
 //---- Define shield radii and other constants
-    G4double shieldInnerRadii = 1.6540 * m; 
+    G4double shieldInnerRadii = 1.6524 * m; 
     G4double shieldOuterRadii = 1.800 * m;
     G4double pi = 3.14159265358979323846;
     
@@ -477,6 +478,7 @@ if(finDF.good() != 1 ) //check that the file is good and working
       }
   
 fMateIDs = new size_t[fNVoxels]; //Array with Material ID for each voxel
+fOrganIDs = new size_t[fNVoxels];
 
 G4cout << "ICRP110PhantomConstruction::ReadPhantomDataFile is openining the following phantom files: " << G4endl;
   
@@ -532,11 +534,14 @@ G4String slice;
         fin >> OrgID; 
 
         G4int mateID_out;
+	G4int organID_out;
 
 // The code below associates organ ID numbers (called here mateID) from ASCII slice
 // files with material ID numbers (called here mateID_out) as defined in ICRP110PhantomMaterials
 // Material and Organ IDs are associated as stated in AM_organs.dat and FM_organs.dat depending on
 // the sex of the phantom (male and female, respctively)
+
+	organID_out = OrgID;
 
 	if (OrgID==128)
 	{
@@ -822,6 +827,7 @@ G4String slice;
 	 }
 	
           fMateIDs[nnew] = mateID_out;
+	  fOrganIDs[nnew] = organID_out;
 	
          }
       }

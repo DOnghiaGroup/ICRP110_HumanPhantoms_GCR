@@ -48,7 +48,8 @@ ICRP110PhantomNestedParameterisation(const G4ThreeVector& halfVoxelSize,
   fdX(halfVoxelSize.x()), fdY(halfVoxelSize.y()), fdZ(halfVoxelSize.z()), 
   fnX(fnX_), fnY(fnY_), fnZ(fnZ_), // number of voxels along X, Y and Z
   fMaterials(mat), // vector of defined materials
-  fMaterialIndices(0) // vector which associates MaterialID to voxels
+  fMaterialIndices(0), // vector which associates MaterialID to voxels
+  fOrganIndices(0)
 {
  ReadColourData();//Define the color of each material
                   // from ColourMap.dat
@@ -134,6 +135,7 @@ ComputeMaterial(G4VPhysicalVolume* physVol, const G4int iz,
             SetVisAttributes(fColours.begin() ->second); // Associate color
         }
     }
+    	mate->SetName(std::to_string(GetOrganIndex(copyID)));
 	physVol -> GetLogicalVolume()->SetMaterial(mate);
      
     return mate;
@@ -142,6 +144,11 @@ ComputeMaterial(G4VPhysicalVolume* physVol, const G4int iz,
 G4int ICRP110PhantomNestedParameterisation::GetMaterialIndex( G4int copyNo ) const
 {
 	return fMaterialIndices[copyNo];
+}
+
+G4int ICRP110PhantomNestedParameterisation::GetOrganIndex( G4int copyNo ) const
+{
+	return fOrganIndices[copyNo];
 }
 
 G4int ICRP110PhantomNestedParameterisation::GetNumberOfMaterials() const
