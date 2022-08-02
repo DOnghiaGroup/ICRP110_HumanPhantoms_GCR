@@ -6,5 +6,5 @@ CXX_FLAGS = -W -Wall -pedantic -Wno-non-virtual-dtor -Wno-long-long -Wwrite-stri
 
 CXX_DEFINES = -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_TCSH -DG4VIS_USE_OPENGL -DG4VIS_USE_OPENGLQT -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/home/reu/bderieg/geant4/GCRSimulator/source/include -isystem /opt/geant4/include/Geant4 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtOpenGL -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtPrintSupport 
+CXX_INCLUDES = -I/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include -isystem /opt/geant4/include/Geant4 -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtOpenGL -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtPrintSupport 
 

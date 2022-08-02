@@ -41,10 +41,11 @@
 #------------------Run------------------#
 #---------------------------------------#
 # Chooose number of events (with the source in source_definition.mac)
-# /output/allFileName oneevent.csv
+/output/allFileName oneevent.csv
 /output/primariesFileName yeehaw.dat
+# /output/weight true
 # /output/primariesFileType organ
-/run/beamOn 100000
+/run/beamOn 100
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

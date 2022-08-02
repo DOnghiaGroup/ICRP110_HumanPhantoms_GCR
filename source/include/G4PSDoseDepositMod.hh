@@ -35,6 +35,7 @@
 #include "G4VPrimitiveScorer.hh"
 #include "G4THitsMap.hh"
 #include <vector>
+#include "G4GenericMessenger.hh"
 
 // (Description)
 //   Primitive scorer class for scoring dose deposit in the geometry volume.
@@ -71,5 +72,8 @@ class G4PSDoseDepositMod : public G4VPrimitiveScorer
       G4THitsMap<G4double>* EvtMap;
       std::vector<std::pair<G4String, G4double>> particlesEnergies;
       G4double IDToMass(G4int);
+      G4double GetRBE(G4Step*);
+      G4GenericMessenger* outputMessenger;
+      G4bool weight;
 };
 #endif

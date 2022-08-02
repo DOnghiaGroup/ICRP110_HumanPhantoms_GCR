@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata-prefix/src/ICRPdata.tar.gz" ABSOLUTE)
-get_filename_component(directory "/home/reu/bderieg/geant4/GCRSimulator/build/ICRPdata" ABSOLUTE)
+get_filename_component(filename "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz" ABSOLUTE)
+get_filename_component(directory "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

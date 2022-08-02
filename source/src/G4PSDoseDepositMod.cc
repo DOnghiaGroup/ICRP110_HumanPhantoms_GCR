@@ -36,6 +36,7 @@
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh"
 #include "ICRP110PhantomNestedParameterisation.hh"
+#include <cmath>
 
 // (Description)
 //   This is a primitive scorer class for scoring only energy deposit.
@@ -49,6 +50,9 @@ G4PSDoseDepositMod::G4PSDoseDepositMod(G4String name, G4int depth)
   :G4VPrimitiveScorer(name,depth),HCID(-1)
 {
     SetUnit("Gy");
+    outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
+    outputMessenger -> DeclareProperty("weight", weight, "Weight particles to provide equivalent dose (bool)?");
+    weight = false;
 }
 
 G4PSDoseDepositMod::G4PSDoseDepositMod(G4String name, const G4String& unit,
@@ -58,8 +62,9 @@ G4PSDoseDepositMod::G4PSDoseDepositMod(G4String name, const G4String& unit,
     SetUnit(unit);
 }
 
-G4PSDoseDepositMod::~G4PSDoseDepositMod()
-{;}
+G4PSDoseDepositMod::~G4PSDoseDepositMod() {
+	delete outputMessenger;
+}
 
 G4bool G4PSDoseDepositMod::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 {
@@ -72,7 +77,12 @@ if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
   G4double orgID = std::stoi(aStep->GetPreStepPoint()->GetMaterial()->GetName());
   G4double organMass = IDToMass(orgID);
   if (organMass == 0.) return FALSE;
-  G4double dose = edep / (organMass*g);
+  G4double dose = 0.0;
+  if (weight) {
+  	dose = GetRBE(aStep) * edep / (organMass*g);
+  } else {
+  	dose = edep / (organMass*g);
+  }
   G4int  index = GetIndex(aStep);
   EvtMap->add(index,dose);  
 
@@ -291,4 +301,32 @@ G4double G4PSDoseDepositMod::IDToMass(G4int id) {
 	if (id==139) { return 0; }
 	if (id==140) { return 0.2; }
 	if (id==141) { return 154.3; }
+}
+
+G4double G4PSDoseDepositMod::GetRBE(G4Step* aStep) {
+	G4cout << "I am weighting!" << G4endl;
+
+	G4double e = 2.718281828459045;
+
+	G4String particleName = aStep -> GetTrack() -> GetParticleDefinition() -> GetParticleName();
+	G4double KE = aStep -> GetPreStepPoint() -> GetKineticEnergy();
+	G4int baryonNumber = aStep -> GetTrack() -> GetParticleDefinition() -> GetBaryonNumber();
+
+	if (particleName == "neutron") {
+		if (KE < (1*MeV)) {
+			return ( 2.5 + ( 18.2*pow(e,((-pow(std::log(KE),2))/6)) ) );
+		} else if (KE < (50*MeV)) {
+			return ( 5.0 + ( 17.0*pow(e,((-pow(std::log(2*KE),2))/6)) ) );
+		} else {
+			return ( 2.5 + ( 3.25*pow(e,((-pow(std::log(0.04*KE),2))/6)) ) );
+		}
+	} else if ((particleName == "proton") 
+			|| (particleName == "pi+") 
+			|| (particleName == "pi-")) {
+		return 2.0;
+	} else if (baryonNumber > 1) {
+		return 20.0;
+	} else {
+		return 1.0;
+	}
 }

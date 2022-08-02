@@ -60,10 +60,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/reu/bderieg/geant4/GCRSimulator/source
+CMAKE_SOURCE_DIR = /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/reu/bderieg/geant4/GCRSimulator/build
+CMAKE_BINARY_DIR = /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build
 
 # Utility rule file for ICRPphantoms.
 
@@ -88,6 +88,6 @@ CMakeFiles/ICRPphantoms.dir/clean:
 .PHONY : CMakeFiles/ICRPphantoms.dir/clean
 
 CMakeFiles/ICRPphantoms.dir/depend:
-	cd /home/reu/bderieg/geant4/GCRSimulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/reu/bderieg/geant4/GCRSimulator/source /home/reu/bderieg/geant4/GCRSimulator/source /home/reu/bderieg/geant4/GCRSimulator/build /home/reu/bderieg/geant4/GCRSimulator/build /home/reu/bderieg/geant4/GCRSimulator/build/CMakeFiles/ICRPphantoms.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/ICRPphantoms.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ICRPphantoms.dir/depend
 
