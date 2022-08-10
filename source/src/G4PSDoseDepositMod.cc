@@ -304,8 +304,6 @@ G4double G4PSDoseDepositMod::IDToMass(G4int id) {
 }
 
 G4double G4PSDoseDepositMod::GetRBE(G4Step* aStep) {
-	G4cout << "I am weighting!" << G4endl;
-
 	G4double e = 2.718281828459045;
 
 	G4String particleName = aStep -> GetTrack() -> GetParticleDefinition() -> GetParticleName();

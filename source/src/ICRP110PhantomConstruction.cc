@@ -51,8 +51,7 @@
 #include "G4Sphere.hh"
 #include "G4NistManager.hh"
 #include "G4PSEnergyDeposit.hh"
-
-
+#include <cstdio>
 
 ICRP110PhantomConstruction::ICRP110PhantomConstruction():
    fMotherVolume(nullptr), fPhantomContainer(nullptr),
@@ -72,6 +71,10 @@ ICRP110PhantomConstruction::ICRP110PhantomConstruction():
 
   outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
   outputMessenger -> DeclareProperty("detectorType", detectorType, "Phantom detector type (all or primaries)");
+  outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
+  outputMessenger -> DeclareProperty("allFileName", allFileName, "Name of detector for the sensitive detector");
+  primariesFileName = "unnamed_output_file.csv";
+  allFileName = "unnamed_output_file.csv";
   detectorType = "none";
 }
 
@@ -85,6 +88,10 @@ ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
 
 G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 {
+  // Delete old output files of the same name
+	std::remove(primariesFileName);
+	std::remove(allFileName);
+
   G4NistManager* nist = G4NistManager::Instance();
 
   // Define Material Air

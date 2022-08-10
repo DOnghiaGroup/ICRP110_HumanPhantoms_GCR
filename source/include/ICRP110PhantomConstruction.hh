@@ -107,6 +107,8 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
   // Messenger values
   G4GenericMessenger* outputMessenger;
   G4String detectorType;
+  G4String primariesFileName;
+  G4String allFileName;
 };
 #endif
 

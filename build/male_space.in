@@ -1,4 +1,10 @@
 #---------------------------------------#
+#--------Set filenames to delete--------#
+#---------------------------------------#
+/output/allFileName final_spectra.csv
+/output/primariesFileName yeehaw.dat
+
+#---------------------------------------#
 #-------------Select Phantom------------#
 #---------------------------------------#
 # Choose phantom sex (male or female)
@@ -40,12 +46,11 @@
 #---------------------------------------#
 #------------------Run------------------#
 #---------------------------------------#
-# Chooose number of events (with the source in source_definition.mac)
-/output/allFileName oneevent.csv
+/output/allFileName final_spectra.csv
 /output/primariesFileName yeehaw.dat
-# /output/weight true
+/output/weight true
 # /output/primariesFileType organ
-/run/beamOn 100
+/run/beamOn 3
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

@@ -30,7 +30,7 @@ G4bool ICRP110PhantomDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0
 		if (material != "Air") {
 			std::ofstream ofile;
 			ofile.open(allFileName, std::ios_base::app);
-			ofile << particleName << "," << initKE << "," << position[0] << "," << position[1] << "," << position[2] << "," << energyDep << "\n"; 
+			ofile << particleName << "," << initKE << "\n"; // << "," << position[0] << "," << position[1] << "," << position[2] << "," << energyDep << "\n"; 
 			ofile.close();
 		}
 	}
