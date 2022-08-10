@@ -13,7 +13,9 @@ for the original information). Here, we've added functionality to:
 Below is information on how to access output files for each of these metrics. See also "Useful Geant4 Information" in
 the main directory for a detailed explanation of how this was modified from the original example.
         
-# Macro Commands (see build/male_space.in as example)
+# Macro Commands 
+
+(see build/male_space.in as example)
            
 ## Select output file type
 
@@ -33,8 +35,8 @@ Before running, the user should specify /output/primariesFileType. Options are "
 a .csv file organized with columns "primary particle name, initial kinetic energy (MeV), dose (Gy) imparted by all secondaries."
 The "organ" option outputs a dictionary (each entry being one event) with:
     
-    - keys: primary particle type, initial kinetic energy
-    - values: a dictionary of organID and dose imparted to that organID
+  - keys: primary particle type, initial kinetic energy
+  - values: a dictionary of organID and dose imparted to that organID
 
 The organIDs are as specified in the ICRP110 human phantom.
 
