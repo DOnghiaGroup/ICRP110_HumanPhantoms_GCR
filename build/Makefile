@@ -320,33 +320,6 @@ src/ICRP110PhantomConstruction.cc.s:
 	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomConstruction.cc.s
 .PHONY : src/ICRP110PhantomConstruction.cc.s
 
-src/ICRP110PhantomDetector.o: src/ICRP110PhantomDetector.cc.o
-
-.PHONY : src/ICRP110PhantomDetector.o
-
-# target to build an object file
-src/ICRP110PhantomDetector.cc.o:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o
-.PHONY : src/ICRP110PhantomDetector.cc.o
-
-src/ICRP110PhantomDetector.i: src/ICRP110PhantomDetector.cc.i
-
-.PHONY : src/ICRP110PhantomDetector.i
-
-# target to preprocess a source file
-src/ICRP110PhantomDetector.cc.i:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.i
-.PHONY : src/ICRP110PhantomDetector.cc.i
-
-src/ICRP110PhantomDetector.s: src/ICRP110PhantomDetector.cc.s
-
-.PHONY : src/ICRP110PhantomDetector.s
-
-# target to generate assembly for a file
-src/ICRP110PhantomDetector.cc.s:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.s
-.PHONY : src/ICRP110PhantomDetector.cc.s
-
 src/ICRP110PhantomMaterial_Female.o: src/ICRP110PhantomMaterial_Female.cc.o
 
 .PHONY : src/ICRP110PhantomMaterial_Female.o
@@ -725,9 +698,6 @@ help:
 	@echo "... src/ICRP110PhantomConstruction.o"
 	@echo "... src/ICRP110PhantomConstruction.i"
 	@echo "... src/ICRP110PhantomConstruction.s"
-	@echo "... src/ICRP110PhantomDetector.o"
-	@echo "... src/ICRP110PhantomDetector.i"
-	@echo "... src/ICRP110PhantomDetector.s"
 	@echo "... src/ICRP110PhantomMaterial_Female.o"
 	@echo "... src/ICRP110PhantomMaterial_Female.i"
 	@echo "... src/ICRP110PhantomMaterial_Female.s"

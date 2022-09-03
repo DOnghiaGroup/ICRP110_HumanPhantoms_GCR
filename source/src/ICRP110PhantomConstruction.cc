@@ -70,12 +70,8 @@ ICRP110PhantomConstruction::ICRP110PhantomConstruction():
   fSection = "head"; // Head partial phantom is the default option
 
   outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
-  outputMessenger -> DeclareProperty("detectorType", detectorType, "Phantom detector type (all or primaries)");
-  outputMessenger -> DeclareProperty("primariesFileName", primariesFileName, "Name of output file for primaries");
-  outputMessenger -> DeclareProperty("allFileName", allFileName, "Name of detector for the sensitive detector");
-  primariesFileName = "unnamed_output_file.csv";
-  allFileName = "unnamed_output_file.csv";
-  detectorType = "none";
+  outputMessenger -> DeclareProperty("fileName", fileName, "Name of output file for primaries");
+  fileName = "unnamed_output_file.csv";
 }
 
 ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
@@ -89,8 +85,7 @@ ICRP110PhantomConstruction::~ICRP110PhantomConstruction()
 G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 {
   // Delete old output files of the same name
-	std::remove(primariesFileName);
-	std::remove(allFileName);
+	std::remove(fileName);
 
   G4NistManager* nist = G4NistManager::Instance();
 
@@ -360,10 +355,6 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
 
 // Sensitive detector construction
 void ICRP110PhantomConstruction::ConstructSDandField() {
-	// Sensitive detector definition
-	ICRP110PhantomDetector* phantomSensitiveDetector = new ICRP110PhantomDetector("SensitiveDetector");
-	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomSensitiveDetector);
-
 	// Multifunctional detector implementation
 	G4MultiFunctionalDetector* phantomDetector = new G4MultiFunctionalDetector("phantomDetector");
 	G4SDManager::GetSDMpointer() -> AddNewDetector(phantomDetector);
@@ -375,13 +366,8 @@ void ICRP110PhantomConstruction::ConstructSDandField() {
 	phantomDetector -> RegisterPrimitive(organName);
 	phantomDetector -> RegisterPrimitive(secondaryType);
 
-	if (detectorType == "all") {
-		// Sensitive detector implementation
-		logicVoxel -> SetSensitiveDetector(phantomSensitiveDetector);	
-	} else if (detectorType == "primaries") {
-		// Multifunctional detector implementation
-		logicVoxel -> SetSensitiveDetector(phantomDetector);
-	}
+	// Multifunctional detector implementation
+	logicVoxel -> SetSensitiveDetector(phantomDetector);
 }
 
 void ICRP110PhantomConstruction::ReadPhantomData(const G4String& sex, const G4String& section)

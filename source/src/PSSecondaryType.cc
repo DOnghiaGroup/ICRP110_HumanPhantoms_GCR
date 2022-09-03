@@ -19,7 +19,7 @@ if (aStep->GetPreStepPoint()->GetMaterial()->GetName() != "Air") {
   G4double edep = aStep->GetTotalEnergyDeposit();
   if ( edep == 0. ) return FALSE;
 
-  G4int  index = GetIndex(aStep);
+  G4int index = GetIndex(aStep);
   G4String secondaryName = aStep -> GetTrack() -> GetParticleDefinition() -> GetParticleName();
   EvtMap->set(index, secondaryName);  
 

@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ICRP110phantoms.dir/src/G4PSDoseDepositMod.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomActionInitialization.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomConstruction.cc.o"
-  "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomDetector.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomMaterial_Female.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomMaterial_Male.cc.o"
   "CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomMessenger.cc.o"

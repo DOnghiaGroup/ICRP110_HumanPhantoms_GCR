@@ -10791,3 +10791,175 @@ int main(void)
   return 0;
 }
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_796bf/fast && /usr/bin/gmake -f CMakeFiles/cmTC_796bf.dir/build.make CMakeFiles/cmTC_796bf.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_796bf.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_796bf.dir/src.c.o   -c /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_796bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_796bf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_796bf.dir/src.c.o  -o cmTC_796bf 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_796bf.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_796bf.dir/build.make:104: cmTC_796bf] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_796bf/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_41863/fast && /usr/bin/gmake -f CMakeFiles/cmTC_41863.dir/build.make CMakeFiles/cmTC_41863.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_41863.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_41863.dir/src.c.o   -c /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_41863
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41863.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_41863.dir/src.c.o  -o cmTC_41863 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_41863.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_41863.dir/build.make:104: cmTC_41863] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_41863/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2fce6/fast && /usr/bin/gmake -f CMakeFiles/cmTC_2fce6.dir/build.make CMakeFiles/cmTC_2fce6.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2fce6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2fce6.dir/src.c.o   -c /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2fce6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fce6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_2fce6.dir/src.c.o  -o cmTC_2fce6 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_2fce6.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_2fce6.dir/build.make:104: cmTC_2fce6] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_2fce6/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f7a89/fast && /usr/bin/gmake -f CMakeFiles/cmTC_f7a89.dir/build.make CMakeFiles/cmTC_f7a89.dir/build
+gmake[1]: Entering directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7a89.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f7a89.dir/src.c.o   -c /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f7a89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7a89.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_f7a89.dir/src.c.o  -o cmTC_f7a89 
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: CMakeFiles/cmTC_f7a89.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_f7a89.dir/build.make:104: cmTC_f7a89] Error 1
+gmake[1]: Leaving directory '/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:138: cmTC_f7a89/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

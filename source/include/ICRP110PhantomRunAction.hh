@@ -25,8 +25,8 @@ public:
 	virtual void BeginOfRunAction(const G4Run*);
 	virtual void EndOfRunAction(const G4Run*);
 private:
-	G4String primariesFileName;
-	G4String primariesFileType;
+	G4String outputFileName;
+	G4String outputType;
 	G4GenericMessenger* outputMessenger;
 };
 

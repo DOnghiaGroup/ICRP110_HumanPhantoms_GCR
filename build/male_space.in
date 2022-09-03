@@ -1,8 +1,7 @@
 #---------------------------------------#
 #--------Set filenames to delete--------#
 #---------------------------------------#
-/output/allFileName final_spectra.csv
-/output/primariesFileName yeehaw.dat
+/output/fileName final_spectra.csv
 
 #---------------------------------------#
 #-------------Select Phantom------------#
@@ -14,9 +13,6 @@
 # Choose phantom section (head, trunk or full)
 /phantom/setPhantomSection full
 /phantom/setScoreWriterSection full
-
-# Select what type of output (all, primaries, or none (default))
-/output/detectorType primaries
 
 #---------------------------------------#
 #------------Initialization-------------#
@@ -46,10 +42,8 @@
 #---------------------------------------#
 #------------------Run------------------#
 #---------------------------------------#
-/output/allFileName final_spectra.csv
-/output/primariesFileName yeehaw.dat
+/output/fileName final_spectra.csv
 /output/weight true
-# /output/primariesFileType organ
 /run/beamOn 3
 
 #---------------------------------------#

@@ -38,7 +38,6 @@
 #include "G4VUserDetectorConstruction.hh"
 #include "globals.hh"
 #include <map>
-#include "ICRP110PhantomDetector.hh"
 #include "G4PSDoseDepositMod.hh"
 #include "PSOrganName.hh"
 #include "PSSecondaryType.hh"
@@ -77,7 +76,6 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
   ICRP110PhantomMaterial_Female* fMaterial_Female;
   ICRP110PhantomMaterial_Male* fMaterial_Male;
   ICRP110PhantomMessenger* fMessenger;
- // std::vector<G4Material*> fMaterials;
   G4VPhysicalVolume* fMotherVolume;
   G4VPhysicalVolume* fPhantomContainer;
   G4int fNVoxelX;
@@ -106,9 +104,7 @@ class ICRP110PhantomConstruction : public G4VUserDetectorConstruction
 
   // Messenger values
   G4GenericMessenger* outputMessenger;
-  G4String detectorType;
-  G4String primariesFileName;
-  G4String allFileName;
+  G4String fileName;
 };
 #endif
 
