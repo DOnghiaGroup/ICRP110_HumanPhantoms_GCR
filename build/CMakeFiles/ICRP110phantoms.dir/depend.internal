@@ -13,7 +13,7 @@ CMakeFiles/ICRP110phantoms.dir/ICRP110phantoms.cc.o
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110ScoreWriterMessenger.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110UserScoreWriter.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSOrganName.hh
- /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
+ /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Plane3D.h
@@ -716,7 +716,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomConstruction.cc.o
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110PhantomMessenger.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110PhantomNestedParameterisation.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSOrganName.hh
- /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
+ /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/ICRP110PhantomConstruction.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -1546,7 +1546,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomMessenger.cc.o
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110PhantomConstruction.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110PhantomMessenger.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSOrganName.hh
- /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
+ /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/ICRP110PhantomMessenger.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -2424,7 +2424,7 @@ CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomVisAction.cc.o
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110PhantomPseudoScene.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/ICRP110PhantomVisAction.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSOrganName.hh
- /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
+ /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
  /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/ICRP110PhantomVisAction.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -3267,9 +3267,9 @@ CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.o
  /opt/geant4/include/Geant4/templates.hh
  /opt/geant4/include/Geant4/tls.hh
  /opt/geant4/include/Geant4/trkdefs.hh
-CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o
- /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
- /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.cc
+CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o
+ /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
+ /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.cc
  /opt/geant4/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Normal3D.h
  /opt/geant4/include/Geant4/CLHEP/Geometry/Point3D.h

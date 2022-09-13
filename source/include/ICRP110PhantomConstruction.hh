@@ -40,7 +40,7 @@
 #include <map>
 #include "G4PSDoseDepositMod.hh"
 #include "PSOrganName.hh"
-#include "PSSecondaryType.hh"
+#include "PSSecondaries.hh"
 #include "G4GenericMessenger.hh"
 #include <fstream>
 

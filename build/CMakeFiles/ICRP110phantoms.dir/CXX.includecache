@@ -77,8 +77,8 @@ G4PSDoseDepositMod.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/G4PSDoseDepositMod.hh
 PSOrganName.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSOrganName.hh
-PSSecondaryType.hh
-/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
+PSSecondaries.hh
+/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
 G4GenericMessenger.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/G4GenericMessenger.hh
 fstream
@@ -204,12 +204,16 @@ G4THitsMap.hh
 vector
 -
 
-/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaryType.hh
+/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/PSSecondaries.hh
 G4VPrimitiveScorer.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/G4VPrimitiveScorer.hh
 G4THitsMap.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/G4THitsMap.hh
+G4Step.hh
+/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/include/G4Step.hh
 vector
+-
+set
 -
 
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/G4PSDoseDepositMod.cc
@@ -456,9 +460,9 @@ G4UnitsTable.hh
 G4SystemOfUnits.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/G4SystemOfUnits.hh
 
-/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.cc
-PSSecondaryType.hh
-/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.hh
+/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.cc
+PSSecondaries.hh
+/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.hh
 G4VSolid.hh
 /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/G4VSolid.hh
 G4VPhysicalVolume.hh

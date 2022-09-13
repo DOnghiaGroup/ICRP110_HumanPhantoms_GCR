@@ -282,18 +282,18 @@ CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSOrganName.cc -o CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.s
 
-CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o: CMakeFiles/ICRP110phantoms.dir/flags.make
-CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o: /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o -c /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.cc
+CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o: CMakeFiles/ICRP110phantoms.dir/flags.make
+CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o: /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o -c /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.cc
 
-CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.cc > CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.i
+CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.cc > CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.i
 
-CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaryType.cc -o CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.s
+CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/source/src/PSSecondaries.cc -o CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.s
 
 # Object files for target ICRP110phantoms
 ICRP110phantoms_OBJECTS = \
@@ -313,7 +313,7 @@ ICRP110phantoms_OBJECTS = \
 "CMakeFiles/ICRP110phantoms.dir/src/ICRP110ScoreWriterMessenger.cc.o" \
 "CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o" \
 "CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.o" \
-"CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o"
+"CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o"
 
 # External object files for target ICRP110phantoms
 ICRP110phantoms_EXTERNAL_OBJECTS =
@@ -334,7 +334,7 @@ ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110PhantomVisAction.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110ScoreWriterMessenger.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/ICRP110UserScoreWriter.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.o
-ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o
+ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o
 ICRP110phantoms: CMakeFiles/ICRP110phantoms.dir/build.make
 ICRP110phantoms: /opt/geant4/lib64/libG4Tree.so
 ICRP110phantoms: /opt/geant4/lib64/libG4FR.so

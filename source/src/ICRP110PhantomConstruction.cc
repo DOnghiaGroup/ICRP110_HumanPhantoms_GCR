@@ -361,10 +361,10 @@ void ICRP110PhantomConstruction::ConstructSDandField() {
 
 	G4VPrimitiveScorer* doseCounter = new G4PSDoseDepositMod("doseCounter");
 	G4VPrimitiveScorer* organName = new PSOrganName("organName");
-	G4VPrimitiveScorer* secondaryType = new PSSecondaryType("secondaryType");
+	G4VPrimitiveScorer* secondaries = new PSSecondaries("secondaries");
 	phantomDetector -> RegisterPrimitive(doseCounter);
 	phantomDetector -> RegisterPrimitive(organName);
-	phantomDetector -> RegisterPrimitive(secondaryType);
+	phantomDetector -> RegisterPrimitive(secondaries);
 
 	// Multifunctional detector implementation
 	logicVoxel -> SetSensitiveDetector(phantomDetector);

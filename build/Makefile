@@ -644,32 +644,32 @@ src/PSOrganName.cc.s:
 	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSOrganName.cc.s
 .PHONY : src/PSOrganName.cc.s
 
-src/PSSecondaryType.o: src/PSSecondaryType.cc.o
+src/PSSecondaries.o: src/PSSecondaries.cc.o
 
-.PHONY : src/PSSecondaryType.o
+.PHONY : src/PSSecondaries.o
 
 # target to build an object file
-src/PSSecondaryType.cc.o:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.o
-.PHONY : src/PSSecondaryType.cc.o
+src/PSSecondaries.cc.o:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.o
+.PHONY : src/PSSecondaries.cc.o
 
-src/PSSecondaryType.i: src/PSSecondaryType.cc.i
+src/PSSecondaries.i: src/PSSecondaries.cc.i
 
-.PHONY : src/PSSecondaryType.i
+.PHONY : src/PSSecondaries.i
 
 # target to preprocess a source file
-src/PSSecondaryType.cc.i:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.i
-.PHONY : src/PSSecondaryType.cc.i
+src/PSSecondaries.cc.i:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.i
+.PHONY : src/PSSecondaries.cc.i
 
-src/PSSecondaryType.s: src/PSSecondaryType.cc.s
+src/PSSecondaries.s: src/PSSecondaries.cc.s
 
-.PHONY : src/PSSecondaryType.s
+.PHONY : src/PSSecondaries.s
 
 # target to generate assembly for a file
-src/PSSecondaryType.cc.s:
-	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaryType.cc.s
-.PHONY : src/PSSecondaryType.cc.s
+src/PSSecondaries.cc.s:
+	$(MAKE) -f CMakeFiles/ICRP110phantoms.dir/build.make CMakeFiles/ICRP110phantoms.dir/src/PSSecondaries.cc.s
+.PHONY : src/PSSecondaries.cc.s
 
 # Help Target
 help:
@@ -734,9 +734,9 @@ help:
 	@echo "... src/PSOrganName.o"
 	@echo "... src/PSOrganName.i"
 	@echo "... src/PSOrganName.s"
-	@echo "... src/PSSecondaryType.o"
-	@echo "... src/PSSecondaryType.i"
-	@echo "... src/PSSecondaryType.s"
+	@echo "... src/PSSecondaries.o"
+	@echo "... src/PSSecondaries.i"
+	@echo "... src/PSSecondaries.s"
 .PHONY : help
 
 

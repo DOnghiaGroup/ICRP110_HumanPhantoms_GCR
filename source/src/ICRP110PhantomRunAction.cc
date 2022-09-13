@@ -5,8 +5,8 @@ ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 	// Define messengers for macro files
 	outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
 
-	outputMessenger -> DeclareProperty("fileName", outputFileName, "Name of output file for primaries");
-	outputMessenger -> DeclareProperty("outputType", outputType, "What to output (basic, organ)?");
+	outputMessenger -> DeclareProperty("fileName", outputFileName, "Name of output file");
+	outputMessenger -> DeclareProperty("outputType", outputType, "What to output (basic, organ, secondaries)?");
 	outputFileName = "unnamed_output_file.csv";
 	outputType = "basic";
 }
@@ -27,6 +27,7 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 	ICRP110PhantomRun* theRun = (ICRP110PhantomRun*)aRun;
 	std::map<std::pair<G4String, G4double>, G4double> totalDoses = theRun -> GetDoseDeposits();
 	std::map<std::pair<G4String, G4double>, std::map<G4String, G4double>> totalDosesByTissue = theRun -> GetTotalDosesByTissue();
+	std::map<std::pair<G4String, G4double>, std::map<G4String, G4int>> totalSecondaryFlux = theRun -> GetTotalSecondaryFlux();
 
 	// For all of the primary particles, store this information
 	if (outputType == "basic") { for (auto itr = totalDoses.begin(); itr != totalDoses.end(); itr++) {
@@ -57,6 +58,30 @@ void ICRP110PhantomRunAction::EndOfRunAction(const G4Run* aRun) {
 
 			if (formatItr != 0) { ofile << ", "; } 
 			ofile << "\"" << tissueName << "\" : " << tissueDose;
+
+			formatItr += 1;
+		}
+
+		ofile << " },\n";
+		ofile.close();
+	}}
+
+	else if (outputType == "secondaries") { for (auto itr = totalSecondaryFlux.begin(); itr != totalSecondaryFlux.end(); itr++) {
+		G4String eventPrimaryName = itr->first.first;
+		G4double eventPrimaryKE = itr->first.second;
+
+		std::ofstream ofile;
+		ofile.open(outputFileName, std::ios_base::app);
+		ofile << "\"'" << eventPrimaryName << "', " << eventPrimaryKE << "\" : { ";
+
+		G4int formatItr = 0;
+		for (auto secItr = itr->second.begin(); secItr != itr->second.end(); secItr++) {
+			G4String secondaryName = secItr->first;
+			// Notice: convert dose to gray on next line
+			G4double secondaryCount = secItr->second;
+
+			if (formatItr != 0) { ofile << ", "; } 
+			ofile << "\"" << secondaryName << "\" : " << secondaryCount;
 
 			formatItr += 1;
 		}
