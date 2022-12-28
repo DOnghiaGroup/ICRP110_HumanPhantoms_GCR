@@ -45,8 +45,8 @@
 /gps/ene/type Pow
 /gps/source/intensity .144764827301
 /gps/ene/alpha -1
-/gps/ene/min 60 MeV
-/gps/ene/max 60 GeV
+/gps/ene/min 120 MeV
+/gps/ene/max 120 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 # /gps/pos/centre 0. 0. 0. cm
@@ -62,8 +62,8 @@
 /gps/ene/type Pow
 /gps/source/intensity .144764827301
 /gps/ene/alpha -1
-/gps/ene/min 140 MeV
-/gps/ene/max 140 GeV
+/gps/ene/min 280 MeV
+/gps/ene/max 280 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 # /gps/pos/centre 0. 0. 0. cm
@@ -79,8 +79,8 @@
 /gps/ene/type Pow
 /gps/source/intensity .144764827301
 /gps/ene/alpha -1
-/gps/ene/min 260 MeV
-/gps/ene/max 260 GeV
+/gps/ene/min 560 MeV
+/gps/ene/max 560 GeV
 /gps/pos/type Surface
 /gps/pos/shape Sphere
 # /gps/pos/centre 0. 0. 0. cm

@@ -332,23 +332,23 @@ G4VPhysicalVolume* ICRP110PhantomConstruction::Construct()
     param -> SetOrganIndices(fOrganIDs);
     param -> SetNoVoxel(fNVoxelX,fNVoxelY,fNVoxelZ);
 
-    // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
-
-//---- Define shield radii and other constants
-    G4double shieldInnerRadii = 1.3555 * m; 
-    G4double shieldOuterRadii = 1.800 * m;
-    G4double pi = 3.14159265358979323846;
-    
-//---- Get the material for the shield
-    G4Material* polyethylene = new G4Material("polyethylene", 0.9*g/cm3, 2);
-    polyethylene -> AddElement(nist->FindOrBuildElement("H"), 4);
-    polyethylene -> AddElement(nist->FindOrBuildElement("C"), 2);
-    G4Material* shieldMat = nist -> FindOrBuildMaterial("G4_Al");
-
-//---- Use the material to define a sphere, then logical volume, then physical volume   
-    G4Sphere* shield = new G4Sphere("shield", shieldInnerRadii, shieldOuterRadii, 0, 2*pi, 0, pi);
-    logicShield = new G4LogicalVolume(shield, polyethylene, "logicShield", 0, 0, 0);
-    G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0, true);
+//    // Create and place an aluminum sphere around the phantom (based on Sam's documentation)
+//
+////---- Define shield radii and other constants
+//    G4double shieldInnerRadii = 1.3555 * m; 
+//    G4double shieldOuterRadii = 1.800 * m;
+//    G4double pi = 3.14159265358979323846;
+//    
+////---- Get the material for the shield
+//    G4Material* polyethylene = new G4Material("polyethylene", 0.9*g/cm3, 2);
+//    polyethylene -> AddElement(nist->FindOrBuildElement("H"), 4);
+//    polyethylene -> AddElement(nist->FindOrBuildElement("C"), 2);
+//    G4Material* shieldMat = nist -> FindOrBuildMaterial("G4_Al");
+//
+////---- Use the material to define a sphere, then logical volume, then physical volume   
+//    G4Sphere* shield = new G4Sphere("shield", shieldInnerRadii, shieldOuterRadii, 0, 2*pi, 0, pi);
+//    logicShield = new G4LogicalVolume(shield, polyethylene, "logicShield", 0, 0, 0);
+//    G4VPhysicalVolume* physShield = new G4PVPlacement(0, G4ThreeVector(), logicShield, "physShield", logicWorld, false, 0, true);
 
   return fMotherVolume;
 }

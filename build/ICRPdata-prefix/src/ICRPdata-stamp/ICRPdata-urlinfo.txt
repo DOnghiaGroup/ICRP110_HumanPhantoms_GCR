@@ -1,3 +1,12 @@
-repository='external project URL'
-module='https://cern.ch/geant4-data/datasets/examples/advanced/ICRP110Phantoms/ICRPdata.tar.gz'
-tag='MD5=2aba5409d4e7b7a2f0328e7d3402f187'
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/home/ben/.local/lib/python3.10/site-packages/cmake/data/bin/cmake;-P;/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata-stamp/download-ICRPdata.cmake;COMMAND;/home/ben/.local/lib/python3.10/site-packages/cmake/data/bin/cmake;-P;/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata-stamp/verify-ICRPdata.cmake;COMMAND;/home/ben/.local/lib/python3.10/site-packages/cmake/data/bin/cmake;-P;/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata-stamp/extract-ICRPdata.cmake
+source_dir=/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata
+work_dir=/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build
+url(s)=https://cern.ch/geant4-data/datasets/examples/advanced/ICRP110Phantoms/ICRPdata.tar.gz
+hash=MD5=2aba5409d4e7b7a2f0328e7d3402f187
+no_extract=
+

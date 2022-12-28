@@ -43,9 +43,9 @@
 #------------------Run------------------#
 #---------------------------------------#
 /output/fileName final_spectra.csv
-/output/outputType secondaries
+/output/outputType basic
 /output/weight true
-/run/beamOn 30
+/run/beamOn 100000
 
 #---------------------------------------#
 #----Dump Scoring Mesh Data to File-----#

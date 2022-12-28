@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(STATUS "verifying file...
-       file='/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'")
+       file='/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'")
 
-  file("MD5" "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz" actual_value)
+  file("MD5" "/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "2aba5409d4e7b7a2f0328e7d3402f187")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(STATUS "MD5 hash of
-    /home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz
+    /home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz
   does not match expected value
     expected: '2aba5409d4e7b7a2f0328e7d3402f187'
       actual: '${actual_value}'")
@@ -71,7 +71,7 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if("/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz" STREQUAL "")
+if("/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz" STREQUAL "")
   message(FATAL_ERROR "LOCAL can't be empty")
 endif()
 
@@ -79,80 +79,91 @@ if("https://cern.ch/geant4-data/datasets/examples/advanced/ICRP110Phantoms/ICRPd
   message(FATAL_ERROR "REMOTE can't be empty")
 endif()
 
-if(EXISTS "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
+if(EXISTS "/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(STATUS "File already exists and hash match (skip download):
-  file='/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'
+  file='/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'
   MD5='2aba5409d4e7b7a2f0328e7d3402f187'"
       )
       return()
     else()
       message(STATUS "File already exists but hash mismatch. Removing...")
-      file(REMOVE "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
+      file(REMOVE "/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
     endif()
   else()
     message(STATUS "File already exists but no hash specified (use URL_HASH):
-  file='/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'
+  file='/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
+    file(REMOVE "/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(STATUS "Downloading...
-   dst='/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'
-   timeout='none'"
+   dst='/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz'
+   timeout='none'
+   inactivity timeout='none'"
 )
-
+set(download_retry_codes 7 6 8 15)
+set(skip_url_list)
+set(status_code)
 foreach(i RANGE ${retry_number})
-  sleep_before_download(${i})
-
+  if(status_code IN_LIST download_retry_codes)
+    sleep_before_download(${i})
+  endif()
   foreach(url https://cern.ch/geant4-data/datasets/examples/advanced/ICRP110Phantoms/ICRPdata.tar.gz)
-    message(STATUS "Using src='${url}'")
+    if(NOT url IN_LIST skip_url_list)
+      message(STATUS "Using src='${url}'")
 
-    
-    
-    
-    
+      
+      
+      
+      
 
-    file(
+      file(
         DOWNLOAD
-        "${url}" "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz"
+        "${url}" "/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz"
         SHOW_PROGRESS
         # no TIMEOUT
+        # no INACTIVITY_TIMEOUT
         STATUS status
         LOG log
         
         
-    )
+        )
 
-    list(GET status 0 status_code)
-    list(GET status 1 status_string)
+      list(GET status 0 status_code)
+      list(GET status 1 status_string)
 
-    if(status_code EQUAL 0)
-      check_file_hash(has_hash hash_is_good)
-      if(has_hash AND NOT hash_is_good)
-        message(STATUS "Hash mismatch, removing...")
-        file(REMOVE "/home/reu/bderieg/geant4/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
+      if(status_code EQUAL 0)
+        check_file_hash(has_hash hash_is_good)
+        if(has_hash AND NOT hash_is_good)
+          message(STATUS "Hash mismatch, removing...")
+          file(REMOVE "/home/ben/Desktop/ICRP110_HumanPhantoms_GCR/build/ICRPdata-prefix/src/ICRPdata.tar.gz")
+        else()
+          message(STATUS "Downloading... done")
+          return()
+        endif()
       else()
-        message(STATUS "Downloading... done")
-        return()
+        string(APPEND logFailedURLs "error: downloading '${url}' failed
+        status_code: ${status_code}
+        status_string: ${status_string}
+        log:
+        --- LOG BEGIN ---
+        ${log}
+        --- LOG END ---
+        "
+        )
+      if(NOT status_code IN_LIST download_retry_codes)
+        list(APPEND skip_url_list "${url}")
+        break()
       endif()
-    else()
-      string(APPEND logFailedURLs "error: downloading '${url}' failed
-       status_code: ${status_code}
-       status_string: ${status_string}
-       log:
-       --- LOG BEGIN ---
-       ${log}
-       --- LOG END ---
-       "
-      )
     endif()
+  endif()
   endforeach()
 endforeach()
 
