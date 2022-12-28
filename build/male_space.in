@@ -45,11 +45,4 @@
 /output/fileName final_spectra.csv
 /output/outputType basic
 /output/weight true
-/run/beamOn 100000
-
-#---------------------------------------#
-#----Dump Scoring Mesh Data to File-----#
-#---------------------------------------#
-# These quantities must have been defined in scoring.mac
-# /score/dumpQuantityToFile PhantomMesh energyDeposit PhantomMesh_Energy_iso_He.txt
-# /score/dumpQuantityToFile PhantomMesh doseDeposit PhantomMesh_Dose_iso_He.txt
+/run/beamOn 3

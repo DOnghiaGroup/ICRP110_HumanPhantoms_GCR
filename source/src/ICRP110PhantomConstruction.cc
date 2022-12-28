@@ -71,7 +71,7 @@ ICRP110PhantomConstruction::ICRP110PhantomConstruction():
 
   outputMessenger = new G4GenericMessenger(this, "/output/", "Run Action");
   outputMessenger -> DeclareProperty("fileName", fileName, "Name of output file for primaries");
-  fileName = "unnamed_output_file.csv";
+  fileName = "final_spectra.csv";
 }
 
 ICRP110PhantomConstruction::~ICRP110PhantomConstruction()

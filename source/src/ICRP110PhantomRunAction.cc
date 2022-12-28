@@ -7,7 +7,7 @@ ICRP110PhantomRunAction::ICRP110PhantomRunAction() {
 
 	outputMessenger -> DeclareProperty("fileName", outputFileName, "Name of output file");
 	outputMessenger -> DeclareProperty("outputType", outputType, "What to output (basic, organ, secondaries)?");
-	outputFileName = "unnamed_output_file.csv";
+	outputFileName = "final_spectra.csv";
 	outputType = "basic";
 }
 
